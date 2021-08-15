@@ -19,6 +19,7 @@
 <body>
 
     <!--Dark navbar-->
+
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand"><img class="me-4" src="/images/navbarwhitebike.svg" alt="white logo">|</a>
@@ -55,16 +56,16 @@
         @yield ('content')
     </div>
 
-    
+
 
     <!--Footers-->
     <footer class="pt-5 pb-3">
         <div class="container">
 
             <h2><b>FOLLOW US:</b> </h2>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
 
             <div class="col-lg-0 pt-3">
 
@@ -82,6 +83,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
 </body>
 

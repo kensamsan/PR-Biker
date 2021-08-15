@@ -22,7 +22,6 @@
 {{-- user profile picture --}}
 <section>
     <div class="container-fluid">
-
         <div class="row">
             <div id="current-profile" class="col-lg-2 col-sm-6 pt-2 profile">
                 <p class="fst-italic fs-5 ms-3 mt-2">Current Profile:</p>
