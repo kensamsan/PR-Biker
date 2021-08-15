@@ -1,0 +1,95 @@
+/* register form */
+
+
+@media (max-width: 991.98px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+.bg-image {
+    background-image: url(/images/biker.png);
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#logo {
+    color: #ffffff;
+    margin-top: 155px;
+}
+
+#login-form {  
+    margin-top: 25%;
+    padding: 16px;
+   
+    
+}
+
+.login-form2 h1 {
+    font-style: italic;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+#login-form h1 {
+    font-weight: bold;
+    color: #EA5656;
+
+}
+input[type=text],
+input[type=password] { 
+    background-color: #ECECF0;
+    color: #8F8E94;
+    border-radius: 11px;
+}
+
+.btn {
+    background: #EA5656;
+    color: #ffffff;
+    padding: 0px 50px;
+    border-radius: 26px;
+}
+
+.btn:hover {
+    color: #27332C;
+}
+
+.btn-blue {
+    background: #6c63b9;
+    padding: 0px 0px;
+}
+.btn-red {
+    background: #EA5656;
+    padding: 0px 20px;
+}
+
+.btn-custom{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-right: 49px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 5px;
+    /* border-radius: 0px 0px 30px 30px; */
+    
+}

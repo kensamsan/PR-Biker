@@ -1,0 +1,94 @@
+#user-photo {
+    width: 27px;
+    clip-path: circle();
+    margin-right: 4px;
+}
+
+/* Banner */
+#banner{
+    background-image: url("/images/biker.png");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+#banner h1,h3,h6{
+    color: white;
+    font-style: italic;
+}
+
+.Recommend h1{
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#banner h1{ font-weight: bold; }
+#banner h3{ font-weight: 500;  }
+#banner h6{ font-weight: 500;  }
+
+/* Card */
+
+.card-course{
+    border-radius: 20px;
+    overflow: visible;
+    color: #000000;
+}
+
+.card-course-card body{
+    color: white;
+}
+
+.card-course-foot{
+    background-color: #EA5656;
+    border-radius: 0px 0px 20px 20px;
+    overflow: visible;
+    color: white;
+
+    font-style: italic;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+.btn-white-outline{
+    color: rgb(110, 74, 74);
+    border: 2px solid rgb(110, 74, 74);
+    margin-top: 20px;
+    border-radius: 14px;
+}
+
+.card-footer{
+    background-color: #cf3232;
+    border-radius: 0px;
+}
+
+.detail{
+    color: white;
+}
+
+.btn2 {
+    background: #000000;
+    color: #cf3232;
+    padding: 0px 0px;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 245px;
+    border-radius: 26px;
+    margin-left: 0px;
+    float: left;
+}
+
+.btn-blue {
+    background: #EA5656;
+    border-radius: 30px;
+}
+
+.btn-custom{
+    width: 150px;
+    height: 35px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;    
+}
