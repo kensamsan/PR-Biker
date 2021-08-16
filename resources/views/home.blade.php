@@ -10,13 +10,13 @@
         <a class="navbar-brand"><img src="/images/navbarlogo.svg" width="150px" alt="white logo"></a>
         <form class="row">
             <div class="col-lg-5">
-                <input class="form-control me-2" type="search" placeholder="Search for an item" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Search for an item">
             </div>
             <div class="col-lg-3">
-                <input class="form-control me-2" type="search" placeholder="All location" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="All location">
             </div>
-            <div class="col-lg-3 mt-1">
-                <button class="btn btn-custom btn-sm btn-blue border-0 fs-5" type="submit">Rent a bike</button>
+            <div class="col-lg-3">
+                <button class="btn btn-rent rounded-pill border-0 fs-5 fw-bold">Rent a bike</button>
             </div>
 
         </form>
@@ -46,7 +46,7 @@
 
 <!-- First Row -->
 
-<div class="container card-container shadow bg-body fw-bolder       ">
+<div class="container card-container shadow bg-body fw-bolder">
     <div class="row my-5">
         <div class="col-lg-3 col-sm-12 p-3">
             <div class="card card-course">
