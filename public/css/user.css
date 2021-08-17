@@ -74,22 +74,18 @@
 }
 
 input[type=username]{
-    /* width: 300px; */
     height: 25px; 
 }
 
 input[type=public-profile] {  
-    /* width: 200px;  */
     height: 25px; 
 }
 
 input[type=home-address] {
-    /* width: 200px; */
     height: 25px; 
 }
 
 input[type=address] {
-    /* width: 400px; */
     height: 25px; 
 }
 

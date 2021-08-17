@@ -59,7 +59,7 @@
 
     <!--Footers-->
     <footer class="pt-5 pb-3">
-        <div class="container">
+        <div class="container-fluid">
 
             <h2><b>FOLLOW US:</b> </h2>
             <a href="#" class="fa fa-facebook"></a>

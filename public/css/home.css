@@ -13,8 +13,6 @@
     border-radius: 10px 5px 5px 10px;
 }
 
-
-
 #whitelogo {
     width: 200px;
     margin-right: 25.5rem!important;
@@ -95,7 +93,9 @@
 }
 
 /* Card */
-
+.card {
+    border: none;
+}
 .card-container {
     width: auto;
     border-radius: 15px;
@@ -133,9 +133,4 @@
     border: 2px solid rgb(110, 74, 74);
     margin-top: 20px;
     border-radius: 14px;
-}
-
-.card-footer{
-    background-color: #cf3232;
-    border-radius: 0px;
 }

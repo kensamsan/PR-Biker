@@ -7,6 +7,11 @@
        display: none;
     }
  } 
+ @media (max-width: 991.98px) { 
+    #white-logo {
+       display: none;
+    }
+  }
 </style>
 
 <nav class="navbar navbar-expand-lg bg-light lightnav">
@@ -28,7 +33,7 @@
                     </div>
                 </div>
                
-                <div class="col">
+                <div class="col mt-1">
                     <button class="mx-auto btn btn-rent rounded-pill border-0 fs-5 fw-bold" id="btn-rent">
                         Rent a bike
                     </button>

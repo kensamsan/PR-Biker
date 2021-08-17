@@ -1,6 +1,11 @@
+/* logo */
+.tagline {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
 /* login form */
-
-
 @media (max-width: 991.98px) {
     #logo {
         display: none;
@@ -38,16 +43,15 @@
     padding: 16px;   
 }
 
-#login-form a {
+.forgot-pass a {
     text-decoration: none;
     color: #27332C;
 }
 
-#login-form h1 {
-    font-weight: bold;
+.form-header h1 {
     color: #EA5656;
-
 }
+
 input[type=email],
 input[type=password] { 
     background-color: #ECECF0;
@@ -58,15 +62,16 @@ input[type=password] {
 }
 
 .btn {
-    float: right;
-    background: #EA5656;
     color: #ffffff;
     padding: 0px 50px;
-    width: 180px;
-    border-radius: 26px;
 }
 
-.btn:hover {
-    color: #27332C;
+#btn-login {
+    background: #EA5656;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
 }
 

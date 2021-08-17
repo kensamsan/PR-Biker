@@ -39,3 +39,7 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/homeaccount', function () {
+    return view('homeaccount');
+});
+
