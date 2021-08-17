@@ -57,8 +57,6 @@
         @yield ('content')
     </div>
 
-
-
     <!--Footers-->
     <footer class="pt-5 pb-3">
         <div class="container">

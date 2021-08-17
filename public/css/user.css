@@ -1,43 +1,21 @@
 @media (max-width: 1199.98px) { 
     #edit-header {
-        /* margin-top: 5rem!important; */
-        margin-top: 10rem!important;
-
+        margin-top: 1.6rem!important;
     }
  }
-
-@media (max-width: 575.98px) { 
-    #logo {
-        display: none;
-    }
- } 
 
 .user-photo {
     width: 25px;
     clip-path: circle();
 }
 
-/* logo and user settings */
-hr {
-    border: 1px solid;
-    color: #000;
-}
-
-#logo {
-    /* padding: 0px 0px 0px 1rem!important; */
-    margin-right: 2.5rem!important;
-}
-
 /* user profile avatar */
 
-#current-profile {
+.profile-card {
     box-shadow: 0px 6px 15px rgb(0 0 0 / 0.2);
-    padding: 2px;
+    padding: .55rem;
     background-color: #ffffff;
     border-radius: 15px;
-    width: 230px;
-    height: 327px;
-    margin: 0 50px 0px 50px!important;
 }
 
 .profile p {
@@ -58,20 +36,13 @@ hr {
 
 /* user profile form */
 
-.main-form {
-    flex-wrap: wrap;
-    flex-grow: 0;
-}
-
 #user-avatar {
     width: 200px;
     margin-top: 10px;
 }
 
 #user-name {
-    font-size: 24px;
     color: #27332C;
-    font-weight: 490;
     padding : 0;
     margin : 3px 0px 3px 0px;
     line-height : 10px;
@@ -84,6 +55,8 @@ hr {
 #edit-header {
     font-weight: 900;
 }
+
+/* forms */
 
 .form-headers {
     color: #27332C;
@@ -101,22 +74,22 @@ hr {
 }
 
 input[type=username]{
-    width: 300px;
+    /* width: 300px; */
     height: 25px; 
 }
 
 input[type=public-profile] {  
-    width: 200px; 
+    /* width: 200px;  */
     height: 25px; 
 }
 
 input[type=home-address] {
-    width: 200px;
+    /* width: 200px; */
     height: 25px; 
 }
 
 input[type=address] {
-    width: 400px;
+    /* width: 400px; */
     height: 25px; 
 }
 

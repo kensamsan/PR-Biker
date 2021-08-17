@@ -42,7 +42,9 @@
    text-indent: 15px;
    background-size: 18px;
    border-radius: 10px 5px 5px 10px;
-   height: 45px;
+}
+#location {
+    height: 1.5rem;
 }
 
 
@@ -95,8 +97,9 @@
 /* Card */
 
 .card-container {
-    width: 100%;
+    width: auto;
     border-radius: 15px;
+    background-color: #F3F3F5;
 }
 
 .card-course{

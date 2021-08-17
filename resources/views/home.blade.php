@@ -4,37 +4,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/home.css">
 <!--White navbar-->
-<nav class="navbar navbar-expand-lg bg-light p-3 lightnav">
-    <div class="container-fluid">
-        <div class="col-lg-3 col-sm-12 mt-1">
-            <img src="images/navbarlogo.svg" id="whitelogo">
-        </div>
-
-        <form class="input-group">
-            <div class="col-lg-6 col-12 my-auto mt-2 ms-2">
-                <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar">
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="mt-1 input-group mb-3">
-                        <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="input-group-text bi bi-search"></i>
-                        </span>
-                    </div>
-                </div>
-               
-                <div class="col">
-                    <button class=" mx-auto btn btn-rent rounded-pill border-0 fs-5 fw-bold mt-1">
-                        Rent a bike
-                    </button>
-                </div>
-
-            </div>
-        </form>
-
-    </div>
-</nav>
+        @include('template.search')
 <!-- Banner  -->
 
 <div id="banner">
@@ -47,20 +17,18 @@
         </div>
     </div>
 </div>
-
-<div class="container-fluid ms-4">
-    <div class="row">
+    <div class="row ms-4">
         <div class="recommend col-lg-6 pt-3">
             <h1 class="fst-italic fw-bolder">Recommended for you:</h1>
         </div>
     </div>
-</div>
+
 
 <!-- First Row -->
 
-<div class="container-fluid card-container shadow bg-body fw-bolder">
+<div class="container card-container shadow fw-bolder">
     <div class="row my-5">
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -82,7 +50,7 @@
             </div>
         </div>
 
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -103,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -124,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -145,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -166,7 +134,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -187,7 +155,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -208,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -229,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -250,7 +218,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -271,7 +239,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -292,7 +260,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-12 p-3">
+        <div class="col-lg-3 col-sm-2 p-3">
             <div class="card card-course">
                 <div class="card-body">
                     <label>
@@ -313,7 +281,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="container">
 

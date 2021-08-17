@@ -35,3 +35,7 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
