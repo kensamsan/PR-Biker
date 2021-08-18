@@ -1,0 +1,71 @@
+/* Media Queries */
+@media (min-width: 768px) { 
+    .fs-md-3 {
+        font-size: 2.5rem;
+    }
+ }
+
+
+
+.product-header {
+    font-weight: 900;
+}
+
+/* Forms */
+.form-container {
+    background-color: #FFFFFF;
+    border-radius: 30px 48px 48px 48px;
+    height: auto;
+}
+
+.photo-card {
+    border-radius: 21px;
+}
+
+.photo-container {
+    background-color:#EFEFEF;
+}
+
+.photo-container p {
+   font-weight: 500;
+}
+
+.fa-dropbox {
+    color: #EA5656;
+}
+
+.btn-select {
+    background-color: #EA5656;
+    height: 35px;
+}
+
+.photo-number-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.photo-number {
+    font-weight: 700;
+    min-height: 100%;
+}
+
+.photo-card h5 {
+    font-weight: 520;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: none;
+    background-color: #ECECF0;
+}
+
+.btn-post {
+    background-color: #EA5656;
+}
+
+textarea {
+    resize: none;
+}

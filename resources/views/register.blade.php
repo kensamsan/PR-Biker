@@ -3,6 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/register.css">
 <link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/main.css">
 <div class="bg-image">
     <div class="container-fluid pt-5">
         <div class="row d-flex justify-content-around">

@@ -43,3 +43,11 @@ Route::get('/homeaccount', function () {
     return view('homeaccount');
 });
 
+Route::get('/product', function () {
+    return view('product');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+

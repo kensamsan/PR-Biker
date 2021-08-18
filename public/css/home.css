@@ -44,24 +44,13 @@
 #location {
     height: 1.5rem;
 }
-
-
-  #navlogolight {
+#navlogolight {
     width: 100%;
-  }
-
-.search {
-    background-color: #EA5656;
-    border-radius: 25px;
-    border-color: #EA5656;
-    font-weight: bolder;
 }
-
-.search:hover {
-    background-color: #c74343;
-    border-color: #c74343;
+.btn-rent {
+    background-color: #EA5656 ;
+    width: 200px;
 }
-
 /* Banner */
 #banner{
     background-image: url("/images/biker.png");
@@ -76,20 +65,20 @@
     left: 1;
     color: white;
     font-style: italic;
+    
 }
 
-.btn-rent {
-    background-color: #EA5656 ;
-    color: #fff;
-    width: 200px;
+#banner-header {
+    font-weight: 900;
 }
 
-.btn-now {
+#btn-now {
     background: #000000;
     color: #EA5656;
     padding: 4px 40px;
     font-size: 1.2em;
     width: 250px;
+    font-weight: 900;
 }
 
 /* Card */
@@ -122,15 +111,11 @@
 .card-course-foot{
     background-color: #EA5656;
     border-radius: 0px 0px 20px 20px;
-    color: white;
-    font-size: 1.1em;
-    height: auto;
 }
 
 
-.btn-white-outline{
-    color: rgb(110, 74, 74);
-    border: 2px solid rgb(110, 74, 74);
-    margin-top: 20px;
+.btn-view{
+    color: #27332C;
+    border: 2px solid #707070;
     border-radius: 14px;
 }

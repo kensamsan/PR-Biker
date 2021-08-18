@@ -4,7 +4,7 @@
             <img src="/images/navbarlogo.svg" alt="logo">
         </div>
         <div class="col-lg-4 col-md-12 col-12">
-            <div class="headers fs-1 fst-italic fw-bold" id="user-settings">USER SETTINGS</div>
+            <div class="headers fs-1 fst-italic lead" id="user-settings">USER SETTINGS</div>
         </div>
     </div>
     <hr>

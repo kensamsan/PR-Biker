@@ -2,6 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" href="/css/user.css">
+<link rel="stylesheet" href="/css/main.css">
 
 <style>
     @media (max-width: 991.98px) {

@@ -11,6 +11,14 @@
     #white-logo {
        display: none;
     }
+    #btn-rent {
+       margin-top: 2rem!important;
+    }
+  }
+
+  #btn-rent a {
+      color: #ffffff;
+
   }
 </style>
 
@@ -31,12 +39,12 @@
                             <i class="input-group-text bi bi-search"></i>
                         </span>
                     </div>
-                </div>
-               
+                </div>             
                 <div class="col mt-1">
-                    <button class="mx-auto btn btn-rent rounded-pill border-0 fs-5 fw-bold" id="btn-rent">
-                        Rent a bike
-                    </button>
+                    <a class="text-light mx-auto btn btn-rent rounded-pill border-0 fs-5 fw-bold" id="btn-rent" 
+                    href="{{url('product')}}">
+                    Rent a bike
+                    </a>               
                 </div>     
             </div>
         </form>
