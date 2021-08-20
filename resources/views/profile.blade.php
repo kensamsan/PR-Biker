@@ -133,7 +133,7 @@
                     <div class="card-body">
                         <p class="card-text fw-bold fst-italic fs-5" id="user-name">Name</p>
                         <p class="card-text fw-normal fst-italic" id="user-email">bikername@gmail.com</p>
-                        <p class="fw-normal fs-6 fst-italic lead mt-5"><i class="bi bi-gear me-1"></i>Tweak your profile</p>
+                        <a class="fw-normal fs-6 fst-italic lead mt-5" href="{{url('settings')}}"><i class="bi bi-gear me-1"></i>Tweak your profile</a>
                     </div>
                 </div>
             </div>

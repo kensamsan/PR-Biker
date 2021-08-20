@@ -29,17 +29,18 @@
 
 #basic-addon1 {
     background-color: #EA5656;
-    height: 45px;
+    height: 38px;
 }
 
 .location-bar {
    background-image: url("/images/geo-alt.svg");
    background-repeat: no-repeat;
    background-color: #F3F3F5;
-   background-position: 5px 12px;
+   background-position: 5px 7px;
    text-indent: 15px;
    background-size: 18px;
-   border-radius: 10px 5px 5px 10px;
+   border-radius: 5px 10px 10px 5px;
+   height: 38px;
 }
 #location {
     height: 1.5rem;

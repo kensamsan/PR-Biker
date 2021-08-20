@@ -11,7 +11,7 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2 col-12 me-5">
+            <div class="profile col-lg-2 col-12 me-5 ms-3">
                 <div class="profile-card card">
                     <p class="fst-italic fs-5 ms-2 mt-2">Current Profile:</p>
                     <img src="/images/girl.png" class="card-img-top" alt="user's photo">
