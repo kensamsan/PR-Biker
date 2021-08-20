@@ -27,12 +27,11 @@
         <div class="col-lg-3 col-sm-12">
             <img class="img-fluid" src="/images/navbarlogo.svg" id="white-logo">
         </div>
-        <form class="input-group">
-            <div class="col-lg-6 col-md-6 col-12 ms-2">
+        <form class="row input-group search-location">
+            <div class="col-lg-6 col-md-7 col-12">
                 <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar">
             </div>
-            <div class="row">
-                <div class="col-lg-7" id="location">
+                <div class="col-lg-3 col-md-7" id="location">
                     <div class="input-group">
                         <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
                         <span class="input-group-text" id="basic-addon1">
@@ -46,7 +45,6 @@
                     Rent a bike
                     </a>               
                 </div>     
-            </div>
         </form>
     </div>
 </nav>

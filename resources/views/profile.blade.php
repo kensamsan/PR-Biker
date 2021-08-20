@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
 <div class="container-fluid">
-    <div class="row mt-2">
-        <div class="col-lg-2 me-5">
-            <img src="/images/navbarlogo.svg" alt="logo">
+    <div class="row">
+        <div class="col-lg-2 mt-3">
+            <img class="img-fluid" src="/images/navbarlogo.svg" alt="logo">
         </div>
-        <div class="col-lg-4 col-md-12 col-12">
+        <div class="col-lg-4 col-6 mt-2">
             <div class="headers fs-1 fst-italic lead" id="user-settings">YOUR PROFILE</div>
         </div>
     </div>

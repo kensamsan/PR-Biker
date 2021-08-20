@@ -1,4 +1,8 @@
-
+@media (max-width: 576px) { 
+    .search-location {
+        width: auto;
+    }
+ }
 /* dark navbar */
 #user-photo {
     width: 27px;
