@@ -17,7 +17,9 @@
                         <h1 class="fs-1 text-uppercase fst-italic fw-bolder">Register An Account:</h1>
                         <p class=" fs-4 fst-italic lead">Get started by using your existing social accounts:</p>
                     </div>
-                    <div class="flex-row gap-2 d-md-block">
+                    
+
+                    {{--<div class="flex-row gap-2 d-md-block"> 
                         <div class=" gap-2 d-md-block pb-2">
                             <button class="btn-register fw-bold border-0 col-lg-4" id="btn-fb" type="button">Login via
                                 FACEBOOK</button>
@@ -25,6 +27,8 @@
                                 via Gmail</button>
                         </div>
                     </div>
+                    --}}
+
                     <p class=" fs-4 fst-italic lead">Or Register Manually:</p>
                     <div>
                         <div class="row mt-2">
@@ -32,7 +36,9 @@
                                 <i class="fs-1 mb-2 bi bi-person"></i>
                             </div>
                             <div class="col-lg-7 mt-2">
-                                <input class="rounded-3 form-control register-input" placeholder="Full Name">  
+
+
+                               <form class="" action="{{URL::to('/store')}" method="post">  <input class="rounded-3 form-control register-input" placeholder="Full Name">   
                             </div>
                         </div>
                         <div class="row">
@@ -52,22 +58,25 @@
                                     <span class="input-group-text fw-bolder border-0" id="add-on">+639</span>
                                     <input type="text" class="form-control register-input" placeholder="Phone Number">
                                 </div>
-                            </div>
-                            
+                            </div> 
                         </div>
                         <div class="row">
                             <div class="col-2">
                                 <i class="fs-1 bi bi-lock"></i>
                             </div>
                             <div class="col-lg-7 mt-2">
-                                <input class="rounded-3 form-control register-input" placeholder="Create Password">  
+                                <input type="password" class="rounded-3 form-control register-input" placeholder="Create Password">  
                             </div>
                         </div>
+                        
+                        </form>
+
+
                         <div class="row">
                             <div class="col-2 phone-number">                            
                             </div>
                             <div class="col-lg-7 mt-1">
-                                <input class="rounded-3 form-control register-input" placeholder="Repeat Password">  
+                                <input type="password" class="rounded-3 form-control register-input" placeholder="Repeat Password">  
                             </div>
                         </div>
                         <div class="row">

@@ -58,49 +58,8 @@
 
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="{{url('')}}" class="nav-link active" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Marketplace</a>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link fw-bold text-light"> <i class="bi bi-chat-text text-light"></i>
-                            Messages</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/images/girl.png" class="user-photo" alt="user's photo"> Shopper's Name</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="{{url('profile')}}">
-                                    <i class="me-1 bi bi-person"></i>
-                                    Profile
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{url('settings')}}">
-                                    <i class="fw-bold me-1 bi bi-gear"></i>
-                                    Settings
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{url('')}}">
-                                <i class="fw-bold me-1 bi bi-box-arrow-right"></i>
-                                Logout
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+           
+           
         </div>
     </nav>
 

@@ -18,7 +18,34 @@
     <link rel="stylesheet" href="/css/main.css">
 
 </head>
+<style>
+    .user-photo {
+        width: 25px;
+        clip-path: circle();
+    }
+    .dropdown-menu {
+        background-color: #212529;
+        border-radius: 27px 0px 27px 27px;
+    }
+    .navbar a{
+        color: #fff;
+    }
 
+    .navbar a:hover{
+        color: #fff;
+    }
+    .dropdown-menu a:hover {
+         background-color: rgba(221,213,205, 0.3);
+    }
+    .dropdown-item .bi {
+        color: #EA5656;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+
+</style>
 <body>
 
     <!--Dark navbar-->
@@ -44,11 +71,41 @@
 
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/girl.png" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{{url('profile')}}">
+                                    <i class="me-1 bi bi-person"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{url('settings')}}">
+                                    <i class="fw-bold me-1 bi bi-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{url('logout')}}">
+                                <i class="fw-bold me-1 bi bi-box-arrow-right"></i>
+                                Logout
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a href="{{url('login')}}" class="nav-link">Log-in</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{url('register')}}" class="nav-link">Register</a>
+                    </li>
+                    @endif
                 </ul>
             </div>
         </div>

@@ -14,6 +14,7 @@
     </div>
     <hr>
 </div>
+
 <div class="row ms-4">
     <div class="headers col-lg-6 pt-3">
         <h1 class="fst-italic fw-bolder">Current Listings</h1>

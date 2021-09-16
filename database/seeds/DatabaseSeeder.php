@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -9,8 +9,14 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+       User::create([
+        'full_name' => '下の名前　苗字',
+        'email' => 'sample@email.com',
+        'password' => Hash::make('pass'),
+        'contact_no' => '123456789'
+       ]);
     }
 }

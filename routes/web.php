@@ -13,12 +13,17 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('out');
 
 Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/store',"UserController@store");
+
+Route::get('/logout','UserController@logout');
+    
+Route::post('/authenticate','UserController@authenticate')->name('authenticate');
 Route::get('/register', function () {
     return view('register');
 });
@@ -38,10 +43,12 @@ Route::get('/product', function () {
 Route::get('/test', function () {
     return view('test');
 });
-
-Route::get('/homeaccount', function () {
-    return view('homeaccount');
+Route::group(['middleware'=>['auth']],function (){
+    Route::get('/homeaccount', function () {
+        return view('homeaccount');
+    });
 });
+
 
 Route::get('/product', function () {
     return view('product');
