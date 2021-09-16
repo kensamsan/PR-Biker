@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400;1,700;1,900&display=swap');
+body {
+  background-color: #F8F7FF;
+  font-family: 'Red Hat Display';
+  height: 100%;
+}
+
+.logbtn {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+  background-color: #ECECF0;
+}
+
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* BANNER */
+.masthead {
+  height: 80vh;
+  min-height: 500px;
+  background-image: url('Images/bannerlogin.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#logincol {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 2rem;
+}
+/* END BANNER */
+
+/* WHITE LOGO */
+.img-fluid {
+  display: inline;
+  border-right: 2px solid white;
+  padding: 0 0.9em;
+  width: 65px;
+}
+
+#whitelogo {
+  width: 100%;
+  border: none;
+}
+
+.phrase {
+  color: white;
+  font-style: italic;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 4rem;
+}
+/* END WHITE LOGO */
+
+
+/* LOG IN CARD */
+.card {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+h1 {
+  color: #EA5656;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+#logincard {
+  margin-left: 0;
+  margin-right: 3rem;
+}
+
+.card-body {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+#fplink {
+  font-style: italic;
+  color: rgb(54, 54, 54);
+  font-size: 1rem;
+}
+
+#fplink:hover {
+  font-style: italic;
+  color: black;
+}
+
+#form1 {
+  background-color: #ECECF0;
+  font-weight: 500;
+}
+
+#form2 {
+  background-color: #ECECF0;
+  font-weight: 500;
+}
+
+.logbtn {
+    background-color: #EA5656;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 40px;
+    border-color: #EA5656;
+    font-weight: bolder;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logbtn:hover {
+  background-color: #c74343;
+  border-color: #c74343;
+  color: white;
+}
+/* END LOG IN CARD */
+
+
+/* FOOTER*/
+footer {
+  background-color: #27332C;
+}
+#socmed img {
+  width: 30px;
+}
+
+#footertext h2 {
+  color: white;
+  font-style: normal;
+  font-weight: 900;
+}
+
+#copyright {
+  font-style: italic;
+  color: white;
+}
+
+#contact a {
+  color: rgb(219, 219, 219);
+}
+
+#contact a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 993px) {
+  #darknavlogo {
+    border-right: none;
+    width: 90%;
+  }
+  #whitelogo {
+    display: block;
+    width: 50rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phrase {
+    font-size: 1rem;
+    margin-left: 0rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #logincol {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 5rem;
+  }
+  #logincard {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .card-body {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+

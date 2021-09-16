@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Side menu */
+.side-menu {
+    background-color: #27332C;
+    min-height: 100vh;
+}
+
+hr{
+    border: 1px solid white!important;
+}
+
+.side-menu > div > *{
+    color: #fff; 
+    padding-left: .5rem;
+    width: 87.5%;   
+}
+.side-menu a:hover, .side-menu a.active, .side-menu a:hover small{
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #ffffff;
+    color: #707070;
+    text-decoration: none;
+}
+
+/* Header */
+.admin-photo, .notif-bell {
+    max-height: 1.75rem;
+}
+.dropdown-menu {
+    min-width: 8rem!important;
+}
+
+/* Main Content*/
+.dashed{
+    border: 0.5px;
+    border-style: solid;
+}
+.card-counter{
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 100px;
+    border-radius: 5px;
+    transition: .3s linear all;
+  }
+
+  .card-counter:hover{
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+  }
+
+  .card-counter.icon{
+    background-color: #fff;
+    color: #000;
+    
+  }
+
+  .card-counter i{
+    font-size: 5em;
+    
+  }
+  .card-counter i img{
+    width: 25%;
+    margin-top: -5rem;
+
+    
+  }
+  .card-counter .count-name{
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-size: 18px;
+    display: block;
+    font-style: normal;
+  }
+
+  .card-counter .count-numbers{
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    text-transform: capitalize;
+    opacity: 100;
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+  }
+ /* END Main Content*/
+ 
