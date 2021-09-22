@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="/css/register.css">
 <link rel="stylesheet" href="/css/login.css">
 <link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="Images/navbarwhitebike.svg">
 <div class="bg-image">
     <div class="container-fluid pt-5">
         <div class="row d-flex justify-content-around">
@@ -38,7 +39,7 @@
                             <div class="col-lg-7 mt-2">
 
 
-                               <form class="" action="{{URL::to('/store')}" method="post">  <input class="rounded-3 form-control register-input" placeholder="Full Name">   
+                               <form class="" action="{{URL::to('/store')}" method="post">  <input class="rounded-3 form-control register-input" style="text-transform: capitalize;" placeholder="Full Name">   
                             </div>
                         </div>
                         <div class="row">
@@ -55,8 +56,8 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="input-group mb-3 mt-2">
-                                    <span class="input-group-text fw-bolder border-0" id="add-on">+639</span>
-                                    <input type="text" class="form-control register-input" placeholder="Phone Number">
+                                    <span class="input-group-text fw-bolder border-0" id="add-on" >+639</span>
+                                    <input type="text" class="form-control register-input" maxlength="9" placeholder="Phone Number">
                                 </div>
                             </div> 
                         </div>

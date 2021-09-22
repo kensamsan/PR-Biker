@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/user.css">
-
+<link rel="icon" href="Images/navbarwhitebike.svg">
 
 {{-- Main Content --}}
 @include('template.whitebar')

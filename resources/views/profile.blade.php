@@ -3,6 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
+<link rel="icon" href="Images/navbarwhitebike.svg">
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-2 mt-3">
