@@ -66,7 +66,7 @@
                     </div>
                     <div class="row g-3 mt-1">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label fs-5 fst-italic">Price:</label>
+                            <label for="inputEmail4" class="form-label fs-5 fst-italic">Rental Fee:</label>
                             <div class="col">
                                 <input type="text" class="form-control">
                             </div>
@@ -83,7 +83,7 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="text-light fw-bolder rounded-pill btn btn-post" type="button">POST NOW</button>
+                        <button class="text-light fw-bolder rounded-pill btn btn-post" type="button">SUBMIT</button>
                     </div>
                 </form>
             </div>
