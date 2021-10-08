@@ -21,7 +21,7 @@ Route::get('/login', function () {
 
 Route::get('/store',"UserController@store");
 
-Route::get('/logout','UserController@logout');
+Route::get('/logout','UserController@logout')->name('logout');
     
 Route::post('/authenticate','UserController@authenticate')->name('authenticate');
 Route::get('/register', function () {
