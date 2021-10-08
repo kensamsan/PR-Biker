@@ -48,19 +48,57 @@
 </style>
 
 <body>
-
     <!--Dark navbar-->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand"><img class="me-4" src="/images/navbarwhitebike.svg" alt="white logo">|</a>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        @if (\Request::is('/'))
+                            <span class="nav-link active">Home</span>
+                        @else
+                            <a href="{{ url('') }}" class="nav-link" aria-current="page">Home</a>
+                        @endif
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('register') }}" class="nav-link">Marketplace</a>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{{url('messages')}}" class="nav-link fw-bold text-light"> <i class="bi bi-chat-text text-light"></i>
+                            Messages</a>
+                    </li>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-
-                <span class="navbar-toggler-icon"></span>
-            </button>
-           
-           
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/girl.png" class="user-photo" alt="user's photo">{{ Auth::user()->full_name }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{{url('profile')}}">
+                                    <i class="me-1 bi bi-person"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{url('settings')}}">
+                                    <i class="fw-bold me-1 bi bi-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{route('logout')}}">
+                                <i class="fw-bold me-1 bi bi-box-arrow-right"></i>
+                                Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
