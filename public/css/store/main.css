@@ -1,0 +1,299 @@
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+/* Color Settings */
+:root {
+    --primaryBlue: #EA5656;
+    --secondaryBlue: #EA5656;
+    --textGrey: #fff;
+}
+  
+/* Defaulting */
+body{
+    overflow-x: hidden;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+
+/* Navigation Bar */
+.navbar-brand img{max-height: 50px;}
+
+.navbar .nav-link{
+    text-align: left;
+    color: var(--textGrey);
+}
+
+.navbar-toggler{color: var(--primaryBlue);}
+
+.blue{
+    background-color: var(--primaryBlue);
+    color: white;
+}
+
+/* Button Styles*/
+.btn-aguora-outline{
+    color: var(--primaryBlue);
+    border: 2px solid var(--primaryBlue);
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-aguora-main{
+    background-color: var(--primaryBlue);
+    color: white!important;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all ease 0.3s;
+}
+
+.btn-aguora-outline:hover{
+    background-color: var(--primaryBlue);
+    color: white;
+}
+
+.btn-aguora-main:focus,
+.btn-aguora-main:hover{
+    background-color: var(--secondaryBlue);
+    color: white;
+}
+
+.raise{
+    transition: ease 0.3s;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--secondaryBlue);
+  transform: translateY(-0.25em);
+}
+
+.btn-trasnparent{
+    background: none;
+    border: none;
+}
+
+/* Text Styles */
+.h-med-title,
+.h-banner {
+    font-family: "Red Hat Display";
+}
+
+.h-banner{
+    text-align: center;
+}
+
+.text-bold{
+    font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.text-medium{font-family: "Red Hat Display", Arial, Helvetica, sans-serif;}
+
+.text-blue{color: var(--primaryBlue);}
+.text-required{color: red;}
+.text-justified{text-align: justify;}
+.text-muted{color: lightgray!important;}
+
+.link-main-custom{color: var(--textGrey);}
+.link-main-custom:hover,
+.link-main-blue:hover,
+.customer-care-links a:hover{
+    color: var(--primaryBlue);
+    cursor: pointer;
+}
+.link-main-custom.active{
+    font-family: "Red Hat Display" , Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.link-main-blue{color: var(--primaryBlue);}
+
+
+/* Input Styles */
+.form-aguora-outline{
+    border: 2px solid var(--primaryBlue);
+    background: transparent;
+}
+.form-group label{
+    font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+}
+
+/* Misc Styles */
+.ul-default{
+    list-style-type: none;
+    padding-left: 0;
+}
+.glass-box{
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.border-left-box,
+.border-left-box.active{
+ 
+}
+
+.border-left-box.active{color: var(--primaryBlue);}
+
+.border-left-box.inactive{
+    border-left: 2px solid var(--textGrey);
+}
+
+
+/* Footer */
+#footer-icons a img{
+    height: 45px;
+    width: auto;
+    margin-right: 10px;
+}
+#footer-details{
+    border-top: 2px solid var(--primaryBlue);
+    border-bottom: 2px solid var(--primaryBlue);
+}
+
+/* Media Queries */
+@media (min-width: 1000px) {
+    .navbar{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .navbar .nav-link::before{
+        content: "";
+        display: block;
+        width: 25px;
+        height: 5px;
+        background: transparent;
+        top: -15px;
+    }   
+    .navbar .nav-link.active::before{
+        background: var(--primaryBlue);
+    } 
+    .navbar .nav-item .btn{
+        margin-top: 5px;
+    } 
+    .h-banner{
+        font-size: 3em;
+        text-align: left;
+    }
+    .p-large{
+        font-size: 1.2em;
+    }
+}
+
+/* Cart Styles */
+.badge{
+    padding: 11px;
+    border-radius: 11px;
+}
+
+#cartCount{
+    font-size: 10px;
+    background: var(--primaryBlue);
+    color: white;
+    margin-left: -10px;
+    padding: 5px 5px;
+    top: -10px;
+    
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-main-cart:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-menu, .cart-container{
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: scroll;
+    max-width: 450px;
+    overflow-x: hidden;
+}
+
+.cart-container::-webkit-scrollbar{
+    width: 5px;
+}
+.cart-container::-webkit-scrollbar-track{
+    background: white;
+}
+.cart-container::-webkit-scrollbar-thumb{
+    background: rgb(210, 210, 210);
+}
+.cart-container::-webkit-scrollbar-thumb:hover{
+    background: rgb(210,210,210);
+}
+
+.cart-menu{
+    padding: 20px;
+    border: none;
+    box-shadow: 0 5px 5px 5px rgba(42, 42, 42, 0.147);
+}
+
+.cart-list{
+    padding-left: 0;
+}
+
+.cart-image{
+    height: 100px;
+}
+
+.inline-group {
+    max-width: 9rem;
+    padding: .5rem;
+}
+.cart-remove{
+    float: right;
+    color: var(--primaryBlue);
+}
+  
+.inline-group {
+text-align: right;
+}
+
+.quantity[type="number"]::-webkit-inner-spin-button,
+.quantity[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.btn-minus, .btn-plus{
+    font-size: 10px;
+    padding: 5px;
+}
+
+.quantity{
+    font-size: 10px;
+    text-align: center;
+    width: 30px;
+}
+
+/* Product Related Styles */
+
+.product-name{
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.product-price{
+    font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--primaryBlue);
+}

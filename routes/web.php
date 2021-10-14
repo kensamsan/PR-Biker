@@ -58,3 +58,22 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/billing', function () {
+    return view('checkout.billing');
+});
+
+Route::get('/shipping', function () {
+    return view('checkout.shipping');
+});
+
+Route::get('/payment', function () {
+    return view('checkout.payment');
+});
+
+Route::get('/cart', function () {
+    return view('checkout.cart');
+});
+
+Route::get('/productview', function () {
+    return view('product_view.productview');
+});
