@@ -82,13 +82,13 @@ tr:nth-child(even) {
 
                     <!-- menu links -->
                     <div class="menu-links d-flex flex-column pt-2 font-weight-bold">
-                        <a href="dashboard.html">Dashboard</a>
-                        <a class="mt-3 " href="users.html">Users</a>
-                        <span class="mt-3 " href="">Listings</span>
-                        <a class="pl-4 mt-2" href="products.html"><small>Products</small></a>
-                        <a class="pl-4 " href=""><small>Rentals</small></a>
+                    <a href="{{url('dashboard')}}">Dashboard</a>
+                        <a class="mt-3 " href="{{url('users')}}">Users</a>
+                        <span class="mt-3 ">Listings</span>
+                        <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
+                        <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
                         <span class="mt-3" href="">Reporters</span>
-                        <a class="pl-4 mt-2 " href="costumer.html"><small>Customers</small></a>
+                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Customers</small></a>
                     </div>
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
@@ -142,7 +142,7 @@ tr:nth-child(even) {
                           <td>Triban RC 100 Road Bike</td>
                           <td>PHP 2,500.00</td>
                           <td><div class="col-md-9 text-right">
-                            <button type="button" class="btn1"><a href="rental-details.html">VIEW</a></button>
+                            <button type="button" class="btn1"><a href="{{url('rental-details')}}">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
                         </div>
                         </td>

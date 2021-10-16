@@ -92,13 +92,13 @@ tr:nth-child(even) {
 
                     <!-- menu links -->
                     <div class="menu-links d-flex flex-column pt-2 font-weight-bold">
-                        <a href="dashboard.html">Dashboard</a>
-                        <a class="mt-3 " href="">Users</a>
-                        <span class="mt-3 " href="">Listings</span>
-                        <a class="pl-4 mt-2" href="products.html"><small>Products</small></a>
-                        <a class="pl-4 " href="rental.html"><small>Rentals</small></a>
+                    <a href="{{url('dashboard')}}">Dashboard</a>
+                        <a class="mt-3 " href="{{url('users')}}">Users</a>
+                        <span class="mt-3 ">Listings</span>
+                        <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
+                        <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
                         <span class="mt-3" href="">Reporters</span>
-                        <a class="pl-4 mt-2 " href="costumer.html"><small>Customers</small></a>
+                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Customers</small></a>
                     </div>
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
@@ -133,7 +133,7 @@ tr:nth-child(even) {
                 </nav>
 
                 <!-- Main Conent -->
-                <caption><h2 class="pt-3 pl-3" style="font-weight: 900;"> <span><a href="rental.html"><img src="Images/arrow-down-sign-to-navigate.png" style="width: 15px;"></a></span> Rental Details</h2></caption>
+                <caption><h2 class="pt-3 pl-3" style="font-weight: 900;"> <span><a href="{{url('rental')}}"><img src="Images/arrow-down-sign-to-navigate.png" style="width: 15px;"></a></span> Rental Details</h2></caption>
                 <p class="dashed"></p>
               
                 <!--  End Main Conent -->

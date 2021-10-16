@@ -77,3 +77,35 @@ Route::get('/cart', function () {
 Route::get('/productview', function () {
     return view('product_view.productview');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/costumer', function () {
+    return view('admin.costumer');
+});
+
+Route::get('/product-details', function () {
+    return view('admin.product-details');
+});
+
+Route::get('/products', function () {
+    return view('admin.products');
+});
+
+Route::get('/rental', function () {
+    return view('admin.rental');
+});
+
+Route::get('/rental-details', function () {
+    return view('admin.rental-details');
+});
+
+Route::get('/users', function () {
+    return view('admin.users');
+});
+
+Route::get('/user-details', function () {
+    return view('admin.user-details');
+});
