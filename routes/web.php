@@ -74,8 +74,8 @@ Route::get('/cart', function () {
     return view('checkout.cart');
 });
 
-Route::get('/productview', function () {
-    return view('product_view.productview');
+Route::get('/productpreview', function () {
+    return view('product_view.productpreview');
 });
 
 Route::get('/dashboard', function () {
