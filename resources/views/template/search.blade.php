@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/search.css">
 
-<nav class="navbar navbar-expand-lg bg-light lightnav">
+<nav class="navbar navbar-expand-lg lightnav border-bottom border-2">
     <div class="container-fluid">
         <div class="col-lg-3 col-sm-12">
             <img class="img-fluid" src="/images/navbarlogo.svg" id="white-logo">
@@ -14,7 +14,7 @@
                 <div class="input-group">
                     <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
                     <span class="input-group-text btn" id="basic-addon1">
-                        <i class="input-group-text bi bi-search"></i>
+                        <i class="bi bi-search"></i>
                     </span>
                 </div>
             </div>

@@ -35,7 +35,7 @@
                         Lucifer Morningstar
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -56,7 +56,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -77,7 +77,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -98,7 +98,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -120,7 +120,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -141,7 +141,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -162,7 +162,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -183,7 +183,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -205,7 +205,7 @@
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
 
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -224,7 +224,7 @@
                         Lucifer Morningstar
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -243,7 +243,7 @@
                         Lucifer Morningstar
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
@@ -262,7 +262,7 @@
                         Lucifer Morningstar
                         <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
                     </label>
-                    <img src="/images/bike.png" class="card-img-top" alt="bike">
+                    <img src="/images/bike1.png" class="card-img-top" alt="bike1">
                     <label class="mt-3 fs-5">PRODUCT NAME</label>
                     <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                 </div>
