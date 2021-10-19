@@ -15,11 +15,16 @@
         display: none;
     }
 
-    #btn-rent {
+    /*#btn-rent {
         margin-top: 2rem !important;
-    }
+    }*/
 }
+
+/* LG BREAKPOINT */
 @media(min-width: 992px) {
+    .w-lg-auto {
+        width: auto!important;
+    }
     .mb-lg-0 {
 		margin-bottom: 0!important;
 	}
@@ -90,38 +95,3 @@
 .lightnav {
     background-color: #fff!important;
 }
-/* .lightnav {
-    margin-top: 3.5rem;
-}
-
-#navlogolight {
-    width: 100%;
-}
-
-.search {
-    background-color: #EA5656;
-    border-radius: 25px;
-    border-color: #EA5656;
-    font-weight: bolder;
-    color: white;
-    display: block;
-    width: 100%;
-}
-
-.search:hover {
-    background-color: #c74343;
-    border-color: #c74343;
-    color: white;
-}
-
-.fa-map-marker {
-    position: absolute;
-    z-index: 99999;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
-
-.loc {
-    margin-top: auto;
-    margin-bottom: auto;
-} */
