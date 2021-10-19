@@ -1,47 +1,122 @@
+/* Media Queries */
 @media (max-width: 767px) {
-    .carousel-inner .carousel-item > div {
+    .carousel-inner .carousel-item>div {
         display: none;
     }
-    .carousel-inner .carousel-item > div:first-child {
+
+    .carousel-inner .carousel-item>div:first-child {
         display: block;
     }
-  }
-  
-  .carousel-inner .carousel-item.active,
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
     display: flex;
-  }
-  
-  /* medium and up screens */
-  @media (min-width: 768px) {
-    
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
-      transform: translateX(25%);
+        transform: translateX(25%);
     }
-    
-    .carousel-inner .carousel-item-start.active, 
+
+    .carousel-inner .carousel-item-start.active,
     .carousel-inner .carousel-item-prev {
-      transform: translateX(-25%);
+        transform: translateX(-25%);
     }
+}
+
+@media (min-width: 768px) {
+    .m-md {
+        margin-right: 2rem!important;
+    }
+}
+/* small screens */
+@media(max-width: 575.98px) {
+  .ms-sm {
+    margin-left: 0!important;
   }
-  
-  .carousel-inner .carousel-item-end,
-  .carousel-inner .carousel-item-start { 
-  transform: translateX(0);
+  .w-sm-80 {
+    width: 80%!important;
   }
+  .ps-sm {
+    margin-left: 0!important;
+  }
+}
+@media (min-width: 576px) {
+  .ms-sm{
+    margin-left: 2rem!important;
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
 .icon-color {
+    color: #EA5656;
+}
+
+.read {
+    color: #EA5656 !important;
+    text-decoration: none !important;
+}
+
+.read a {
+    color: #EA5656 !important;
+}
+
+.btn-custom-outline {
+    border-color: #EA5656 !important;
+    color: #EA5656 !important;
+}
+
+.custom-padding {
+  padding-right: 3rem!important;
+  padding-left: 3rem!important;
+}
+.custom-hr-color{
+  border: 1px solid #EA5656 ;
+}
+.lh-3 {
+  line-height: 90%!important;
+}
+.fa-clock, .fa-star{
   color: #EA5656;
 }
-.read{
-  color: #EA5656!important;
-  text-decoration: none!important;
+.fa-greater-than{
+  font-size: .9em!important;
 }
-.read a{
-  color: #EA5656!important;
-} 
-.product-description {
-  text-align: justify;
-  text-justify: inter-word;
+/* custom textarea */
+.w-60 {
+  width: 80%!important;
+}
+.ms-6{
+  margin-left: 5rem!important;
+}
+.remove-resize {
+  resize: none;
+}
+/* card listings */
+#user-photo {
+  width: 27px;
+  clip-path: circle();
+  margin-right: 4px;
+}
+#card-time {
+  margin-left: 2.2rem!important;
+  line-height: 0;
+}
+.card-course-foot{
+  background-color: #EA5656;
+  border-radius: 0px 0px 20px 20px;
+}
+.card-course{
+  padding: 0;
+  border-radius: 20px;
+  color: #27332C;
 }

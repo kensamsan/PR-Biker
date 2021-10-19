@@ -273,11 +273,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center p-3">
-                <button class="btn btn-view">View More</button>
-            </div>
-        </div>
     </div>
 </div>
 

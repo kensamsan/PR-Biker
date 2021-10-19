@@ -39,7 +39,7 @@
 @include('template.search')
 
 <main>
-    <div class="container-fluid">
+    <div class="container-fluid mb-">
     <div class="row my-5 px-5">
         <div class="col-lg-9" id="cart-col">   
             <h4 class="text-bold">CART ITEMS</h4>

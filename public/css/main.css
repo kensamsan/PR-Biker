@@ -24,6 +24,14 @@ body {
 .btn a:hover {
     color: #fff;
 }
+.btn-background {
+    background-color: #EA5656!important;
+}
+/* Text/Paragrph alignment */
+.paragraph-alignment {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 /* Footer */
 

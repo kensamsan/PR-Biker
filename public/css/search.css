@@ -2,9 +2,11 @@
     #btn-rent {
         margin-top: 2rem !important;
     }
-
     #white-logo {
         display: none;
+    }
+    .w-sm-100{
+        width: 100%!important;
     }
 }
 
@@ -17,15 +19,22 @@
         margin-top: 2rem !important;
     }
 }
+@media(min-width: 992px) {
+    .mb-lg-0 {
+		margin-bottom: 0!important;
+	}
+}
+/* @media (max-width: 576px) {
+    .w-sm-100{
+        width: 100%!important;
+    }
+} */
 
 #btn-rent a {
     color: #ffffff;
 }
 
-#btn-rent {
-    background-color: #EA5656;
-    width: 200px;
-}
+
 
 .icon-color {
     color: #EA5656;
@@ -81,3 +90,38 @@
 .lightnav {
     background-color: #fff!important;
 }
+/* .lightnav {
+    margin-top: 3.5rem;
+}
+
+#navlogolight {
+    width: 100%;
+}
+
+.search {
+    background-color: #EA5656;
+    border-radius: 25px;
+    border-color: #EA5656;
+    font-weight: bolder;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+.search:hover {
+    background-color: #c74343;
+    border-color: #c74343;
+    color: white;
+}
+
+.fa-map-marker {
+    position: absolute;
+    z-index: 99999;
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.loc {
+    margin-top: auto;
+    margin-bottom: auto;
+} */
