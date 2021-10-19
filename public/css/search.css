@@ -1,46 +1,6 @@
-@media (max-width: 575.98px) {
-    #btn-rent {
-        margin-top: 2rem !important;
-    }
-    #white-logo {
-        display: none;
-    }
-    .w-sm-100{
-        width: 100%!important;
-    }
-}
-
-@media (max-width: 991.98px) {
-    #white-logo {
-        display: none;
-    }
-
-    /*#btn-rent {
-        margin-top: 2rem !important;
-    }*/
-}
-
-/* LG BREAKPOINT */
-@media(min-width: 992px) {
-    .w-lg-auto {
-        width: auto!important;
-    }
-    .mb-lg-0 {
-		margin-bottom: 0!important;
-	}
-}
-/* @media (max-width: 576px) {
-    .w-sm-100{
-        width: 100%!important;
-    }
-} */
-
 #btn-rent a {
     color: #ffffff;
 }
-
-
-
 .icon-color {
     color: #EA5656;
 }

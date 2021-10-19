@@ -4,7 +4,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/home.css">
 <!--White navbar-->
-@include('template.search')
+
 <!-- Banner  -->
 
 <div id="banner">

@@ -118,7 +118,7 @@
             </div>
         </div>
     </nav>
-
+    @include('template.search')
     {{-- Main content --}}
     <div id="content">
         @yield ('content')
