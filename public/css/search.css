@@ -1,12 +1,15 @@
 @media (max-width: 575.98px) {
     #btn-rent {
-        margin-top: 2rem !important;
+        margin-top: 0.5rem !important;
     }
     #white-logo {
         display: none;
     }
     .w-sm-100{
         width: 100%!important;
+    }
+    #search-item {
+        margin-top: 2rem !important;
     }
 }
 
@@ -15,9 +18,16 @@
         display: none;
     }
 
-    /*#btn-rent {
-        margin-top: 2rem !important;
-    }*/
+    #search-item {
+        margin-top: 1rem !important;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    #search-item {
+        margin-top: 1rem !important;
+    }
 }
 
 /* LG BREAKPOINT */
@@ -29,11 +39,6 @@
 		margin-bottom: 0!important;
 	}
 }
-/* @media (max-width: 576px) {
-    .w-sm-100{
-        width: 100%!important;
-    }
-} */
 
 #btn-rent a {
     color: #ffffff;

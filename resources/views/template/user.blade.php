@@ -67,11 +67,6 @@
             </div>
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="{{url('messages')}}" class="nav-link fw-bold text-light"> <i class="bi bi-chat-text text-light"></i>
-                            Messages</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">

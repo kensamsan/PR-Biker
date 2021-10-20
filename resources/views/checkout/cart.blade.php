@@ -7,52 +7,21 @@
 <link rel="stylesheet" href="/css/store/main.css">
 <link rel="stylesheet" href="/css/store/normalize.css">
 
-
-
-
-<style>
-  .btn span.icon a{
-    background:tomato;
-    text-decoration: none;
-    padding-top: 5pt;
-    color: #fff;
-    float: left;
-    width: 100%;
-    height: 40px;
-  }
-
-  textarea {
-  width: 92%;
-  height: 100px;
-  margin-left: 15px;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  border: 2px solid rgb(197, 197, 197);
-  border-radius: 4px;
-  background-color: #ffffff;
-  font-size: 16px;
-  resize: none;
-}
-
-</style>
-<!--White navbar-->
-@include('template.search')
-
 <main>
     <div class="container-fluid mb-">
     <div class="row my-5 px-5">
         <div class="col-lg-9" id="cart-col">   
-            <h4 class="text-bold">CART ITEMS</h4>
+            <h2 class="fw-bold"><b>CART ITEMS</b></h4>
             <!-- Cart with items -->
             <table class="table table-cart">
                 <thead>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">PRODUCT</th>
+                        <th scope="col">PRODUCT DETAILS</th>
                         <th scope="col"></th>
                         <th scope="col">QUANTITY</th>
                         <th scope="col">PRICE</th>
-                        <th scope="col">QTY PRICE</th>
+                        <th scope="col">TOTAL</th>
                     </tr>
                 </thead>
                 <tbody>

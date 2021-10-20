@@ -1,11 +1,9 @@
 @extends('template.master')
 
-
 @section('content')
-<link rel="stylesheet" href="/css/home.css">
-<!--White navbar-->
 
-<!-- Banner  -->
+<link rel="stylesheet" href="/css/home.css">
+
 
 <div id="banner">
     <div class="container-fluid">

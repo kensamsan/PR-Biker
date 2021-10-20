@@ -31,7 +31,7 @@
         clip-path: circle();
     }
     .dropdown-menu {
-        background-color: #212529;
+        background-color: #212529 !important;
         border-radius: 27px 0px 27px 27px;
     }
     .navbar a{
