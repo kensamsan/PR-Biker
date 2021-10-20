@@ -16,8 +16,8 @@
     </div>
 </div>
 <div class="row ms-4">
-    <div class="recommend col-lg-6 pt-3">
-        <h1 class="fst-italic fw-bolder">Recommended for you:</h1>
+    <div class="recommend col-lg-6 pt-5">
+        <h1 class="fst-italic fw-bolder"><b>Recommended for you:</b></h1>
     </div>
 </div>
 
