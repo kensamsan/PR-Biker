@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="/css/store/store.css">
 <link rel="stylesheet" href="/css/store/normalize.css">
 
-
 @section('content')
 
 <main>
