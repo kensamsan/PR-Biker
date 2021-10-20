@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-lg ps-lg-4 border-bottom border-2">
         <div class="container-fluid pe-0 pe-lg-3 ps-4 ps-lg-3">
             <div class="row align-items-center w-100">
-                <div class="col-lg-3">
+                <div class="col-lg-3 text-lg-start text-center">
                     <img src="/images/navbarlogo.svg" alt="" class="img-fluid">
                 </div>
                 <div id="search-item" class="col-lg-4 mb-3 mb-lg-0">

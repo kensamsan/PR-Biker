@@ -72,7 +72,7 @@
                         <a href="{{url('')}}" class="nav-link active" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('register')}}" class="nav-link">Marketplace</a>
+                        <a href="{{url('marketplace')}}" class="nav-link">Marketplace</a>
                 </ul>
             </div>
 

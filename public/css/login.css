@@ -4,7 +4,6 @@
     font-weight: 600;
 }
 
-
 /* login form */
 @media (max-width: 991.98px) {
     #logo {
@@ -61,17 +60,12 @@ input[type=password] {
 
 }
 
-.btn {
-    color: #ffffff;
-    padding: 0px 50px;
-}
-
-#btn-login {
+.btn-login {
     background: #EA5656;
+    color: #ffffff;
 }
 
 .btn a {
-    color: #fff;
     text-decoration: none;
 }
 

@@ -58,6 +58,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/marketplace', function () {
+    return view('marketplace');
+});
+
 Route::get('/billing', function () {
     return view('checkout.billing');
 });

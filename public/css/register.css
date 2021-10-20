@@ -38,17 +38,13 @@
 
 .btn-register {
     color: #fff;
-    padding: 5px;
-    border-radius: 12px;
-}
-
-#btn-reg {
+    border-radius: 20px;
     background-color: #EA5656;
 }
 
-.bi{
+.icons-register{
     color: #EA5656;
-}
+} 
 
 #terms {
     color: #EA5656;
