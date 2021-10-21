@@ -150,10 +150,11 @@ tr:nth-child(even) {
                           <td>1002</td>
                           <td>Mark Joseph</td>
                           <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-end">
+                          <td>
+                            <div class="col-md-9 text-end">
                             <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        
+                            </div>
                         </td>
                         </tr>
                         <tr>
