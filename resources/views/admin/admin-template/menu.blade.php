@@ -1,7 +1,5 @@
 <style>
-    .menu-links a{
-        text-decoration: none;
-    }
+    .menu-links a{text-decoration: none;}
 </style>
 
 <nav class="side-menu d-flex flex-column px-0 mx-0">

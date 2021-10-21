@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title>Dashboard</title>
     <link rel="icon" href="Images/Bikers_favicon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -27,8 +25,8 @@
         integrity="sha512-BqNYFBAzGfZDnIWSAEGZSD/QFKeVxms2dIBPfw11gZubWwKUjEgmFUtUls8vZ6xTRZN/jaXGHD/ZaxD9+fDo0A=="
         crossorigin="anonymous"></script>
 </head>
-
-<nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
         <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">
@@ -47,4 +45,6 @@
                 </div>
             </li>
         </ul>
-</nav>
+    </nav>
+</body>
+</html>

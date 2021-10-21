@@ -1,5 +1,3 @@
-{{-- <link rel="stylesheet" href="/css/admin/users.css"> --}}
-
 <style>
     .table-holder {
         background-color: white;
