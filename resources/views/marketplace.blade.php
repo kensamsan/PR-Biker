@@ -28,7 +28,7 @@
                         <div class="row">
                             @for ($j = 0; $j < 3; $j++)
                                 <div class="col-lg-4 col-md-4 col-12 pt-4">
-                                    <div class="card card-course">
+                                    <div class="card card-course images">
                                         <div class="card-body">
                                             <label>
                                                 <img src="/images/user1.png" alt="user photo" id="user-photo">
@@ -46,6 +46,10 @@
                                             </button>
                                         </div>
                                     </div>
+                                </div>
+                                <div id="image-viewer">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="full-image">
                                 </div>
                             @endfor
                         </div>
@@ -122,4 +126,5 @@
             </div>
         </div>
     </div>
+    <script src="/js/modal.js"></script>
 @endsection

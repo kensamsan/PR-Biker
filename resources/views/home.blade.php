@@ -43,7 +43,7 @@
                 <div id="image-viewer">
                     <span class="close">&times;</span>
                     <img class="modal-content" id="full-image">
-                  </div>
+                </div>
                 @endfor     
             </div>
             @endfor

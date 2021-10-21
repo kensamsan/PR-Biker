@@ -55,6 +55,7 @@
         <div class="d-flex flex-row px-0 mx-0">
             <div class="col-lg-2 px-0">
                 <!-- Side Menu -->
+<<<<<<< HEAD
                 <nav class="side-menu d-flex flex-column px-0 mx-0">
                     <div class="logo">
                         <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo"
@@ -76,6 +77,9 @@
                         <small>© 2021 Bikers</small>
                     </div>
                 </nav>
+=======
+                @include('admin.admin-template.menu')
+>>>>>>> 1d9c3e19cd6b9eaa02da47359757587e9c6e0ce4
             </div>
 
             <!-- Navbar -->

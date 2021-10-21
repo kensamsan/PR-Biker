@@ -78,7 +78,7 @@
         <div class="d-flex flex-row px-0 mx-0">
             <div class="col-lg-2 px-0">
                 <!-- Side Menu -->
-                <nav class="side-menu d-flex flex-column px-0 mx-0">
+                {{-- <nav class="side-menu d-flex flex-column px-0 mx-0">
                     <div class="logo">
                         <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo"
                             style="width: 75%;">
@@ -98,7 +98,8 @@
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
                     </div>
-                </nav>
+                </nav> --}}
+                @include('admin.admin-template.menu')
             </div>
 
             <!-- Navbar -->
@@ -130,6 +131,7 @@
                     <h2 class="pt-3 pl-3" style="font-weight: 900;">Users</h2>
                 </caption>
                 <p class="dashed"></p>
+<<<<<<< HEAD
                 <!-- Main Conent -->
                 <div class="card">
                     <div class="card-body">
@@ -197,6 +199,67 @@
             <!--  End Main Conent -->
         </div>
     </div>
+=======
+                    <table>
+                        <h4 style="font-weight: 900; color: #707070;">User List</h4>
+                        <tr>
+                          <th>ID</th>
+                          <th>NAME</th>
+                          <th>CONTACT</th>
+                          <th>ACTION</th>
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>1001</td>
+                          <td>Mark Joseph</td>
+                          <td>sample_email@email.com</td>
+                          <td><div class="col-md-9 text-end">
+                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
+                            <button type="button" class="btn2"><a href="">DELETE</a></button>
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>1002</td>
+                          <td>Mark Joseph</td>
+                          <td>sample_email@email.com</td>
+                          <td><div class="col-md-9 text-end">
+                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
+                            <button type="button" class="btn2"><a href="">DELETE</a></button>
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>1003</td>
+                          <td>Mark Joseph</td>
+                          <td>sample_email@email.com</td>
+                          <td><div class="col-md-9 text-end">
+                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
+                            <button type="button" class="btn2"><a href="">DELETE</a></button>
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>1004</td>
+                          <td>Mark Joseph</td>
+                          <td>sample_email@email.com</td>
+                          <td><div class="col-md-9 text-end">
+                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
+                            <button type="button" class="btn2"><a href="">DELETE</a></button>
+                        
+                        </td>
+                        </tr>
+                       
+                      </table>
+                <!--  End Main Conent -->
+            </div>
+        </div>
+            
+
+
+
+>>>>>>> 1d9c3e19cd6b9eaa02da47359757587e9c6e0ce4
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -241,7 +241,7 @@
                             <div class="row">
                                 @for ($j = 0; $j < 4; $j++)
                                     <div class="col-lg-3 col-md-6 col-12 pt-4">
-                                        <div class="card card-course">
+                                        <div class="card card-course images">
                                             <div class="card-body">
                                                 <label>
                                                     <img src="/images/user1.png" alt="user photo" id="user-photo">
@@ -260,6 +260,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="image-viewer">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="full-image">
+                                    </div>
                                 @endfor
                             </div>
                         @endfor
@@ -271,4 +275,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/carousel.js"></script>
+    <script src="/js/modal.js"></script>
 @endsection

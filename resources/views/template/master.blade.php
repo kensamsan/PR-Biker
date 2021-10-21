@@ -59,7 +59,7 @@
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand"><img class="me-4" src="/images/navbarwhitebike.svg" alt="white logo">|</a>
+            <a class="navbar-brand" href="{{url('')}}"><img class="me-4" src="/images/navbarwhitebike.svg" alt="white logo">|</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
 
