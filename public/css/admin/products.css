@@ -15,10 +15,6 @@ body {
     min-height: 100vh;
 }
 
-hr{
-    border: 1px solid white!important;
-}
-
 .side-menu > div > *{
     color: #fff; 
     padding-left: .5rem;

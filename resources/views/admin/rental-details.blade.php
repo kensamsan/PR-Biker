@@ -89,30 +89,7 @@ tr:nth-child(even) {
 
             <!-- Navbar -->
             <div class="col-lg px-0">
-                <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <i class="fas fa-list-ul h3"></i>
-                        <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">
-                                    <img class="notif-bell" src="Images/bell.png" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img class="admin-photo img-fluid pr-2" src="Images/account.png" alt="admin photo">
-                                    <span>Admin</span>
-                                </a>
-                                <div class="dropdown-menu w-10" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Logout</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
+                @include('admin.admin-template.main')
                 <!-- Main Conent -->
                 <caption><h2 class="pt-3 pl-3" style="font-weight: 900;"> <span><a href="{{url('rental')}}"><img src="Images/arrow-down-sign-to-navigate.png" style="width: 15px;"></a></span> Rental Details</h2></caption>
                 <p class="dashed"></p>

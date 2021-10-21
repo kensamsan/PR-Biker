@@ -84,58 +84,12 @@ tr:nth-child(even) {
         <div class="d-flex flex-row px-0 mx-0">
             <div class="col-lg-2 px-0">
                 <!-- Side Menu -->
-<<<<<<< HEAD
-                <nav class="side-menu d-flex flex-column px-0 mx-0">
-                    <div class="logo">
-                        <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo" style="width: 75%;">
-                    </div>
-                    <hr class="mb-2 mx-0">
-
-                    <!-- menu links -->
-                    <div class="menu-links d-flex flex-column pt-2 font-weight-bold">
-                    <a href="{{url('dashboard')}}">Dashboard</a>
-                        <a class="mt-3 " href="{{url('users')}}">Users</a>
-                        <span class="mt-3 ">Listings</span>
-                        <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
-                        <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
-                        <span class="mt-3" href="">Reports</span>
-                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Costumers</small></a>
-                    </div>
-                    <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
-                        <small>© 2021 Bikers</small>
-                    </div>
-                </nav>
-=======
                 @include('admin.admin-template.menu')
->>>>>>> 1d9c3e19cd6b9eaa02da47359757587e9c6e0ce4
             </div>
 
             <!-- Navbar -->
             <div class="col-lg px-0">
-                <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <i class="fas fa-list-ul h3"></i>
-                        <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">
-                                    <img class="notif-bell" src="Images/bell.png" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img class="admin-photo img-fluid pr-2" src="Images/account.png" alt="admin photo">
-                                    <span>Admin</span>
-                                </a>
-                                <div class="dropdown-menu w-10" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Logout</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
+                @include('admin.admin-template.main')
                 <!-- Main Conent -->
                 <caption><h2 class="pt-3 pl-3" style="font-weight: 900;"><span><a href="{{url('products')}}" ><img src="Images/arrow-down-sign-to-navigate.png"  style="width: 15px;"></a></span> Product Details</h2></caption>
                 <p class="dashed"></p>
