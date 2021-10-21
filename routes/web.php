@@ -113,3 +113,6 @@ Route::get('/users', function () {
 Route::get('/user-details', function () {
     return view('admin.user-details');
 });
+Route::get('/add-product', function () {
+    return view('admin.add-product');
+});
