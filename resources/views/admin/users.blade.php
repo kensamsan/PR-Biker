@@ -13,9 +13,10 @@
         color: #FF0000;
     }
 
-    .btn1,.btn2 {
+    .btn1,
+    .btn2 {
         border: none;
-        background-color:transparent;
+        background-color: transparent;
     }
 
 </style>
@@ -53,35 +54,34 @@
                             <td>Sample Contact</td>
                             <td>
                                 <div class="col-md-9 text-right">
-                                    <button type="button" class="btn1"><a
-                                            href="product-details.html">VIEW</a></button>
+                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
                                     <button type="button" class="btn2"><a href="">DELETE</a></button>
                                 </div>
                             </td>
+                        </tr>
         </div>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Sample Contact</td>
-            <td>
-                <div class="col-md-9 text-right">
-                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
-                    <button type="button" class="btn2"><a href="">DELETE</a></button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>Sample Contact</td>
-            <td>
-                <div class="col-md-9 text-right">
-                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
-                    <button type="button" class="btn2"><a href="">DELETE</a></button>
-                </div>
-            </td>
-        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Sample Contact</td>
+                            <td>
+                                <div class="col-md-9 text-right">
+                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
+                                    <button type="button" class="btn2"><a href="">DELETE</a></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry the Bird</td>
+                            <td>Sample Contact</td>
+                            <td>
+                                <div class="col-md-9 text-right">
+                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
+                                    <button type="button" class="btn2"><a href="">DELETE</a></button>
+                                </div>
+                            </td>
+                        </tr>
         </tbody>
         </table>
         </section>
