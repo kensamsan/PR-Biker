@@ -74,7 +74,7 @@ tr:nth-child(even) {
         <div class="d-flex flex-row px-0 mx-0">
             <div class="col-lg-2 px-0">
                 <!-- Side Menu -->
-                <nav class="side-menu d-flex flex-column px-0 mx-0">
+                {{-- <nav class="side-menu d-flex flex-column px-0 mx-0">
                     <div class="logo">
                         <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo" style="width: 75%;">
                     </div>
@@ -93,7 +93,8 @@ tr:nth-child(even) {
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
                     </div>
-                </nav>
+                </nav> --}}
+                @include('admin.admin-template.menu')
             </div>
 
             <!-- Navbar -->
@@ -125,8 +126,6 @@ tr:nth-child(even) {
                 <!-- Main Conent -->
                 <caption><h2 class="pt-3 pl-3" style="font-weight: 900;">Users</h2></caption>
                 <p class="dashed"></p>
-                <div class="card">
-                  <div class="card-body">
                     <table>
                         <h4 style="font-weight: 900; color: #707070;">User List</h4>
                         <tr>
@@ -134,55 +133,54 @@ tr:nth-child(even) {
                           <th>NAME</th>
                           <th>CONTACT</th>
                           <th>ACTION</th>
-                        </div>
+                        
                         </td>
                         </tr>
                         <tr>
                           <td>1001</td>
                           <td>Mark Joseph</td>
                           <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
+                          <td><div class="col-md-9 text-end">
                             <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                        
                         </td>
                         </tr>
                         <tr>
                           <td>1002</td>
                           <td>Mark Joseph</td>
                           <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
+                          <td><div class="col-md-9 text-end">
                             <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                        
                         </td>
                         </tr>
                         <tr>
                           <td>1003</td>
                           <td>Mark Joseph</td>
                           <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
+                          <td><div class="col-md-9 text-end">
                             <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                        
                         </td>
                         </tr>
                         <tr>
                           <td>1004</td>
                           <td>Mark Joseph</td>
                           <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
+                          <td><div class="col-md-9 text-end">
                             <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
                             <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                        
                         </td>
                         </tr>
                        
                       </table>
-                  </div>
-                </div>
                 <!--  End Main Conent -->
             </div>
+        </div>
             
 
 
