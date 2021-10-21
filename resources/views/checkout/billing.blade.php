@@ -1,10 +1,10 @@
 @extends('template.master')
 
+@section('content')
+
 <link rel="stylesheet" href="/css/store/checkout.css">
 <link rel="stylesheet" href="/css/store/store.css">
 <link rel="stylesheet" href="/css/store/normalize.css">
-
-@section('content')
 
 <main>
         <div class="container-fluid">
@@ -102,6 +102,4 @@
             </form>
         </div>
     </main>
-
-
 @endsection

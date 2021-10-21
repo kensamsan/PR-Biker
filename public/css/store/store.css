@@ -4,7 +4,7 @@
 
 /* Color Settings */
 :root {
-    --primaryRed: #EA5656;
+    --primaryBlue: #EA5656;
 }
   
 /* Defaulting */
@@ -17,8 +17,8 @@ body{
 
 /* Button Styles*/
 .btn-aguora-outline{
-    color: var(--primaryRed);
-    border: 2px solid var(--primaryRed);
+    color: var(--primaryBlue);
+    border: 2px solid var(--primaryBlue);
     background-color: transparent;
     font-weight: bold;
     padding-left: 20px;
@@ -55,17 +55,16 @@ body{
 }
 .text-medium{font-family: "Red Hat Display", Arial, Helvetica, sans-serif;}
 
-.text-blue{color: var(--primaryRed);}
+.text-blue{color: var(--primaryBlue);}
 .text-required{color: red;}
 .text-justified{text-align: justify;}
 .text-muted{color: lightgray!important;}
 
-.link-main-custom{color: var(--primaryRed);}
-
+.link-main-custom{color: var(--primaryBlue);}
 /* .link-main-custom:hover,
 .link-main-blue:hover,
 .customer-care-links a:hover{
-    color: var(--primaryRed);
+    color: var(--primaryBlue);
     cursor: pointer;
 }
 .link-main-custom.active{
@@ -74,12 +73,12 @@ body{
     
 } */
 
-.link-main-blue{color: var(--primaryRed);}
+.link-main-blue{color: var(--primaryBlue);}
 
 
 /* Input Styles */
 .form-aguora-outline{
-    border: 2px solid var(--primaryRed);
+    border: 2px solid var(--primaryBlue);
     background: transparent;
 }
 .form-group label{
@@ -100,10 +99,10 @@ body{
  
 }
 
-.border-left-box.active{color: var(--primaryRed);}
+.border-left-box.active{color: var(--primaryBlue);}
 
 .border-left-box.inactive{
-    border-left: 2px solid var(--primaryRed);
+    border-left: 2px solid var(--primaryBlue);
 }
 
 /* Cart Styles */
@@ -114,7 +113,7 @@ body{
 
 #cartCount{
     font-size: 10px;
-    background: var(--primaryRed);
+    background: var(--primaryBlue);
     color: white;
     margin-left: -10px;
     padding: 5px 5px;
@@ -122,22 +121,13 @@ body{
     
 }
 
-.dropdown-toggle::after {
-    display: none;
-}
 
 .btn-main-cart:focus{
     outline: none;
     box-shadow: none;
 }
 
-.dropdown-menu, .cart-container{
-    min-height: 400px;
-    max-height: 600px;
-    overflow-y: scroll;
-    max-width: 450px;
-    overflow-x: hidden;
-}
+
 
 .cart-container::-webkit-scrollbar{
     width: 5px;
@@ -172,7 +162,7 @@ body{
 }
 .cart-remove{
     float: right;
-    color: var(--primaryRed);
+    color: var(--primaryBlue);
 }
   
 .inline-group {

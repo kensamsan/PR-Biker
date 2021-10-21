@@ -1,5 +1,3 @@
-{{-- <link rel="stylesheet" href="/css/admin/users.css"> --}}
-
 <style>
     .table-holder {
         background-color: white;
@@ -54,34 +52,35 @@
                             <td>Sample Contact</td>
                             <td>
                                 <div class="col-md-9 text-right">
-                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
+                                    <button type="button" class="btn1"><a
+                                            href="product-details.html">VIEW</a></button>
                                     <button type="button" class="btn2"><a href="">DELETE</a></button>
                                 </div>
                             </td>
                         </tr>
         </div>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Sample Contact</td>
-                            <td>
-                                <div class="col-md-9 text-right">
-                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
-                                    <button type="button" class="btn2"><a href="">DELETE</a></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry the Bird</td>
-                            <td>Sample Contact</td>
-                            <td>
-                                <div class="col-md-9 text-right">
-                                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
-                                    <button type="button" class="btn2"><a href="">DELETE</a></button>
-                                </div>
-                            </td>
-                        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Sample Contact</td>
+            <td>
+                <div class="col-md-9 text-right">
+                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
+                    <button type="button" class="btn2"><a href="">DELETE</a></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry the Bird</td>
+            <td>Sample Contact</td>
+            <td>
+                <div class="col-md-9 text-right">
+                    <button type="button" class="btn1"><a href="product-details.html">VIEW</a></button>
+                    <button type="button" class="btn2"><a href="">DELETE</a></button>
+                </div>
+            </td>
+        </tr>
         </tbody>
         </table>
         </section>
