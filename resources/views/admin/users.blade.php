@@ -3,7 +3,7 @@
 
 <head>
     <title>Users</title>
-    <link rel="icon" href="Images/navbarwhitebike.svg">
+    <link rel="icon" href="Images/Bikers_favicon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +11,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -87,8 +88,8 @@ tr:nth-child(even) {
                         <span class="mt-3 ">Listings</span>
                         <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
                         <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
-                        <span class="mt-3" href="">Reporters</span>
-                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Customers</small></a>
+                        <span class="mt-3" href="">Reports</span>
+                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Costumers</small></a>
                     </div>
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>

@@ -3,7 +3,7 @@
 
 <head>
     <title>Product Details</title>
-    <link rel="icon" href="Images/navbarwhitebike.svg">
+    <link rel="icon" href="Images/Bikers_favicon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

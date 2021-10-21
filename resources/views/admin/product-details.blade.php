@@ -97,8 +97,8 @@ tr:nth-child(even) {
                         <span class="mt-3 ">Listings</span>
                         <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
                         <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
-                        <span class="mt-3" href="">Reporters</span>
-                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Customers</small></a>
+                        <span class="mt-3" href="">Reports</span>
+                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Costumers</small></a>
                     </div>
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
