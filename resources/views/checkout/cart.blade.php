@@ -76,17 +76,6 @@
             </div> -->
         </div>
         <div class="col-lg-3 cart-info">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="text-bold">Apply Coupon</h4>
-                    <div class="input-group mt-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button">Button</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="card mt-3">
                 <div class="card-body">
                     <h4 class="text-bold mb-3">Cart Total</h4>

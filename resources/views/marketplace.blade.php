@@ -52,8 +52,8 @@
                     @endfor
                 </div>
             </div>
-            <div class="col-lg-3 mt-5 ms-5">
-                <h1>Feature Products</h1>
+            <div class="col-lg-3 mt-5 ms-lg-5 mx-auto">
+                <h1 class="text-lg-start text-center">Feature Products</h1>
                 <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">

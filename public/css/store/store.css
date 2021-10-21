@@ -4,9 +4,7 @@
 
 /* Color Settings */
 :root {
-    --primaryBlue: #EA5656;
-    --secondaryBlue: #EA5656;
-    --textGrey: #EA5656;
+    --primaryRed: #EA5656;
 }
   
 /* Defaulting */
@@ -19,8 +17,8 @@ body{
 
 /* Button Styles*/
 .btn-aguora-outline{
-    color: var(--primaryBlue);
-    border: 2px solid var(--primaryBlue);
+    color: var(--primaryRed);
+    border: 2px solid var(--primaryRed);
     background-color: transparent;
     font-weight: bold;
     padding-left: 20px;
@@ -57,16 +55,17 @@ body{
 }
 .text-medium{font-family: "Red Hat Display", Arial, Helvetica, sans-serif;}
 
-.text-blue{color: var(--primaryBlue);}
+.text-blue{color: var(--primaryRed);}
 .text-required{color: red;}
 .text-justified{text-align: justify;}
 .text-muted{color: lightgray!important;}
 
-.link-main-custom{color: var(--textGrey);}
+.link-main-custom{color: var(--primaryRed);}
+
 /* .link-main-custom:hover,
 .link-main-blue:hover,
 .customer-care-links a:hover{
-    color: var(--primaryBlue);
+    color: var(--primaryRed);
     cursor: pointer;
 }
 .link-main-custom.active{
@@ -75,12 +74,12 @@ body{
     
 } */
 
-.link-main-blue{color: var(--primaryBlue);}
+.link-main-blue{color: var(--primaryRed);}
 
 
 /* Input Styles */
 .form-aguora-outline{
-    border: 2px solid var(--primaryBlue);
+    border: 2px solid var(--primaryRed);
     background: transparent;
 }
 .form-group label{
@@ -101,10 +100,10 @@ body{
  
 }
 
-.border-left-box.active{color: var(--primaryBlue);}
+.border-left-box.active{color: var(--primaryRed);}
 
 .border-left-box.inactive{
-    border-left: 2px solid var(--textGrey);
+    border-left: 2px solid var(--primaryRed);
 }
 
 /* Cart Styles */
@@ -115,7 +114,7 @@ body{
 
 #cartCount{
     font-size: 10px;
-    background: var(--primaryBlue);
+    background: var(--primaryRed);
     color: white;
     margin-left: -10px;
     padding: 5px 5px;
@@ -173,7 +172,7 @@ body{
 }
 .cart-remove{
     float: right;
-    color: var(--primaryBlue);
+    color: var(--primaryRed);
 }
   
 .inline-group {
