@@ -11,63 +11,66 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <style>
+    /* .card {
+        border-radius: 1vh;
+        width: 69rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    } */
 
-.card{
-    margin-left: 10pt;
-    border-radius: 1vh;
-    width: 69rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+    table tr th {
+        font-family: 'Poppins', sans-serif;
+        color: #707070;
+        font-weight: 900;
+        text-align: center;
+        border: solid 1px;
+        border-left: hidden;
+        border-right: hidden;
 
-table tr th{
-    font-family: 'Poppins', sans-serif;
-    color: #707070;
-    font-weight: 900;
-    text-align: center;
-    border: solid 1px;
-    border-left: hidden;
-    border-right: hidden;
-    
-}
+    }
 
-td, th {
-  border: 1px solid #f1f1f1;
-  color: #707070;
-  text-align: left;
-  padding: 4px;
-  text-align: center;
-}
+    td,
+    th {
+        border: 1px solid #f1f1f1;
+        color: #707070;
+        text-align: left;
+        padding: 4px;
+        text-align: center;
+    }
 
-tr:nth-child(even) {
-  background-color: #f3f3f3;
-}
+    tr:nth-child(even) {
+        background-color: #f3f3f3;
+    }
 
-.btn1 a{
-    color: #0AA500;
-}
-.btn2 a{
-    color: #FF0000;
-}
-.btn1,.btn2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight:600;
-    background-color: transparent;
-    border: none;
-}
+    .btn1 a {
+        color: #0AA500;
+    }
+
+    .btn2 a {
+        color: #FF0000;
+    }
+
+    .btn1,
+    .btn2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: transparent;
+        border: none;
+    }
+
 </style>
 
 <body>
@@ -77,19 +80,20 @@ tr:nth-child(even) {
                 <!-- Side Menu -->
                 <nav class="side-menu d-flex flex-column px-0 mx-0">
                     <div class="logo">
-                        <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo" style="width: 75%;">
+                        <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo"
+                            style="width: 75%;">
                     </div>
                     <hr class="mb-2 mx-0">
 
                     <!-- menu links -->
                     <div class="menu-links d-flex flex-column pt-2 font-weight-bold">
-                    <a href="{{url('dashboard')}}">Dashboard</a>
-                        <a class="mt-3 " href="{{url('users')}}">Users</a>
+                        <a href="{{ url('dashboard') }}">Dashboard</a>
+                        <a class="mt-3 " href="{{ url('users') }}">Users</a>
                         <span class="mt-3 ">Listings</span>
-                        <a class="pl-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
-                        <a class="pl-4 " href="{{url('rental')}}"><small>Rentals</small></a>
+                        <a class="pl-4 mt-2" href="{{ url('products') }}"><small>Products</small></a>
+                        <a class="pl-4 " href="{{ url('rental') }}"><small>Rentals</small></a>
                         <span class="mt-3" href="">Reports</span>
-                        <a class="pl-4 mt-2 " href="{{url('costumer')}}"><small>Costumers</small></a>
+                        <a class="pl-4 mt-2 " href="{{ url('costumer') }}"><small>Costumers</small></a>
                     </div>
                     <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
                         <small>© 2021 Bikers</small>
@@ -122,72 +126,77 @@ tr:nth-child(even) {
                         </ul>
                     </div>
                 </nav>
-
-                <!-- Main Conent -->
-                <caption><h2 class="pt-3 pl-3" style="font-weight: 900;">Users</h2></caption>
+                <caption>
+                    <h2 class="pt-3 pl-3" style="font-weight: 900;">Users</h2>
+                </caption>
                 <p class="dashed"></p>
+                <!-- Main Conent -->
                 <div class="card">
-                  <div class="card-body">
-                    <table>
-                        <h4 style="font-weight: 900; color: #707070;">User List</h4>
-                        <tr>
-                          <th>ID</th>
-                          <th>NAME</th>
-                          <th>CONTACT</th>
-                          <th>ACTION</th>
-                        </div>
+                    <div class="card-body">
+                        <table>
+                            <h4 style="font-weight: 900; color: #707070;">User List</h4>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>CONTACT</th>
+                                <th>ACTION</th>
+                    </div>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>1001</td>
+                        <td>Mark Joseph</td>
+                        <td>sample_email@email.com</td>
+                        <td>
+                            <div class="col-md-9 text-right">
+                                <button type="button" class="btn1"><a
+                                        href="user-details.html">VIEW</a></button>
+                                <button type="button" class="btn2"><a href="">DELETE</a></button>
+                            </div>
                         </td>
-                        </tr>
-                        <tr>
-                          <td>1001</td>
-                          <td>Mark Joseph</td>
-                          <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
-                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
-                            <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Mark Joseph</td>
+                        <td>sample_email@email.com</td>
+                        <td>
+                            <div class="col-md-9 text-right">
+                                <button type="button" class="btn1"><a
+                                        href="user-details.html">VIEW</a></button>
+                                <button type="button" class="btn2"><a href="">DELETE</a></button>
+                            </div>
                         </td>
-                        </tr>
-                        <tr>
-                          <td>1002</td>
-                          <td>Mark Joseph</td>
-                          <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
-                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
-                            <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>Mark Joseph</td>
+                        <td>sample_email@email.com</td>
+                        <td>
+                            <div class="col-md-9 text-right">
+                                <button type="button" class="btn1"><a
+                                        href="user-details.html">VIEW</a></button>
+                                <button type="button" class="btn2"><a href="">DELETE</a></button>
+                            </div>
                         </td>
-                        </tr>
-                        <tr>
-                          <td>1003</td>
-                          <td>Mark Joseph</td>
-                          <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
-                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
-                            <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
+                    </tr>
+                    <tr>
+                        <td>1004</td>
+                        <td>Mark Joseph</td>
+                        <td>sample_email@email.com</td>
+                        <td>
+                            <div class="col-md-9 text-right">
+                                <button type="button" class="btn1"><a
+                                        href="user-details.html">VIEW</a></button>
+                                <button type="button" class="btn2"><a href="">DELETE</a></button>
+                            </div>
                         </td>
-                        </tr>
-                        <tr>
-                          <td>1004</td>
-                          <td>Mark Joseph</td>
-                          <td>sample_email@email.com</td>
-                          <td><div class="col-md-9 text-right">
-                            <button type="button" class="btn1"><a href="user-details.html">VIEW</a></button>
-                            <button type="button" class="btn2"><a href="">DELETE</a></button>
-                        </div>
-                        </td>
-                        </tr>
-                       
-                      </table>
-                  </div>
+                    </tr>
+                    </table>
                 </div>
-                <!--  End Main Conent -->
             </div>
-            
-
-
-
+            <!--  End Main Conent -->
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
