@@ -24,27 +24,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"
         integrity="sha512-BqNYFBAzGfZDnIWSAEGZSD/QFKeVxms2dIBPfw11gZubWwKUjEgmFUtUls8vZ6xTRZN/jaXGHD/ZaxD9+fDo0A=="
         crossorigin="anonymous"></script>
+        <title>Bikers @yield('title')</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
-        <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <img class="notif-bell" src="Images/bell.png" alt="">
-                </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="admin-photo img-fluid pr-2" src="Images/account.png" alt="admin photo">
-                    <span>Admin</span>
-                </a>
-                <div class="dropdown-menu w-10" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+    
+    <div class="container-fluid p-0">
+        <div class="d-flex flex-row px-0 mx-0">
+            <div class="col-lg-2 px-0">
+                <!-- Side Menu -->
+                <style>
+                    .menu-links a{text-decoration: none;}
+                </style>
+                
+                <nav class="side-menu d-flex flex-column px-0 mx-0">
+                    <div class="logo">
+                        <img class="p-2 img-fluid mx-auto mt-2 d-block " src="images/Group 29.png" alt="biker's logo" style="width: 75%;">
+                    </div>
+                    <hr class="mb-2 mx-0">
+                
+                    <!-- menu links -->
+                    <div class="menu-links d-flex flex-column pt-2">
+                    <a href="{{url('dashboard')}}"><b>Dashboard</b></a>
+                        <a class="mt-3 " href="{{url('users')}}"><b>Users</b></a>
+                        <span class="mt-3"><b>Listings</b></span>
+                        <a class="ps-4 mt-2" href="{{url('products')}}"><small>Products</small></a>
+                        <a class="ps-4 " href="{{url('rental')}}"><small>Rentals</small></a>
+                        <span class="mt-3" href=""><b>Reporters</b></span>
+                        <a class="ps-4 mt-2 " href="{{url('costumer')}}"><small>Costumers</small></a>
+                    </div>
+                    <div class="d-flex flex-column-reverse h-100 text-center pb-3" style="flex: 1;">
+                        <small>© 2021 Bikers</small>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg px-0 mx-0">
+                <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
+                    <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <img class="notif-bell" src="Images/bell.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="admin-photo img-fluid pr-2" src="Images/account.png" alt="admin photo">
+                                <span>Admin</span>
+                            </a>
+                            <div class="dropdown-menu w-10" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+               
+                <div class="body">
+                    @yield('body')
                 </div>
-            </li>
-        </ul>
-    </nav>
+    
+    
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

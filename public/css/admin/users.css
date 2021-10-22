@@ -1,0 +1,9 @@
+.user-profilephoto {
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    width: 140px;
+}
+.profile h4{
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+}

@@ -90,6 +90,10 @@ Route::get('/costumer', function () {
     return view('admin.costumer');
 });
 
+Route::get('/costumer-details', function () {
+    return view('admin.costumer-details');
+});
+
 Route::get('/product-details', function () {
     return view('admin.product-details');
 });

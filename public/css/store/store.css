@@ -94,10 +94,6 @@ body{
     border-radius: 5px;
     border: 2px solid white;
 }
-.border-left-box,
-.border-left-box.active{
- 
-}
 
 .border-left-box.active{color: var(--primaryBlue);}
 
