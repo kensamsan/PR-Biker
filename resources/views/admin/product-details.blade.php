@@ -26,7 +26,6 @@
     <h3 class="ps-2 pt-4 pb-2 fs-2"><a href="/products"><i class="fas fa-chevron-left me-3 text-dark"></i></a><b>Product
             Details</b></h3>
     <p class="dashed"></p>
-    <!-- Side Menu -->
     <div class="row mx-5 my-5">
         <div class="col-lg-7">
             <section class="mx-4">
@@ -66,10 +65,10 @@
             </section>
         </div>
         <div class="col-lg-4">
-            <div class="mb-3">
+            <div class="mb-3 h-100">
                 <label for="exampleFormControlTextarea1" class="form-label text-dark fs-4 fw-bold">Product
                     Comments</label>
-                <textarea class="form-control product-textarea h-75 w-100" id="exampleFormControlTextarea1"
+                <textarea class="form-control product-textarea h-100 w-100" id="exampleFormControlTextarea1"
                     rows="3"></textarea>
             </div>
         </div>
