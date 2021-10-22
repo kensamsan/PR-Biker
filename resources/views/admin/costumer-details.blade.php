@@ -17,7 +17,7 @@
             <h4 style="font-weight: 700;">Name</h4>
             <caption>Customer Name</caption>
             <h4 class="mt-3" style="font-weight: 700;">Concern</h4>
-            <caption>8 Don Manolo Blvd, Cupang, Muntinlupa, 1770 Metro Manila</caption>
+            <caption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex laboriosam a corporis, omnis odit vitae aut accusantium explicabo ullam expedita debitis quia deleniti possimus inventore iste impedit eius eligendi molestiae.</caption>
         </div>
     </div>
 
