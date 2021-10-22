@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-lg-2 d-flex align-items-center" id="cart-area">
                     <a class="text-light btn w-100 rounded-pill border-0 fs-6 fw-bold btn-background me-3" id="btn-rent" href="{{url('product')}}"> Rent a bike</a>
-                    <i class="fas fa-shopping-cart icon-color fs-5" id="cart-size"></i>
+                    <a href="{{url('cart')}}"><i class="fas fa-shopping-cart icon-color fs-5" id="cart-size"></i></a>
                 </div>
 
             </div>
