@@ -1,12 +1,3 @@
-.table-cart th{
-    width: auto!important;
-}
-
-.cart-table-image{
-    height: 70px;
-}
-
-
 /* Progress Bar Style */
 
 .progressbar li{
@@ -66,18 +57,9 @@
    background: var(--primaryBlue);;
    color: white
 }
-
-/* Checkout Content Style */
-
-@media(min-width:1000px){
-    #cart-col{
-        border-right: 1px solid black;
-    }
-    .checkout-form{
-        border-right: 1px solid black;
-    }
+.cart-table-image{
+    height: 70px;
 }
-
 .p-small{
     font-size: 14px;
 }

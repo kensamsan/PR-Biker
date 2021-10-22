@@ -34,9 +34,7 @@
                             <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                         </div>
                         <div class="card card-course-foot shadow">
-                            <button class="text-light mx-auto fst-italic btn border-0 fs-5 p-2">
-                                Other Details
-                            </button>
+                            <a href="{{url('productpreview')}}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
                         </div>
                     </div>
                 </div>

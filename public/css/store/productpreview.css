@@ -98,9 +98,6 @@
 .ms-6{
   margin-left: 5rem!important;
 }
-.remove-resize {
-  resize: none;
-}
 /* card listings */
 #user-photo {
   width: 27px;

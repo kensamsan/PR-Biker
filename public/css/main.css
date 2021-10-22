@@ -26,12 +26,18 @@ body {
     background-color: #EA5656 !important;
     color: #fff;
 }
+.btn-background a {
+    color: #fff;
+}
 /* Text/Paragrph alignment */
 .paragraph-alignment {
     text-align: justify;
     text-justify: inter-word;
 }
-
+/* Text area resize */
+.remove-resize {
+    resize: none;
+  }
 /* Footer */
  footer {
     background-color: #27332C;

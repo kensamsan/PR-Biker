@@ -38,16 +38,31 @@
                         <div class="col">GRAB/LALAMOVE</div>
                     </div>
                     <hr>
-                    <p class="text-bold mb-5">CHOOSE PAYMENT METHOD <span class="text-required">*</span></p>
+                    <p class="text-bold mb-4">CHOOSE PAYMENT METHOD <span class="text-required">*</span></p>
                     <div class="mb-lg-5">
                     <!-- GCash -->
-                        <div class="row mt-3 pb-0">
+                        <div class="row pb-0">
                             <div class="col">
                                 <div class="custom-control custom-control-inline">
                                     <input type="radio" id="gcash" name="gcash" class="custom-control-input" data-target="#gcashinfo" data-toggle="collapse" aria-expanded="false" required />
                                     <label class="custom-control-label" for="gcash">Bank Deposit/Online Fund Transfer</label>
-                                </div>
+                                </div>                              
                             </div>
+                        </div>
+                        <div class="mt-3 ps-lg-3 ps-4">
+                            <label>Bank Name:</label>
+                            <span class="text-uppercase">bpi</span>
+                            <br>
+                            <label>Account Name:</label>
+                            <span>Gabriel Carlos Jornales Checa</span>
+                            <br>
+                            <label>Account Number:</label>
+                            <span>0123456789</span>
+                            
+                        </div>
+                        <div class="mt-3 ps-lg-3 ps-4">
+                            <label class="fw-bold" for="">Send proof of payment:</label>
+                            <p class="pt-1">sample@email.com</p>
                         </div>
                         <div class="row collapse" id="gcashinfo">
                             <div class="col">
@@ -64,8 +79,6 @@
                             </div>
                         </div><br>
                         <hr>
-                        <!-- <div class="form-check mb-3">
-                        </div> -->
                     </div>
                     <div class="row align-items-center">
                         <div class="col-lg-6 my-2">
@@ -84,7 +97,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>
@@ -93,7 +106,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>
@@ -102,7 +115,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>
@@ -111,7 +124,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>
@@ -120,7 +133,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>
@@ -129,7 +142,7 @@
                                 <tr>
                                     <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
                                     <td class="w-50">
-                                        <p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p>
+                                        <p class="p-small">Product Name</p>
                                     </td>
                                     <td class="text-right w-75">x1 <br>
                                         <span class="text-bold">₱ 20,000</span>

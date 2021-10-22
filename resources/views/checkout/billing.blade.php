@@ -32,7 +32,7 @@
                         </p>
                         <input type="text" class="form-control" id="address">
                         <p class="text-bold mt-3 mb-2">Note</p>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <textarea class="form-control remove-resize" id="exampleFormControlTextarea1" rows="5"></textarea>
 
                         <div class="row mt-4 align-items-center">
                             <div class="col-lg-6 my-2">
@@ -50,42 +50,42 @@
                                 <tbody>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><img src="../images/image-placeholder.jpeg" alt="Product Name" class="cart-table-image"></td>
-                                        <td class="w-50"><p class="p-small">Lenovo G25-10 24.5" Full-HD Gaming Monitor 144Hz 1ms G-SYNC HDMI Display Port Height Adjust VESA</p></td>
+                                        <td class="w-50"><p class="p-small">Product Name</p></td>
                                         <td class="text-right w-75">x1 <br>
                                             <span class="text-bold">₱ 20,000</span>
                                         </td>
