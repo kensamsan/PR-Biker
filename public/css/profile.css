@@ -1,0 +1,33 @@
+@media (max-width: 991.98px) { 
+    #product-profile {
+        display: none;
+    }
+ }
+.listing-container {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+
+.bike-name {
+    font-weight: 800;
+    color: #EA5656;
+    line-height: 5px;
+}
+
+.bi-geo-alt, .bi-gear {
+    color: #EA5656;
+}
+
+.card a {
+    text-decoration: none;
+    color: #27332C;
+}
+
+.product-card {
+    border: none;
+    border-radius: 31px;
+}
+
+.product-img {
+    border-radius: 33px 32px 0px 0px;
+}

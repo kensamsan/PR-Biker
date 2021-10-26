@@ -1,0 +1,71 @@
+/* logo */
+.tagline {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* login form */
+@media (max-width: 991.98px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+.bg-image {
+    background-image: url(/images/biker.png);
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#logo {
+    color: #ffffff;
+    margin-top: 155px;
+}
+
+#login-form {  
+    margin-top: 25%;
+    padding: 16px;   
+}
+
+.forgot-pass a {
+    text-decoration: none;
+    color: #27332C;
+}
+
+.form-header h1 {
+    color: #EA5656;
+}
+
+input[type=email],
+input[type=password] { 
+    background-color: #ECECF0;
+    color: #8F8E94;
+    font-size: 1.1em;
+    border-radius: 0px 14px 0px 14px;
+
+}
+
+.btn-login {
+    background: #EA5656;
+    color: #ffffff;
+}
+
+.btn a {
+    text-decoration: none;
+}
+

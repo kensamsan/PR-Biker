@@ -1,0 +1,82 @@
+@media (max-width: 576px) { 
+    .search-location {
+        width: auto;
+    }
+ }
+/* dark navbar */
+#user-photo {
+    width: 27px;
+    clip-path: circle();
+    margin-right: 4px;
+}
+/* Banner */
+#banner{
+    background-image: url("/images/biker.png");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+.open-cycles {
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    color: white;
+    font-style: italic;
+    
+}
+
+#banner-header {
+    font-weight: 900;
+}
+
+#btn-now {
+    background: #000000;
+    color: #EA5656;
+    padding: 4px 40px;
+    font-size: 1.2em;
+    width: 250px;
+    font-weight: 900;
+}
+.recommended-bg {
+    background-color: #F8F7FF;
+}
+
+/* Card */
+.card {
+    border: none;
+}
+.card-container {
+    width: auto;
+    border-radius: 15px;
+    background-color: #F3F3F5;
+}
+
+.card-course{
+    padding: 0;
+    border-radius: 20px;
+    color: #27332C;
+}
+
+
+#card-time {
+    margin-left: 2.2rem!important;
+    line-height: 0;
+}
+
+.card-text {
+    margin: 0;
+    line-height: 22px;
+}
+
+.card-course-foot{
+    background-color: #EA5656;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+.btn-view{
+    color: #27332C;
+    border: 2px solid #707070;
+    border-radius: 14px;
+}

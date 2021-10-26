@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Side menu */
+.side-menu {
+    background-color: #27332C;
+    min-height: 100vh;
+}
+
+.side-menu > div > *{
+    color: #fff; 
+    padding-left: .5rem;
+    width: 87.5%;   
+}
+.side-menu a:hover, .side-menu a.active, .side-menu a:hover small{
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #ffffff;
+    color: #707070;
+    text-decoration: none;
+}
+
+/* Header */
+.admin-photo, .notif-bell {
+    max-height: 1.75rem;
+}
+.dropdown-menu {
+    min-width: 8rem!important;
+}
+
+/* Main Content */
+.dashed{
+    border: 0.5px;
+    border-style: solid;
+}

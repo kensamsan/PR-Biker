@@ -1,0 +1,97 @@
+@media (max-width: 1199.98px) { 
+    #edit-header {
+        margin-top: 1.6rem!important;
+    }
+ }
+ @media (max-width: 575.98px) { 
+    .profile {
+        margin-right: 0rem!important ;
+        margin-left: 0rem!important ;
+        /* margin-left: none ; */
+    }
+ }
+
+.user-photo {
+    width: 25px;
+    clip-path: circle();
+}
+
+/* user profile avatar */
+
+.profile-card {
+    box-shadow: 0px 6px 15px rgb(0 0 0 / 0.2);
+    padding: .55rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+#btn-edit { background-color: #27332e; }
+#btn-password { background-color: #EA5656; }
+
+.btn a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* user profile form */
+
+#user-avatar {
+    width: 200px;
+    margin-top: 10px;
+}
+
+#user-name {
+    color: #27332C;
+    padding : 0;
+    margin : 3px 0px 3px 0px;
+    line-height : 10px;
+}
+
+#user-email {
+    font-size: 1.1em;
+}
+
+#edit-header {
+    font-weight: 900;
+}
+
+/* forms */
+
+.form-headers {
+    color: #27332C;
+    font-weight: 400;
+}
+
+.col-form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #ECECF0;
+    border:1px solid #ced4da;
+    margin-top: 4px;   
+}
+
+input[type=username]{
+    height: 25px; 
+}
+
+input[type=public-profile] {  
+    height: 25px; 
+}
+
+input[type=home-address] {
+    height: 25px; 
+}
+
+input[type=address] {
+    height: 25px; 
+}
+
+.form-select {
+    background-image: url(/images/arrow.png);
+    background-color: #ECECF0;
+    width: 200px;
+    height: 35px;
+}

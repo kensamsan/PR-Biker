@@ -1,0 +1,75 @@
+/* Progress Bar Style */
+
+.progressbar li{
+    float: left;
+    width: 33%;
+    position: relative;
+    text-align: center;
+}
+
+.progressbar{
+    list-style-type: none;
+}
+
+.progressbar li:before{
+    content:'';
+    width: 30px;
+    height: 30px;
+    border: 2px solid #dfdfdf;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    line-height: 27px;
+    background: white;
+    color: #bebebe;
+    text-align: center;
+    font-weight: bold;
+}
+
+.progressbar li:first-child:after{
+    content: none;
+    width: 0;
+}
+
+.progressbar li:first-child::before{
+    border-color: var(--primaryBlue);
+    background: var(--primaryBlue);;
+    color: white
+}
+    
+.progressbar li:after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 10px;
+    background: #dfdfdf;
+    top: 10px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li.active + li:after{
+    background: var(--primaryBlue);;
+}
+   
+.progressbar li.active + li:before{
+   border-color: var(--primaryBlue);
+   background: var(--primaryBlue);;
+   color: white
+}
+.cart-table-image{
+    height: 70px;
+}
+.p-small{
+    font-size: 14px;
+}
+
+.total-bg{
+    background-color: #dfdfdf;
+}
+
+.cart-items-container{
+    height: 300px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+}

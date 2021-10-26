@@ -1,0 +1,62 @@
+/* register form */
+@media (max-width: 991.98px) {
+    .bi,.phone-number {
+        display: none;
+    }
+    
+}
+
+ @media (max-width: 1199.98px) { 
+    .bi,.phone-number {
+        display: none;
+    }
+    #logo-register, .tagline {
+        display: none;
+    }
+ }
+
+@media (max-width: 575.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #login-form h1 {
+        text-align: center;
+    }
+}
+
+#logo-register {
+    margin-top: 15rem!important;
+    width: 10px!important;
+}
+
+#btn-fb { background-color: #3B5998; }
+
+#btn-gmail { background-color: #EA5656; }
+
+.btn-register {
+    color: #fff;
+    border-radius: 20px;
+    background-color: #EA5656;
+}
+
+.icons-register{
+    color: #EA5656;
+} 
+
+#terms {
+    color: #EA5656;
+}
+
+.register-input {
+    background-color: #ECECF0;
+    height: 35px;
+    border: none;
+}
+
+#add-on {
+    background-color: #ECECF0;
+    color: #EA5656;
+}

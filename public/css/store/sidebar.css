@@ -1,0 +1,151 @@
+.wrapper {
+    display: flex;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+  
+  #sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    background: white;
+    color: black;
+    transition: all 0.4s;
+    height: 100vh;
+    padding: 30px;
+    border-right: 2px solid var(--primaryBlue);
+  }
+  
+  #sidebar.active {
+    margin-left: -300px;
+  }
+
+  #sidebarCollapse{
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.14);
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  
+  #content {
+    width: 100%;
+    padding: 20px;
+    min-width: height 100vh;
+    transition: all 0.4s;
+  }
+  
+  #content h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #content p {
+    text-align: justify;
+  }
+  
+  #sidebarCollapse{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -300px;
+    }
+  
+    #sidebar.active {
+      margin-left: 0;
+    }
+  
+    #sidebarCollapse {
+      display: block;
+    }
+  }
+
+/* Categories Section */
+.sidebar-header{
+    font-family: "Poppins Bold", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.sidenav-title{
+    font-size: 16px;
+    font-family: "Poppins Medium", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.sidenav-categories{
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidenav .sidenav-link{
+    color: black;
+    font-size: 14px;
+    margin-top: -1px;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav .sidenav-link.active{
+    background-color: var(--primaryBlue);
+    color: white;
+}
+
+.sidenav .sidenav-link:hover{
+    background: var(--primaryBlue);
+    color: white;
+}
+
+.categories, .attr{
+    overflow: auto;
+    height: 150px;
+    scrollbar-width: thin;
+    scrollbar-track-color: white;
+    scrollbar-color: #888;
+}
+
+.categories::-webkit-scrollbar,
+.attr::-webkit-scrollbar{
+    width: 5px;
+}
+.categories::-webkit-scrollbar-track,
+.attr::-webkit-scrollbar-track{
+    background: white;
+}
+.categories::-webkit-scrollbar-thumb,
+.attr::-webkit-scrollbar-thumb{
+background: rgb(210, 210, 210);
+}
+.categories::-webkit-scrollbar-thumb:hover
+.attr::-webkit-scrollbar-track:hover{
+    background: rgb(210,210,210);
+}
+
+/* Price Range */
+.peso{
+    background-color: white;
+    padding: 0;
+    font-size: 12px;
+}
+
+.form-price, .peso{
+    border-radius: 0!important;
+    border-width: 0 0 1px 0;
+    border-color: grey;
+    outline: none!important;
+}
+
+.form-price:focus,
+.form-price:hover{
+    border-bottom-width: 2px;
+    border-color: var(--primaryBlue);
+    outline-style: none;
+    box-shadow: none;
+}
+
+#priceRange small{
+    font-size: 10px;
+}
+
