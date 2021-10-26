@@ -32,7 +32,9 @@ Route::group(['prefix' => ''], function () {
 
 	Route::group(['middleware' => ['auth']], function()
 	{
-
+		Route::get('my-orders','OrderController@myOrders')->name('my-orders');
+		Route::get('order-deposit/{id}','OrderController@orderDeposit')->name('order-deposit');
+		Route::post('order-deposit-submit/','OrderController@orderDepositSubmit')->name('order-deposit-submit');
 		Route::group(['prefix'=>'admin','middleware' => 'permission:is_admin'],function()
 		{
 		
@@ -95,6 +97,8 @@ Route::group(['prefix' => ''], function () {
 		Route::post('account-billing-address/{id}','BillingAddressController@addBillingAddressModal')->name('account.billing-address.store-modal');
 		Route::post('account-billing-contact/{id}','BillingAddressController@addBillingContactModal')->name('account.contact.store-modal');
 		Route::resource('account.order','OrderController');
+		Route::get('order-print/{id}','OrderController@printOrder')->name('order-print');
+		Route::get('order-cancel','OrderController@cancelOrder')->name('order-cancel');
 		// Route::resource('account.wishlist', 'WishlistController');
 		// Route::get('wishlist-add-to-cart/{product_id}', 'WishlistController@addToCart')->name('wishlist-add-to-cart');
 		// Route::get('wishlist-add-to-cart-variation/{product_id}/variation/{variation_id}', 'CartController@addToCartVariation')->name('wishlist-add-to-cart-variation');

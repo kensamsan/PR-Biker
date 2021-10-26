@@ -67,6 +67,7 @@ class AccountController extends Controller
 				'username' => $request->input('email'),				
 				'contact' => $request->input('contact'),
 				'password' => Hash::make($request->input('password')),
+				'active' => 1,
 				'verification_code' => $code,
 				
 			]);

@@ -16,6 +16,8 @@ class CreateOrderItemsTable extends Migration
             $table->increments('id');
             $table->integer('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('orders');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
             $table->integer('transaction_id')->unsigned()->nullable();
             $table->foreign('transaction_id')->references('id')->on('transactions');
             $table->enum('status',['okay','canceled','returned','defect']);

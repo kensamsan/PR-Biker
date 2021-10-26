@@ -9,7 +9,8 @@ class OrderItem extends Model
 	//
 	protected $fillable = [
 		'order_id',
-		'variation_id',
+		'product_id',
+		// 'variation_id',
 		'transaction_id',
 		'status',
 		'qty',
@@ -18,7 +19,7 @@ class OrderItem extends Model
 
   public function product()
     {
-        return $this->hasManyThrough('App\Product', 'App\Variation');
+        return $this->belongsTo('App\Product');
     }
 
 	public function variation()

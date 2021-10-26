@@ -529,7 +529,7 @@ class CartController extends Controller
 				
 				$order_item = OrderItem::create([
 					'order_id'=>$order->id,
-					'product_id'=>$x->product_id,
+					'product_id'=>$x->id,
 				
 					'status'=>'okay',
 					'qty'=>$x->quantity,
