@@ -18,9 +18,8 @@
             </div>
         </div>
         <div class="container card-container shadow fw-bolder">
-            @for ($i = 0; $i < 3; $i++)
             <div class="row my-5">
-                @for ($j = 0; $j < 4; $j++)
+                @foreach ($products as $x)
                 <div class="col-lg-3 col-md-6 col-12 p-3">
                     <div class="card card-course images">
                         <div class="card-body">
@@ -34,7 +33,7 @@
                             <p class="fs-5 lh-1 card-text">1,000,000,000</p>
                         </div>
                         <div class="card card-course-foot shadow">
-                            <a href="{{url('productpreview')}}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
+                            <a href="{{url('#')}}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
                         </div>
                     </div>
                 </div>
@@ -42,9 +41,8 @@
                     <span class="close">&times;</span>
                     <img class="modal-content" id="full-image">
                 </div>
-                @endfor     
+                @endforeach     
             </div>
-            @endfor
         </div>
     </section> 
     <script src="/js/modal.js"></script>
