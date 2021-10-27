@@ -52,7 +52,7 @@
     }
 
 </style>
-<body>
+<body class="d-flex flex-column min-100-vh">
 
     <!--Dark navbar-->
 
@@ -119,7 +119,7 @@
     </nav>
     @include('template.search')
     {{-- Main content --}}
-    <div id="content">
+    <div class="flex-grow-1" id="content">
         @yield ('content')
     </div>
 
