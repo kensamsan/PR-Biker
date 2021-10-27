@@ -31,10 +31,7 @@
                                                         <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                                                     </div>
                                                     <div class="card card-course-foot shadow border-0">
-                                                        <button
-                                                            class="btn-background text-light mx-auto fst-italic btn border-0 fs-5 p-2">
-                                                            <a href="{{ route('product.show',$x->id) }}">Other Details</a>
-                                                        </button>
+                                                            <a class="btn btn-background text-light mx-auto fst-italic btn border-0 fs-5 p-2" href="{{ route('product.show',$x->id) }}">Other Details</a>
                                                     </div>
                                                 </div>
                                             </div>
