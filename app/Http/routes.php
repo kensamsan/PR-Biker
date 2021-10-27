@@ -69,6 +69,7 @@ Route::group(['prefix' => ''], function () {
 			Route::post('order-cancel/{id}/','AdminOrderController@orderCancel')->name('admin.order.cancel');
 			Route::post('orders-ship/{id}/','AdminOrderController@orderShip')->name('admin.order.ship');
 			Route::post('orders-reship/{id}/','AdminOrderController@orderReShip')->name('admin.order.reship');
+			Route::get('admin-order-deposit/{id}','AdminOrderController@orderDeposit')->name('admin-order-deposit');
 			// Route::resource('category', ['uses' => 'CategoryController@method', 'as' => 'categories']);
 
 

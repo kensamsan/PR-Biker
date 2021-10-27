@@ -244,6 +244,8 @@
 						@elseif($order->status=='processing')
 							@if($order->shipping_type=='courier')
 								<li><a href="{{ route('admin.order.action',[$order->id,'pickup']) }}">PickUp</a></li>
+							@elseif($order->shipping_type=='pick-up')
+								<li><a href="{{ route('admin.order.action',[$order->id,'done']) }}">Picked Up</a></li>
 							@else
 								<li><a href="#" data-toggle="modal" data-target="#courier">Ship</a></li>
 							@endif
@@ -257,7 +259,7 @@
 
 							<li><a href="{{ route('admin.order.action',[$order->id,'delivered']) }}">Delivered</a></li>
 						@elseif($order->status=='delivered')
-							<li><a href="{{ route('admin-order-deposit',$order->id) }}">Upload Receipt</a></li>
+							<!-- <li><a href="{{ route('admin-order-deposit',$order->id) }}">Upload Receipt</a></li> -->
 
 						@elseif($order->status=='cancelled')
 						@endif

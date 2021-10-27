@@ -24,6 +24,16 @@ use Mail;
 class AdminOrderController extends Controller
 {
     //
+    public function orderDeposit($id) {
+
+		$order = Order::find($id);
+		$user = User::find($order->user_id);
+		return view('admin.orders.deposit', [
+			'user'=>$user,
+			'order'=>$order,
+		]);
+
+	}
     public function orderAction($id,$action)
 	{
 
@@ -249,6 +259,29 @@ class AdminOrderController extends Controller
 			case 'reship':
 
 	
+			break;
+
+			case 'done':
+
+			$order->status = 'delivered';
+			$order->payment_status = 'paid';
+	
+				$orderLog = OrderLog::create([
+					'order_id'=>$id,
+					'title'=>'DELIVERED',
+					'content'=>'Delivered/PICKED UP Successfully',
+				]);
+
+				$url = URL::to('/');
+				$data = array(
+					'order_id'=>$order->order_id,
+					'id'=>$order->id,
+					'email'=>$user->email,
+					'user_id'=>$user->id,
+					'url'=>$url
+				); 
+
+
 			break;
 		}
 		$order->save();
