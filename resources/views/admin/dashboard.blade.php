@@ -196,7 +196,7 @@
 											<p class="card-body total-text-card">0</p>
 										</div>
 										<div class="first-column  text-center">
-											<strong class="card-header">Total INvoice</strong>
+											<strong class="card-header">Total Invoice</strong>
 										</div>
 									</div>
 								</div>
