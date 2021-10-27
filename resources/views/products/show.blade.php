@@ -1,6 +1,5 @@
 @extends('template.master')
 @section('content')
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/store/productpreview.css">
@@ -14,15 +13,13 @@
                      <div class="carousel-item @if($p->productImage->first()->id==$x->id) active @endif">
                         <div class="col-lg-3 col-md-3 px-2">
                             <div class="card">
-                                <div class="card-img">
-                                    <img src="/uploads/products/{{$x->file_name}}" class="img-fluid">
+                                <div class="card-img"
+                                    style="background: url('{{ asset("uploads/products/".$x->file_name) }}') no-repeat center; background-size: cover; height: 300px;">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-           
-                  
+                    @endforeach                 
                 </div>
                 <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
                     data-bs-slide="prev">
@@ -74,6 +71,12 @@
                             @else
                                 <b>out of stock</b>
                             @endif
+                        </div>                  
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 d-flex col-md-2">
+                            <a href="#" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light">add to
+                                cart</a>
                         </div>
                     </div>
                     {{-- Meet the seller --}}
