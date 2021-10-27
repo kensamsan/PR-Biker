@@ -18,6 +18,7 @@ Route::get('marketplace/','HomeController@marketplace')->name('marketplace');
 Route::get('register/','AccountController@register')->name('register');
 Route::post('store-account/','AccountController@store')->name('store-account');
 Route::get('product/{id}','ProductController@show')->name('product.show');
+Route::get('/order-tracking','OrderTrackingController@order')->name('order-tracking');
 
 
 Route::group(['prefix' => ''], function () {
