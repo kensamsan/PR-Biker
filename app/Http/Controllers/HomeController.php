@@ -26,6 +26,7 @@ class HomeController extends Controller
     	$product = Product::where('listing','=','products')->get();
        
         return view('home',[
+            'products'=>$product
             ]);
     }
 }
