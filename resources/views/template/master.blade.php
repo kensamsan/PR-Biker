@@ -10,8 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>Bikers</title>
-    <link rel="icon" href="Images/Bikers_favicon.png">
+    <link rel="icon" href="/images/Bikers_favicon.png">
     
 
     <!-- Bootrsrap CSS -->
@@ -39,6 +40,7 @@
 
     .navbar a:hover{
         color: #fff;
+        border-radius: 27px 0px 27px 27px;
     }
     .dropdown-menu a:hover {
          background-color: rgba(221,213,205, 0.3);
@@ -46,16 +48,9 @@
     .dropdown-item .bi {
         color: #EA5656;
     }
-
-    .dropdown:hover>.dropdown-menu {
-        display: block;
-    }
-
 </style>
 <body class="d-flex flex-column min-100-vh">
-
     <!--Dark navbar-->
-
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{url('')}}"><img class="me-4" src="/images/navbarwhitebike.svg" alt="white logo">|</a>
@@ -83,7 +78,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="/images/girl.png" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>
                                 <a class="dropdown-item" href="{{url('profile')}}">
                                     <i class="me-1 bi bi-person"></i>
@@ -97,12 +92,17 @@
                                 </a>
                             </li>
                             <li>
+                                <a class="dropdown-item" href="{{url('order-tracking')}}">
+                                    <i class="fw-bold me-1 bi bi-truck"></i>
+                                    Order Tracking
+                                </a>
+                            </li>  
+                            <li>
                                 <a class="dropdown-item" href="{{url('logout')}}">
                                 <i class="fw-bold me-1 bi bi-box-arrow-right"></i>
                                 Logout
                                 </a>
-                            </li>
-                            
+                            </li>                     
                         </ul>
                     </li>
                     @else
@@ -117,7 +117,9 @@
             </div>
         </div>
     </nav>
-    @include('template.search')
+    @if (!Request::is('profile')&&!Request::is('login')&&!Request::is('register')&&!Request::is('order-tracking'))
+        @include('template.search')
+    @endif
     {{-- Main content --}}
     <div class="flex-grow-1" id="content">
         @yield ('content')
