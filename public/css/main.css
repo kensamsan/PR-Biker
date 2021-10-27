@@ -99,10 +99,10 @@ footer h1 {
   }
   /* Image Modal */
 img {
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.3s;
 }
-img:hover {opacity: 0.7;}
+.img-modal:hover {opacity: 0.7;}
 /* The Modal background */
 #image-viewer {
     display: none;

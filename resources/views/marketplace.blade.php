@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/marketplace.css">
 
     <div class="container-fluid ps-lg-5 mx-auto">
-        <h1 class="text-uppercase fw-bold mb-5 fst-italic mt-5 text-lg-start text-center" id=marketplace-text>
+        <h1 class="text-uppercase fw-bold mb-5 fst-italic mt-5 text-lg-start text-center fs-1" id=marketplace-text>
             <b>Marketplace</b>
         </h1>
         <div class="row pb-5 text-lg-start text-center">
@@ -22,17 +22,11 @@
             <div class="col-lg-8">
                 <div class="mb-5">
                          <div class="row">
-                                @foreach($products as $x)
-                                      
+                                @foreach($products as $x)     
                                             <div class="col-lg-4 col-md-4 col-12 pt-4">
                                                 <div class="card card-course images">
                                                     <div class="card-body">
-                                                       <!--  <label>
-                                                            <img src="/images/user1.png" alt="user photo" id="user-photo">
-                                                            username
-                                                            <p class="card-time lh-3" id="card-time">30 mins ago</p>
-                                                        </label> -->
-                                                        <img src="/uploads/products/{{$x->getProductImage()}}" class="card-img-top img-fluid" alt="bike1">
+                                                        <div class="col img-modal" style="background: url('{{ asset("uploads/products/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;" data-src="{{ asset("uploads/products/".$x->getProductImage()) }}"></div>
                                                         <label class="mt-3 fs-5 fw-bold">{{$x->product_name}}</label>
                                                         <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                                                     </div>
@@ -44,87 +38,20 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="image-viewer">
-                                                <span class="close">&times;</span>
-                                                <img class="modal-content" id="full-image">
-                                            </div>
-
-                                       
                                 @endforeach
+                                
                         </div>
-                        
-                    
+                    </div>   
                 </div>
-            </div>
-            <div class="col-lg-3 mt-5 ms-lg-5 mx-auto">
-                <h1 class="text-lg-start text-center">Feature Products</h1>
-                <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/images/bike1.png" class="img-fluid" alt="bike1">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">Price</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/images/bike1.png" class="img-fluid" alt="bike1">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">Price</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/images/bike1.png" class="img-fluid" alt="bike1">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">Price</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/images/bike1.png" class="img-fluid" alt="bike1">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">Price</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/images/bike1.png" class="img-fluid" alt="bike1">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">Price</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-3 mt-2 mb-4 ms-lg-5 mx-auto">
+                @include('template.featured-products')
             </div>
         </div>
+    </div>
+</div>
+    <div id="image-viewer">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="full-image">
     </div>
     <script src="/js/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
