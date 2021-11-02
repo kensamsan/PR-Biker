@@ -9,12 +9,12 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    @foreach($p->productImage as $x)
-                     <div class="carousel-item @if($p->productImage->first()->id==$x->id) active @endif">
+                    @foreach($rental->rentalImage as $x)
+                     <div class="carousel-item @if($rental->rentalImage->first()->id==$x->id) active @endif">
                         <div class="col-lg-3 col-md-3 px-2">
                             <div class="card">
                                 <div class="card-img"
-                                    style="background: url('{{ asset("uploads/products/".$x->file_name) }}') no-repeat center; background-size: cover; height: 300px;">
+                                    style="background: url('{{ asset("uploads/rentals/".$x->file_name) }}') no-repeat center; background-size: cover; height: 300px;">
                                 </div>
                             </div>
                         </div>
@@ -37,43 +37,36 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="ms-5 ms-sm">
-                    <h2 class="lead display-6">{{$p->product_name}}</h2>
-                    <h2 class="fw-bold"><b>PHP {{ number_format($p->price,2)}}</b></h2>
+                    <h2 class="lead display-6">{{$rental->product_name}}</h2>
+                    <h2 class="fw-bold"><b>PHP {{ number_format($rental->price,2)}}</b></h2>
                     <div class="row">
                         <div class="col-lg-4 d-flex col-md-2">
-                            <span class="me-3">
+                           <!--  <span class="me-3">
                                 <i class="far fa-calendar-alt fs-4 pe-2 icon-color"></i>
                                 <label class="fs-5" for="">2015</label>
-                            </span>
+                            </span> -->
                             <span>
                                 <i class="fas fa-map-marker-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5 lead" for="">Manila City</label>
+                                <label class="fs-5 lead" for="">{{$rental->city->name}}</label>
                             </span>
                         </div>
                     </div>
                     <hr>
                     <h3 class="fw-bold"><b>Description:</b></h3>
-                    <p class="paragraph-alignment">{{$p->description}}</p>
-                    <!-- <a href="#" class="read fw-bold"><b>read more</b></a> -->
+                    <p class="paragraph-alignment">{{$rental->description}}</p>
                     <div class="row">
                         <div class="col-lg-6 d-flex col-md-2">
-                            @if($p->productQtyAvailable()>0)
-                          <!--   <a href="#" class="px-5 mt-3 me-3 btn btn-background fw-bold text-uppercase lead text-light">buy
-                                now</a> -->
-                         
-                            <form method="post" action="{{ route('client-add-to-cart') }}">
+                 
+                            <form method="post" action="{{ route('client-rent-now') }}">
                             {{csrf_field()}}
-                                <input type="hidden" name="product_id" value="{{$p->id}}">
-                                <input type="hidden" name="qty" value="1">
-                              <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light" value="add to cart">
+                                <input type="hidden" name="rental_id" value="{{$rental->id}}">
+                              <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light" value="Rent Now">
                         
                             </form>
-                            @else
-                                <b>out of stock</b>
-                            @endif
                         </div>                  
                     </div>
-                
+                    <!-- <a href="#" class="read fw-bold"><b>read more</b></a> -->
+                 
                     {{-- Listings --}}
                     @include('template.similar-listings')
                 </div>

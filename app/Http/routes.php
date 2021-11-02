@@ -33,6 +33,28 @@ Route::group(['prefix' => ''], function () {
 
 	Route::group(['middleware' => ['auth']], function()
 	{
+		Route::get('rent','HomeController@rent')->name('rent');
+		Route::get('rent-bike','HomeController@rentBike')->name('rent-bike');
+		Route::get('post-bike','HomeController@postBike')->name('post-bike');
+
+		Route::post('post-bike-submit','HomeController@postBikeSubmit')->name('post-bike-submit');
+
+		Route::get('my-rentals','RentalController@myRentals')->name('my-rentals');	
+
+		Route::post('client-rent-now','RentalController@clientRentNow')->name('client-rent-now');
+		Route::post('client-rental-information','RentalController@clientRentalInformation')->name('client-rental-information');
+		Route::post('client-rental-payment','RentalController@clientRentalPayment')->name('client-rental-payment');
+		Route::post('client-rental-submit','RentalController@clientRentalSubmit')->name('client-rental-submit');
+		Route::get('rental-details/{id}','RentalController@detail')->name('rental-detail');	
+
+		Route::get('my-listings','HomeController@listings')->name('my-listings');
+		Route::get('listings/{id}','HomeController@showListings')->name('listings-show');
+
+		Route::get('listing-deposit/{id}','RentalController@listingDeposit')->name('listing-deposit');
+		Route::get('listing-ship/{id}','RentalController@listingShip')->name('listing-ship');
+		Route::post('listing-deposit-submit/','RentalController@listingDepositSubmit')->name('listing-deposit-submit');
+
+
 		Route::get('my-orders','OrderController@myOrders')->name('my-orders');
 		Route::get('order-deposit/{id}','OrderController@orderDeposit')->name('order-deposit');
 		Route::post('order-deposit-submit/','OrderController@orderDepositSubmit')->name('order-deposit-submit');
@@ -96,6 +118,7 @@ Route::group(['prefix' => ''], function () {
 
 		Route::resource('account','AccountController');
 		Route::resource('account.billing-address','BillingAddressController');
+		Route::post('account-billing-address-rent/{id}','BillingAddressController@addBillingAddressModalFromRent')->name('account.billing-address.store-modal-rent');
 		Route::post('account-billing-address/{id}','BillingAddressController@addBillingAddressModal')->name('account.billing-address.store-modal');
 		Route::post('account-billing-contact/{id}','BillingAddressController@addBillingContactModal')->name('account.contact.store-modal');
 		Route::resource('account.order','OrderController');
@@ -123,6 +146,13 @@ Route::group(['prefix' => ''], function () {
 		//Dashboard
 
 		Route::group(['middleware' => ['permission:is_allow_products']], function(){
+
+			Route::resource('admin-rentals','RentalController');
+			Route::get('admin-rentals-cancel/{id}','RentalController@cancel')->name('admin-rentals.cancel');
+			Route::get('admin-rentals-delivered/{id}','RentalController@delivered')->name('admin-rentals.delivered');
+			Route::get('admin-rentals-approve/{id}','RentalController@approve')->name('admin-rentals.approve');
+			Route::get('admin-rentals-approve-payment/{id}','RentalController@approvePayment')->name('admin-rentals.approve-payment');
+
 			Route::resource('admin-products','ProductController');
 			Route::get('/admin-products-stock/{id}','ProductController@stock')->name('admin.product.stock');
 			route::post('admin-products-addstock','ProductController@addstock')->name('admin.product.addstock');
@@ -133,6 +163,8 @@ Route::group(['prefix' => ''], function () {
 			Route::resource('admin-products.product-image', 'ProductImageController');
 			Route::post('/delete_product-image/{id}', 'ProductImageController@destroy')->name('product-image-delete');
 			Route::get('/api/delete_product-image/{id}', 'ProductImageController@deleteProductImage')->name('delete-product-image');
+
+
 		});
 
 
@@ -196,5 +228,5 @@ Route::group(['prefix' => ''], function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
-	
+	Route::get('/fetch-cities/{region}','JsonController@fetchCities')->name('fetch-cities');
 });

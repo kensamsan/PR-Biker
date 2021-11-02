@@ -102,16 +102,16 @@ class ProductController extends Controller
 	public function index(Request $request)
 	{
 		//
-		Log::info($request);
+		// Log::info($request);
 	
 
 		if($request->search=='')
 		{
-			$products = Product::where('listing','=','products')->paginate(10);
+			$products = Product::paginate(10);
 		}
 		else
 		{
-			$products = Product::where('listing','=','products')->Where(function ($query) use ($request) {
+			$products = Product::Where(function ($query) use ($request) {
 				$query->where('product_code','like', '%'.$request->search.'%')
 				->orWhere('product_name','like', '%'.$request->search.'%');
 			})
@@ -131,11 +131,11 @@ class ProductController extends Controller
 
 		if($request->search=='')
 		{
-			$products = Product::where('listing','=',$type)->paginate(10);
+			$products = Product::paginate(10);
 		}
 		else
 		{
-			$products = Product::where('listing','=',$type)->Where(function ($query) use ($request) {
+			$products = Product::Where(function ($query) use ($request) {
 				$query->where('product_code','like', '%'.$request->search.'%')
 				->orWhere('product_name','like', '%'.$request->search.'%');
 			})

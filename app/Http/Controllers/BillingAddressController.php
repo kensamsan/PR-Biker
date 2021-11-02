@@ -51,6 +51,95 @@ class BillingAddressController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
 
+		public function addBillingAddressModalFromRent($user_id,Request $request)
+	{
+		//
+		Log::info($request);
+
+		$validator = Validator::make($request->all(), [
+				'first_name' => 'required|min:2|max:255',    
+			'last_name' => 'required|min:2|max:255',    
+			'address' => 'required|min:2|max:255',    
+			'landmark' => 'required|min:2|max:255',    
+			'brgy' => 'required|min:2|max:255',    
+			'city' => 'required|min:2|max:50',    
+			'zip' => 'required|min:2|max:5',    			
+			'region' => 'required|min:2',    			
+			'email' => 'required|email',    			
+			'contact' => array('required'),
+					
+		],[
+			'contact.numeric' => 'Invalid contact number'
+		]);
+
+		if ($validator->fails()) {
+		
+			return redirect()
+				->route('account.billing-address.create',$user_id)
+				->withErrors($validator)
+				->withInput();
+		}
+
+		$billingCount = BillingAddress::where('user_id','=',$user_id)->count();
+
+		DB::beginTransaction();
+		try
+		{
+			if($billingCount>2)
+				{
+					return redirect()->route('client-checkout-information')->with('error_message', 'Only Two Billing Address allowed!');
+				}
+				else 
+				{
+					$billingAddress = BillingAddress::create([
+						'first_name'=>$request->input('first_name'),
+						'last_name'=>$request->input('last_name'),
+						'address'=>$request->input('address'),
+						'brgy'=>$request->input('brgy'),
+						'city'=>$request->input('city'),
+						'zip'=>$request->input('zip'),
+						'region'=>$request->input('region'),
+						'email'=>$request->input('email'),
+						'landmark'=>$request->input('landmark'),
+						'contact'=>$request->input('contact'),
+						'type'=>$request->input('type'),
+						'user_id'=>$user_id,
+						]);
+					DB::table('activity_logs')->insert([
+						'username'  =>  Auth::user()->username.'@'.\Request::ip(),
+						'entry'  =>  'added billing-address for user :'.$user_id,
+						'comment'  =>  '',
+						'family'  =>  'insert',
+						'created_at' => \Carbon\Carbon::now()
+						]);
+					DB::commit();
+
+					return redirect()->route('profile')->with('flash_message', 'Shipping Address Added!!');
+				}
+				
+			
+		}
+		catch(\Exception $e)
+		{
+			
+			DB::rollback();
+			Log::info($e->getMessage());
+		}
+		catch(\Throwable $e)
+		{
+			DB::rollback();
+			Log::info($e->getMessage());
+		}
+
+		
+
+		
+
+
+	}
+
+
+
 	public function addBillingAddressModal($user_id,Request $request)
 	{
 		//

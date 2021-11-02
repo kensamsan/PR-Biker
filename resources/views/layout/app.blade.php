@@ -340,7 +340,7 @@
                                 <a class="{{(\Request::route()->getName() == 'admin-products.index') ? 'active' : ''}}" href="{{route('admin-products.index',['product'])}}">Products</a>
                             </li>
                             <li>
-                                <a class="{{(\Request::route()->getName() == 'settings.activity.logs.index') ? 'active' : ''}}" href="{{route('product-type.index',['rentals'])}}">Rentals</a>
+                                <a class="{{(\Request::route()->getName() == 'admin-rentals.index') ? 'active' : ''}}" href="{{route('admin-rentals.index',['rentals'])}}">Rentals</a>
                             </li>
                            
 

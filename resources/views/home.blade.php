@@ -24,16 +24,15 @@
                     <div class="card card-course images">
                         <div class="card-body">
                             <label>
-                                <img src="/images/girl.png" alt="user photo" id="user-photo">
-                                Lucifer Morningstar
-                                <p class="card-time mt-2 lh-3" id="card-time">666 mins ago</p>
+                                <img src="/uploads/users/anon.png" alt="user photo" id="user-photo">
+                                USer
                             </label>
-                            <img src="/images/bike1.png" class="card-img-top" alt="bike1">
-                            <label class="mt-3 fs-5">PRODUCT NAME</label>
-                            <p class="fs-5 lh-1 card-text">1,000,000,000</p>
+                            <img src="/uploads/products/{{$x->getProductImage()}}" class="card-img-top" alt="bike1">
+                            <label class="mt-3 fs-5">{{$x->product_name}}</label>
+                            <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                         </div>
                         <div class="card card-course-foot shadow">
-                            <a href="{{url('#')}}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
+                            <a href="{{ route('product.show',$x->id) }}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
                         </div>
                     </div>
                 </div>

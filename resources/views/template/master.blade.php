@@ -92,9 +92,21 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{url('order-tracking')}}">
+                                <a class="dropdown-item" href="{{url('my-orders')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
                                     Order Tracking
+                                </a>
+                            </li> 
+                            <li>
+                                <a class="dropdown-item" href="{{url('my-listings')}}">
+                                    <i class="fw-bold me-1 bi bi-truck"></i>
+                                    My Listings
+                                </a>
+                            </li>  
+                            <li>
+                                <a class="dropdown-item" href="{{url('my-rentals')}}">
+                                    <i class="fw-bold me-1 bi bi-truck"></i>
+                                    Rental Tracking
                                 </a>
                             </li>  
                             <li>

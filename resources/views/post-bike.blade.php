@@ -1,0 +1,134 @@
+@extends('template.master')
+@section('content')
+
+    
+<style>
+    .table-header{
+    background-color: #EA5656;
+}
+.order-image{
+    width: 90px;
+    height: 90px;
+}
+</style>
+<div class="container-fluid px-5">
+    <h1 class=" headers lead fs-1 text-dark mb-0 mt-4">Post A Bike</h1>
+   
+    <div class="row p-2">
+        {{ Form::open(array('url' => '/post-bike-submit', 'method' => 'post','files'=>true)) }}
+
+            <div class="row">
+                <div class="col-lg-4">
+                    {{ Form::label('bike_name', 'Bike Name') }}
+                    {{ Form::text('bike_name','',array('class'=>'form-control span6','placeholder' => 'Bike Name')) }}
+                    <span class="errors" style="color:#FF0000">{{$errors->first('bike_name')}}</span>
+                </div>
+                <div class="col-lg-4">
+                    {{ Form::label('bike_unit', 'Bike Unit') }}
+                    {{ Form::text('bike_unit','',array('class'=>'form-control span6','placeholder' => 'Bike Unit')) }}
+                    <span class="errors" style="color:#FF0000">{{$errors->first('bike_unit')}}</span>
+                </div>
+                <div class="col-lg-4">
+                    {{ Form::label('images', 'Images') }}
+                    <input type="file" name="images[]" multiple accept="image/png, image/jpeg">
+                    <span class="errors" style="color:#FF0000">{{$errors->first('bike_name')}}</span>
+                </div>
+            </div>
+
+            
+            
+            <div class="row top10">
+                <div class="col-lg-4">
+                 
+                    {{ Form::label('province', 'Province') }}
+                    <select name="province" id="province" class="form-control">
+                        <option></option>
+                        @foreach($provinces as $x)
+                            <option value="{{$x->id}}">{{$x->name}}</option>
+                        @endforeach
+                    </select>
+                   
+                   
+                </div>
+                <div class="col-lg-4">
+                    {{ Form::label('city', 'city') }}
+                   <select name="city" id="city" class="form-control" required> </select>
+                </div>
+<!-- 
+                <div class="col-lg-4">
+                    {{ Form::label('dt_from', 'From') }}
+                    <input type="date" name="dt_from" class="form-control">
+                    <input type="time" name="dt_from_time" class="form-control">
+           
+                  
+                </div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    {{ Form::label('price', 'price') }}
+                    {{ Form::number('price','',array('class'=>'form-control span6','placeholder' => 'Bike Name')) }}
+                    <span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
+                </div>
+                <div class="col-lg-4">
+                    {{ Form::label('description', 'Description') }}
+                    <textarea class="form-control" name="description"></textarea>
+                </div>
+
+                 <!-- <div class="col-lg-4">
+                    {{ Form::label('dt_to', 'To') }}
+                    <input type="date" name="dt_to" class="form-control">
+                    <input type="time" name="dt_to_time" class="form-control">
+                  
+                </div> -->
+            </div>
+
+
+            <div class="row top10">
+                <div class="col-lg-4">
+                    <input type="submit" class="btn btn-danger" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+                </div>
+            </div>
+            
+            {!! Form::close() !!}
+
+    </div>
+</div>
+<script type="text/javascript">
+    
+          
+            $(function(){
+
+               
+             
+                $('#province').on('change', function() {
+                    console.log($(this).val());
+                        $.ajax({
+                        headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                },
+                        type: 'GET',
+                        url: '/api/fetch-cities/'+$(this).val(),
+                        
+                   
+                        success: function (data){
+             
+                      
+                            $('#city').children().remove();
+                            $.each(data.cities, function(key, value) {
+                              $("#city").append(`<option value="`+value.id+`">`+value.name+`</option>`);
+                            });
+                        },
+                        error: function(e) {
+                            console.log(e);
+                        }});
+
+                    console.log('adas');
+                });
+                
+            });
+
+
+
+</script>
+@endsection
