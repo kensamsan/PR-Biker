@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-lg-4">
                     {{ Form::label('description', 'Description') }}
-                    <textarea class="form-control" name="description"></textarea>
+                    <textarea class="form-control remove-resize" name="description"></textarea>
                 </div>
 
                  <!-- <div class="col-lg-4">
@@ -86,7 +86,7 @@
 
             <div class="row top10">
                 <div class="col-lg-4">
-                    <input type="submit" class="btn btn-danger" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+                    <input type="submit" class="btn btn-background" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
                 </div>
             </div>
             

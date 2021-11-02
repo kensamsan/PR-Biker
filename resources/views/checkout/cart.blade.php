@@ -1,6 +1,5 @@
 @extends('template.master')
 @section('content')
-
 <link rel="stylesheet" href="/css/store/checkout.css">
 
 <main>
@@ -26,20 +25,21 @@
                     @foreach(\Cart::session(Auth::user()->id)->getContent() as $x)
                         <tr>
                             <td>
-                            
-                                <img src="/uploads/products/{{ App\Product::find($x->id)->getProductImage() }}" style="width:100px;height:100px;float:left;padding-right: 0px;margin-right: 15px;object-fit:cover;">
-                                <p><strong><a href="/product/{{ App\Product::find($x->id)->first()->id or 0 }}" style="color: #F2B533;">{{ $x->name }}</a></strong></p>
+                                <img class="img-fluid cart-item-image" src="/uploads/products/{{ App\Product::find($x->id)->getProductImage() }}">
+                                <a class="fw-bold" href="/product/{{ App\Product::find($x->id)->first()->id or 0 }}" style="color: #EA5656;">{{ $x->name }}</a>
                             </td>
                             <td style="width: 100px;">
                                 <input type="text" class="form-control" value="{{ $x->quantity }}" readonly="true">
                             </td>
                             <td>
-                                <a href="{{ route('add-qty',$x->id) }}" style="color: #F2B533;"><i class="fa fa-plus-circle"></i></a>
-                                <a href="{{ route('sub-qty',$x->id) }}" style="color: #F2B533;"><i class="fa fa-minus-circle"></i></a>
+                                <a href="{{ route('add-qty',$x->id) }}"><i class="fa fa-plus-circle cart-quantity p-0"></i></a>
+                                <a href="{{ route('sub-qty',$x->id) }}"><i class="fa fa-minus-circle cart-quantity p-0"></i></a>
                             </td>
                             <td>₱ {{ number_format($x->price,2) }}</td>
                             <td>₱ {{ number_format($x->price*$x->quantity,2) }}</td>
-                            <td><a href="{{ route('client-remove-item',$x->id) }}" style="color: #F2B533;"><i class="fa fa-times"></i> remove</a></td>
+                            <td>
+                                <a href="{{ route('client-remove-item',$x->id) }}"><i class="fa fa-times cart-actions p-0"></i></a>
+                            </td>
                       </tr>
 
 
@@ -88,9 +88,8 @@
                     <td>&nbsp;</td>
                   </tr>
                 </tfoot>
-            </table>
-            
-            <a href="{{ route('client-checkout-information') }}" style="float: right"><button class="btn btn-shop">CHECKOUT</button></a>
+            </table>    
+            <a class="btn btn-background float-end" href="{{ route('client-checkout-information') }}">CHECKOUT</a>
             </div>
             @else
             <h3 style="margin: auto;width: 50%;border: 3px ;padding: 10px;">There are no items in your shopping cart</h3>

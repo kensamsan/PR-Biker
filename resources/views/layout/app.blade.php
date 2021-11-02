@@ -8,15 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes">
     <meta name="description" content="{{Session::get('software_description')}}">
     <meta name="author" content="Aguora IT Solutions & Technology">
-
+    <link rel="icon" href="/images/Bikers_favicon.png">
     <title>@yield('title') | {{Session::get('software_name')}}</title>
 
+    {{-- Google fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
 
 
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/sb-admin.css') }}" rel="stylesheet" media="  ">
-    {{-- <link href="{{ URL::asset('css/normalize.css') }}" rel="stylesheet"> --}}
+    <link href="{{ URL::asset('css/normalize.css') }}" rel="stylesheet">
 
 
     <link href="{{ URL::asset('assets/fontawesome-free-5.15.1-web/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -45,8 +49,11 @@
     <meta name="msapplication-square310x310logo" content="{{Session::get('company_logo')}}" />
     @yield('css')
     <style>
+        * {
+            font-family: 'Poppins', 'sans-serif';
+        }
         .side-nav>li>ul>li>a.active,.side-nav>li>ul>li>a.active:focus,.side-nav>li>ul>li>a.active:active,.side-nav>li>ul>li>a.active:active:focus,.side-nav>li>ul>a:active,.side-nav>li>ul>a:active:focus,.side-nav>li>ul>a:active:hover,.side-nav>li>ul>li>a:focus:hover {
-            background-color: #0063e0 !important;
+            background-color: #EA5656 !important;
             color: #fff;
         }
         .side-nav>li>ul>li>a:active,.side-nav>li>ul>li>a:focus{
@@ -118,7 +125,7 @@
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
         }
         .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-            background-color: #0063e0 !important;
+            background-color: #EA5656 !important;
         }
         .navbar-inverse .navbar-nav>.active>a:active:focus, .navbar-inverse .navbar-nav>.active>a:focus:hover {
             background-color: transparent;
@@ -132,11 +139,11 @@
         }
         .navbar-inverse .side-nav>li>a:focus:hover
         {
-            background-color: #0063e0 !important;
+            background-color: #EA5656 !important;
         }
         .navbar-inverse .side-nav>li.active>a:active,.navbar-inverse .side-nav>li.active>a:focus:hover
         {
-            background-color: #0063e0 !important;
+            background-color: #EA5656 !important;
         }
         @media (max-width: 309px)
         {
@@ -273,6 +280,12 @@
         {
             padding: 10px 15px;
         }
+        .img-fluid{
+            max-width: 75%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
     
 </head>
@@ -291,7 +304,7 @@
                     <span class="icon-bar" style="background-color:#222;"></span>
                     <span class="icon-bar" style="background-color:#222;"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('dashboard.index')}}" style="font: normal normal bold 21px/24px Source Sans Pro;text-align:center;color:white;text-transform: uppercase;">@yield('app_name')</a>
+                <a class="text-center navbar-brand" href="{{route('dashboard.index')}}" ><img class="img-fluid" src="/images/admin-bikers.png" alt=""></a>
                 
             </div>
             <ul class="nav navbar-nav navbar-left hidden-xs" style="margin-right:0px;">

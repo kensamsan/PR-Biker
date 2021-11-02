@@ -49,7 +49,6 @@
 	{
 		display:block;
 		font-size: 1.3em;
-		font-weight: 900;
 		margin-bottom: 10px;
 		letter-spacing: -1px;
 		min-height: 40px;
@@ -196,7 +195,7 @@
 											<p class="card-body total-text-card">0</p>
 										</div>
 										<div class="first-column  text-center">
-											<strong class="card-header">Total Invoice</strong>
+											<h4 class="card-header">Total Invoice</h4>
 										</div>
 									</div>
 								</div>
@@ -220,7 +219,7 @@
 											<p class="card-body total-text-card">0</p>
 										</div>
 										<div class="first-column  text-center">
-											<strong class="card-header">Paid Rents</strong>
+											<h4 class="card-header">Paid Rents</h4>
 										</div>
 									</div>
 								</div>
@@ -243,7 +242,7 @@
 											<p class="card-body total-text-card">0</p>
 										</div>
 										<div class="first-column  text-center">
-											<strong class="card-header">Unpaid Total</strong>
+											<h4 class="card-header">Unpaid Total</h4>
 										</div>
 									</div>
 								</div>
@@ -266,7 +265,7 @@
 											<p class="card-body total-text-card">0</p>
 										</div>
 										<div class="first-column  text-center">
-											<strong class="card-header">Pending Rents</strong>
+											<h4 class="card-header">Pending Rents</h4>
 										</div>
 									</div>
 								</div>

@@ -1,29 +1,13 @@
-@extends('template.user')
-
+@extends('template.master')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
-<link rel="stylesheet" href="/css/user.css">
-<link rel="icon" href="Images/navbarwhitebike.svg">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-2 mt-3">
-            <img class="img-fluid" src="/images/navbarlogo.svg" alt="logo">
-        </div>
-        <div class="col-lg-4 col-6 mt-2">
-            <div class="headers fs-1 fst-italic lead" id="user-settings">YOUR PROFILE</div>
-        </div>
-    </div>
-    <hr>
-</div>
-
 <div class="row ms-4">
-    <div class="headers col-lg-6 pt-3">
+    <div class="headers col-lg-6 mt-5">
         <h1 class="fst-italic fw-bolder">My Listings </h1>
     </div>
 </div>
-<div class="container d-flex justify-content-evenly mt-3 mb-5">
-    <div class="row my-auto">
-        <div class="col-lg-12 listing-container shadow ">
+<div class="container-fluid d-flex justify-content-center mt-3 mb-5">
+        <div class="col-lg-5 listing-container shadow p-3">
         <table class="table table-hover">
                 <tr>
                     <th>Bike Name</th>
@@ -92,7 +76,6 @@
                 </div>
             </div>
         </div> -->
-    </div>
 </div>
 
 @endsection

@@ -76,7 +76,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/images/girl.png" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
+                            <img src="/images/image-placeholder.jpeg" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>

@@ -1,4 +1,4 @@
-@extends('template.user')
+@extends('template.master')
 
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">

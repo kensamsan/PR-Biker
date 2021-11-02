@@ -1,8 +1,7 @@
-@extends('template.user')
-
+@extends('template.master')
 @section('content')
-<link rel="stylesheet" href="/css/profile.css">
-<link rel="stylesheet" href="/css/user.css">
+{{-- <link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/css/user.css"> --}}
 <link rel="icon" href="Images/navbarwhitebike.svg">
 <div class="container-fluid">
     <div class="row">
@@ -18,7 +17,7 @@
 
 <div class="row ms-4">
     <div class="headers col-lg-6 pt-3">
-        <h1 class="fst-italic fw-bolder">My Orders </h1>
+        <h1 class="fst-italic fw-bolder">My Orders</h1>
     </div>
 </div>
 <div class="container d-flex justify-content-evenly mt-3 mb-5">
