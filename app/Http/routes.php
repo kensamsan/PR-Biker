@@ -13,7 +13,9 @@
 Route::get('/login', 'UserController@login')->name('user.login');
 Route::get('/admin', 'UserController@admin')->name('admin.login');
 Route::get('/','HomeController@home')->name('home');
-Route::get('marketplace/','HomeController@marketplace')->name('marketplace');
+Route::get('/marketplace','HomeController@marketplace')->name('marketplace');
+Route::get('/terms','TermsController@terms')->name('terms');
+Route::get('/privacy','TermsController@privacy')->name('privacy');
 
 Route::get('register/','AccountController@register')->name('register');
 Route::post('store-account/','AccountController@store')->name('store-account');

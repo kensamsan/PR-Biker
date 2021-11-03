@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Register')
 @section('content')
 <link rel="stylesheet" href="/css/register.css">
 <link rel="stylesheet" href="/css/login.css">

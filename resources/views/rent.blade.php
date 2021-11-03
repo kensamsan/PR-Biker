@@ -1,4 +1,5 @@
 @extends('template.master')
+@section('title', 'Rent')
 @section('content')
 <style>
    #content {

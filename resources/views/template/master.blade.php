@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <title>Bikers</title>
+    <title>Bikers | @yield('title')</title>
     <link rel="icon" href="/images/Bikers_favicon.png">
     
 
@@ -151,12 +151,8 @@
                 <div class="d-flex justify-content">
 
                     <p class="fw-normal fst-italic">&copy; 2021 Bikers &nbsp; &nbsp;</p>
-
-
-                    <a href="#NeedHelps?" class="footer-link fw-normal">&nbsp; Need help? &nbsp; &#8226; &nbsp; </a>
-                    <a href="#contactus" class="footer-link fw-normal">&nbsp; Contact us &nbsp; &#8226; &nbsp;</a>
-                    <a href="#Terms" class="footer-link fw-normal">&nbsp; Terms &nbsp; &#8226; &nbsp;</a>
-                    <a href="#Privacy" class="footer-link fw-normal">&nbsp; Privacy &nbsp;</a>
+                    <a href="{{route('terms')}}" class="footer-link fw-normal">&nbsp; Terms &nbsp; &#8226; &nbsp;</a>
+                    <a href="{{route('privacy')}}" class="footer-link fw-normal">&nbsp; Privacy &nbsp;</a>
 
                 </div>
             </div>

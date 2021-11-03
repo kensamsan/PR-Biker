@@ -1,4 +1,5 @@
 @extends('template.master')
+@section('title', 'Home')
 @section('content')
     <link rel="stylesheet" href="/css/home.css">
     <div id="banner">

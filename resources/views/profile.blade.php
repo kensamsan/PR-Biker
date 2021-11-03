@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Profile')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">

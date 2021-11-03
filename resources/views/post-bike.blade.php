@@ -1,7 +1,6 @@
 @extends('template.master')
-@section('content')
-
-    
+@section('title', 'Post A Bike')
+@section('content')   
 <style>
     .table-header{
     background-color: #EA5656;

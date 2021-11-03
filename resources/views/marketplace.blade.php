@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Marketplace')
 @section('content')
 
 <link rel="stylesheet" href="/css/marketplace.css">
