@@ -292,6 +292,11 @@
         .margin-top {
             margin-top: 2rem!important;
         }
+
+        .margin-top-lg {
+            margin-top: 8rem!important;
+        }
+
         .margin-left {
             margin-left: 3.5rem!important;
         }
@@ -301,6 +306,10 @@
         .mx-auto {
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .no-border {
+            border: none !important;
         }
     </style>
     

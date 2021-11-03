@@ -219,10 +219,8 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid margin-top-lg">
 	<div class="container-fluid">
-
-
 	  <div class="panel panel-default"  style="width: 100%; margin: auto;">
 		<div class="panel-heading">
 			<h3>Order #{{ $order->order_id }}</h3>			
@@ -601,7 +599,6 @@
 					<p style="font-size: 0.9em;">Landmark : {{ $order->address->landmark }}</p>
 				</div>
 			</div>
-
 			<div class="row">
 				<div class="col-md-6">
 					<h5><strong>Payment Method</strong></h5>
@@ -609,40 +606,36 @@
 				</div>
 				<div class="col-md-6">
 					<h5><strong>Shipping Method</strong></h5>
-					<p style="font-size: 0.9em;">{{ $order->shipping_type }}</p>
-					
+					<p style="font-size: 0.9em;">{{ $order->shipping_type }}</p>	
 				</div>
 			</div>
-
-
-	
 		</div>
 		</div>
 	  </div>
-
-	  <div class="panel panel-default"  style="width: 100%; margin: auto;">
-			<div class="panel-heading">
-				<h3>Order Transactions</h3>			
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-12">
-						<table class="table" style="font-size: 0.9em;">
-							@foreach($orderLogs as $x)
-							<tr>
-								<td style="width: 20%">{{ Carbon\Carbon::parse($x->created_at)->toDayDateTimeString() }}</td>
-								<td style="left:0">{!! $x->content !!}</td>
-							</tr>
-							@endforeach
-						</table>
+	  <div class="container-fluid">
+		<div class="row container-fluid">
+			<div class="col-lg-12 panel panel-default margin-top">
+				<div class="panel-heading">
+					<h3>Order Transactions</h3>			
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<table class="table" style="font-size: 0.9em;">
+								@foreach($orderLogs as $x)
+								<tr>
+									<td class="no-border" style="width: 20%">{{ Carbon\Carbon::parse($x->created_at)->toDayDateTimeString() }}</td>
+									<td class="no-border" style="left:0">{!! $x->content !!}</td>
+								</tr>
+								@endforeach
+							</table>
+						</div>
 					</div>
 				</div>
-
 			</div>
-		</div>
-
+		  </div>
+	  </div>
 	</div>
-
 </div>
 @stop
 @section('script')
