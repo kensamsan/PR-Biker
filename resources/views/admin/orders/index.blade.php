@@ -158,7 +158,7 @@
 			@endif
 		</div>
 	</div>
-	<div class="row">
+	{{-- <div class="row">
 		{{ Form::open(array('route' => 'admin.orders.index', 'method' => 'get')) }} 
 		
 		<div class="col-md-4">
@@ -186,8 +186,8 @@
 	    </div>	    
 	
 		{{ Form::close() }}
-	</div>
-	<div class="row">
+	</div> --}}
+	{{-- <div class="row">
 		<div class="col-lg-12">
 			
 			<ol class="breadcrumb">
@@ -197,7 +197,7 @@
 			</ol>
 			
 		</div>
-	</div>
+	</div> --}}
 
 	<div class="row">
 		

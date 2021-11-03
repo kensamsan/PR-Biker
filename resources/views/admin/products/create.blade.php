@@ -105,30 +105,30 @@
 		background-color:white;
 		box-shadow: 0px 3px 6px #00000029;
 	}
+	.margin-right {
+		margin-right: 2rem!important;
+	}
 </style>
 @stop
 @section('content')
 <div class="container-fluid">
 	<div class="row" style="margin-top:30px;">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">				
-				<h2>Products List</h2> <small></small>
+		<div class="col-lg-12">
+			<div class="margin-top">
+				<h1>Product List</h1>
+				<hr style="border: 1px solid black">
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-10">
 			<div class="panel panel-default panel-custom">
-				<div class="panel-heading">
-					
-				</div>
-				<div class="panel-body" style="padding:0px;">
+				<div class="panel-body" style="padding:3rem;">
 					<form method="post" action="{{ route('admin-products.store') }}">
 					{{ csrf_field() }}
 					<div class="row">
 						<div class="col-lg-4">
-							<label for="product_name">Product Name</label>
+							<label class="margin-right" for="product_name">Product Name</label>
 							<input type="text" name="product_name" class="orm-control" placeholder="Product Name"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('product_name')}}</span>
 						</div>
@@ -136,7 +136,7 @@
 
 					<div class="row">
 						<div class="col-lg-4">
-							<label for="category_id">Categories</label>
+							<label class="margin-right margin-top" for="category_id">Categories</label>
 							<select name="category_id">
 								@foreach($categories as $x)
 								<option value="{{$x->id}}">{{ $x->category_name }}</option>
@@ -160,21 +160,21 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-4">
-							<label for="description">Description</label>
+							<label class="margin-top" for="description">Description</label>
 							<textarea name="description" class="form-control"></textarea>
 							<span class="errors" style="color:#FF0000">{{$errors->first('description')}}</span>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4">
-							<label for="price">Price</label>
+							<label class="margin-right margin-top" for="price">Price</label>
 							<input type="number" name="price" class="orm-control" placeholder="Price"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4">
-							<label for="visibility">Visibility</label>
+							<label class="margin-right margin-top" for="visibility">Visibility</label>
 							<input type="radio" name="visibility"  value="active">active
 							<input type="radio" name="visibility"  value="inactive">inactive
 							<span class="errors" style="color:#FF0000">{{$errors->first('visibility')}}</span>
@@ -185,7 +185,7 @@
 					
 					<div class="row top10">
 						<div class="col-lg-4">
-							<input type="submit" class="btn btn-default" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+							<input type="submit" class="btn btn-default btn-primary" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
 						</div>
 					</div>
 					
