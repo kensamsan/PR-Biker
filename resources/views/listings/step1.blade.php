@@ -15,16 +15,15 @@
                <input type="hidden" name="rental_id" value="{{$rental->id}}">
                <div class="col-lg-4">
                     {{ Form::label('dt_from', 'From') }}
-                    <input type="date" name="dt_from" class="form-control">
+                    <input type="date" name="dt_from" class="form-control my-2">
                     <input type="time" name="dt_from_time" class="form-control">
            
                   
                 </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 mt-4">
                     {{ Form::label('dt_to', 'To') }}
-                    <input type="date" name="dt_to" class="form-control">
+                    <input type="date" name="dt_to" class="form-control my-2">
                     <input type="time" name="dt_to_time" class="form-control">
-                  
                 </div>
          <!--    <table class="table table-condensed">
                 <thead>
@@ -59,7 +58,7 @@
                 <tfoot>
                 
             </table> -->
-                <input type="submit" name="CHECKOUT">
+                <input class="btn-background fw-bold border-0 mt-3 rounded p-2" type="submit" name="CHECKOUT">
      
 
                 </div>
