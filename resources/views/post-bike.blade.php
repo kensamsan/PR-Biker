@@ -18,7 +18,7 @@
         {{ Form::open(array('url' => '/post-bike-submit', 'method' => 'post','files'=>true)) }}
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-3">
                     {{ Form::label('bike_name', 'Bike Name') }}
                     {{ Form::text('bike_name','',array('class'=>'form-control span6','placeholder' => 'Bike Name')) }}
                     <span class="errors" style="color:#FF0000">{{$errors->first('bike_name')}}</span>
@@ -38,7 +38,7 @@
             
             
             <div class="row top10">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-3">
                  
                     {{ Form::label('province', 'Province') }}
                     <select name="province" id="province" class="form-control">
@@ -51,7 +51,7 @@
                    
                 </div>
                 <div class="col-lg-4">
-                    {{ Form::label('city', 'city') }}
+                    {{ Form::label('city', 'City') }}
                    <select name="city" id="city" class="form-control" required> </select>
                 </div>
 <!-- 
@@ -66,8 +66,8 @@
 
             <div class="row">
                 <div class="col-lg-4">
-                    {{ Form::label('price', 'price') }}
-                    {{ Form::number('price','',array('class'=>'form-control span6','placeholder' => 'Bike Name')) }}
+                    {{ Form::label('price', 'Price') }}
+                    {{ Form::number('price','',array('class'=>'form-control span6','placeholder' => 'price')) }}
                     <span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
                 </div>
                 <div class="col-lg-4">
