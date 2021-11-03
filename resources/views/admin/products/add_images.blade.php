@@ -111,14 +111,12 @@
 @stop
 @section('content')
 <div class="container-fluid">
-
-	<div class="row">
+	<div class="row" style="margin-top: 30px";>
 		<div class="col-lg-12">
 			<h1 class="page-header">
 				<small><a href="{{ route('admin-products.index') }}">Products</a> > {{$p->product_name}}</small>
 			</h1>
 		</div>
-	
 	</div>
 	<div class="row">
 		<div class="col-lg-12">

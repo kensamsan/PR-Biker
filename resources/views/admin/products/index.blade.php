@@ -134,9 +134,8 @@
 <div class="container-fluid">
 	<div class="row" style="margin-top:30px;">
 		<div class="col-lg-12">
-			<div class="margin-top">
-				<h1>Product List</h1>
-				<hr style="border: 1px solid black">
+			<div class="page-header">				
+				<h2>Product List</h2> <small></small>
 			</div>
 		</div>
 	</div>

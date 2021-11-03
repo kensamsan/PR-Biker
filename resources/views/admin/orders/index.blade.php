@@ -145,10 +145,9 @@
 <div class="container-fluid">
 	<div class="row" style="margin-top: 30px";>
 		<div class="col-lg-12">
-			<div class="margin-top">
-				<h1>Orders</h1>
+			<div class="page-header">				
+				<h2>Orders</h2> <small></small>
 			</div>
-			<hr style="border: 1px solid black">
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success">{{Session::get('flash_message')}}</div>
 			@endif
