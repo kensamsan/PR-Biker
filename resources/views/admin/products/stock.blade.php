@@ -211,7 +211,7 @@
 
 <div class="container-fluid">
 
-	<div class="row">
+	<div class="row" style="margin-top: 30px;">
 		<div class="col-lg-12">
 			<h1 class="page-header">
 				<small><a href="{{ route('admin-products.index') }}">Products</a> > {{$p->product_name}}</small>
@@ -221,9 +221,6 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="">
-				&nbsp; 
-			</h1>
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success alert-dismissible">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -238,8 +235,8 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-			<table class="table" style="border: 1px solid black;">
-				<thead  >
+			<table class="table">
+				<thead>
 					<tr style="border: 1px solid black;">
 						<th>Product Name</th>
 						<th>On Stock</th>

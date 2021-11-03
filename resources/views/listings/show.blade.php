@@ -4,28 +4,18 @@
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
 <link rel="icon" href="Images/navbarwhitebike.svg">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-2 mt-3">
-            <img class="img-fluid" src="/images/navbarlogo.svg" alt="logo">
-        </div>
-        <div class="col-lg-4 col-6 mt-2">
-            <div class="headers fs-1 fst-italic lead" id="user-settings">YOUR PROFILE</div>
-        </div>
-    </div>
-    <hr>
-</div>
+
 
 <div class="row ms-4">
     <div class="headers col-lg-6 pt-3">
-        <h1 class="fst-italic fw-bolder">My Listing </h1>
+        <h1 class="fst-italic fw-bolder">Rental Tracking</h1>
     </div>
 </div>
 <div class="container d-flex justify-content-evenly mt-3 mb-5">
-    <div class="row my-auto">
-        <div class="col-lg-7 listing-container shadow p-4 ms-4">
+    <div class="row justify-content-center mx-auto">
+        <div class="col-lg-7 listing-container shadow p-4 ms-4 w-100">
       <div class="panel panel-default"  style="width: 100%; margin: auto;">
-                <h3 class="title-style">Order Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$listing->id}}</span></h3>
+                <h3 class="title-style">Rental Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$listing->id}}</span></h3>
                 <br>
                 
             <div class="row">
@@ -203,21 +193,6 @@
             </table>
 
         </div>
-        </div>
-
-        <div class="col-lg-4 d-flex justify-content-end">
-            <div class="col-lg-9 me-5">
-                <div class="profile-card card" id="product-profile">
-                    <p class="fst-italic fs-5 ms-2 mt-2">Your Profile:</p>
-                    <img src="/uploads/users/{{Auth::user()->photo}}" class="card-img-top" alt="user's photo">
-                    <div class="card-body">
-                        <p class="card-text fw-bold fst-italic fs-5" id="user-name">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</p>
-                        <p class="card-text fw-normal fst-italic" id="user-email">{{Auth::user()->email}}</p>
-                        <a class="fw-normal fs-6 fst-italic lead mt-5" href="{{url('settings')}}"><i class="bi bi-gear me-1"></i>Tweak your profile</a>
-                        <a class="fw-normal fs-6 fst-italic lead mt-5" href="{{url('my-orders')}}"><i class="bi bi-gear me-1"></i>My Orders</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

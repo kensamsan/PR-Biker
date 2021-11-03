@@ -112,7 +112,7 @@
 	<div class="row" style="margin-top:30px;">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="page-header">				
-				<h2>Promo Code List</h2> <small></small>
+				<h2>Add Promo Code</h2> <small></small>
 			</div>
 		</div>
 	</div>
@@ -126,20 +126,20 @@
 				<div class="panel-body" style="padding:0px;">
 					{{ Form::open(array('route' => 'admin.promo-codes.store', 'method' => 'store','files'=>true)) }}
 					<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-11 margin-left margin-bottom margin-top">
 					{{ Form::label('code', 'Promo Code') }}
 					{{ Form::text('code','',array('class'=>'form-control span6','placeholder' => 'Promo Code')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('code')}}</span>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-11 margin-left margin-bottom margin-top">
 					{{ Form::label('label', 'Label') }}
 					<textarea class="form-control" name="label" id="label"></textarea>
 				</div>
 			</div>	
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-11 margin-left margin-bottom margin-top">
 					{{ Form::label('description', 'Description') }}
 					{{ Form::text('description','',array('class'=>'form-control span6','placeholder' => 'description')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('description')}}</span>
@@ -147,7 +147,7 @@
 			</div>
 			
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-5 margin-left margin-bottom margin-top">
 					{{ Form::label('type', 'Type') }}
 					<select class="form-control" name="type">
 						<option value="promo">Promo</option>
@@ -161,7 +161,7 @@
 					<span class="errors" style="color:#FF0000">{{$errors->first('type')}}</span>
 				</div>
 
-				<div class="col-lg-6">
+				<div class="col-lg-6 margin-bottom margin-top">
 					{{ Form::label('target', 'Target') }}
 					<select class="form-control" name="target">
 						<option value="subtotal">Subtotal</option>				
@@ -171,24 +171,24 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-5 margin-left margin-bottom margin-top">
 					{{ Form::label('date_from', 'From') }}
 					{{ Form::date('date_from','',array('class'=>'form-control span6','placeholder' => 'From')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('product_code')}}</span>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 margin-bottom margin-top">
 					{{ Form::label('date_to', 'To') }}
 					{{ Form::date('date_to','',array('class'=>'form-control span6','placeholder' => 'To')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('date_to')}}</span>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-5 margin-left margin-bottom margin-top">
 					{{ Form::label('value', 'Value') }}
 					{{ Form::text('value','',array('class'=>'form-control span6','placeholder' => '+50/-10% etc')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('value')}}</span>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 margin-bottom margin-top">
 					{{ Form::label('order', 'Order') }}
 					{{ Form::number('order','1',array('class'=>'form-control span6','placeholder' => 'Order Applied')) }}
 					<span class="errors" style="color:#FF0000">{{$errors->first('order')}}</span>
@@ -196,7 +196,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-5 margin-left margin-bottom margin-top">
 					{{ Form::label('discount_type', 'Discount Type') }}
 					<select class="form-control" name="discount_type" id="discount_type">
 						<option value="all">All</option>
@@ -232,8 +232,8 @@
 			
 			
 			<div class="row top10">
-				<div class="col-lg-4">
-					<input type="submit" class="btn btn-success btn-lg" value="Submit" />
+				<div class="col-lg-4 margin-left margin-bottom margin-top">
+					<input type="submit" class="btn btn-primary" value="Submit" />
 				</div>
 			</div>
 

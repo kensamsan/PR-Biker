@@ -290,7 +290,17 @@
             margin-top: 2rem!important;
         }
         .margin-top {
-            margin-top: 3.5rem!important;
+            margin-top: 2rem!important;
+        }
+        .margin-left {
+            margin-left: 3.5rem!important;
+        }
+        .margin-bottom {
+            margin-bottom: 2rem!important;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
     

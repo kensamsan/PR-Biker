@@ -126,7 +126,7 @@
 				<div class="panel-body" style="padding:0px;">
 					{{ Form::open(array('route' => 'admin.tag.store', 'method' => 'store','files'=>true)) }}
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-lg-11 margin-left margin-bottom margin-top">
 								{{ Form::label('tag_name', 'Tag Name') }}
 								{{ Form::text('tag_name','',array('class'=>'form-control span6','placeholder' => 'Tag Name')) }}
 								<span class="errors" style="color:#FF0000">{{$errors->first('tag_name')}}</span>
@@ -149,8 +149,8 @@
  -->
 
 						<div class="row top10">
-							<div class="col-lg-4">
-								<input type="submit" class="btn btn-success btn-lg" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+							<div class="col-lg-4 margin-left margin-bottom">
+								<input type="submit" class="btn btn-primary" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
 							</div>
 						</div>
 						{!! Form::close() !!}

@@ -117,18 +117,16 @@
 		</div>
 	</div>
 	<div class="row">
-		
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-lg-12">
 			<div class="panel panel-default panel-custom">
 				<div class="panel-heading">
-					
 				</div>
 				<div class="panel-body" style="padding:0px;">
 					<form method="post" action="{{ route('admin-products.update',[$p->id]) }}">
 					<input type="hidden" name="_method" value="PUT">
 					{{ csrf_field() }}
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 margin-top margin-left">
 							<label for="product_name">Product Name</label>
 							<input type="text" name="product_name" class="orm-control" placeholder="Product Name" value="{{ $p->product_name }}"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('product_name')}}</span>
@@ -136,7 +134,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 margin-top margin-left">
 							<label for="category_id">Categories</label>
 							<select name="category_id">
 								@foreach($categories as $x)
@@ -147,7 +145,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-12 margin-top margin-left">
 							{{ Form::label('tag_id', 'Tags') }}
 
 								@foreach($tags as $x)
@@ -174,21 +172,21 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 margin-top margin-left">
 							<label for="description">Description</label>
 							<textarea name="description" class="form-control">{{$p->description}}</textarea>
 							<span class="errors" style="color:#FF0000">{{$errors->first('description')}}</span>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 margin-top margin-left">
 							<label for="price">Price</label>
 							<input type="number" name="price" class="orm-control" placeholder="Price" value="{{ $p->price }}"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 margin-top margin-left">
 							<label for="visibility">Visibility</label>
 							<input type="radio" name="visibility"  value="active" @if($x->visibility=='active') checked="checked" @endif >active
 							<input type="radio" name="visibility"  value="inactive" @if($x->visibility=='inactive') checked="checked" @endif >inactive
@@ -199,8 +197,8 @@
 					
 					
 					<div class="row top10">
-						<div class="col-lg-4">
-							<input type="submit" class="btn btn-default" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+						<div class="col-lg-4 margin-top margin-left margin-bottom">
+							<input type="submit" class="btn btn-primary" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
 						</div>
 					</div>
 					
