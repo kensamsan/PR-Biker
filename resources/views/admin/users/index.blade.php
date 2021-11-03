@@ -108,12 +108,14 @@
 @stop
 @section('content')
 <div class="container-fluid">
-	<div class="row" style="margin-top:30px;">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">				
-				<h2>Users List</h2> <small></small>
+	<div class="row" style="margin-top: 30px";>
+		<div class="col-lg-12">
+			<div class="margin-top">
+				<h1>Users</h1>
 			</div>
+			<hr style="border: 1px solid black">
 		</div>
+		
 	</div>
 	<div class="row">
 		

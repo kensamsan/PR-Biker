@@ -8,13 +8,11 @@
     <h1 class="text-uppercase fw-bold mb-5 fst-italic mt-5 text-lg-start text-center fs-1" id=marketplace-text>
         <b>Rentals</b>
     </h1>
-   
-    <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 jusify-content-center mx-auto">
             <div class="mb-5">
                 <div class="row">
                     @foreach($rentals as $x)
-                        <div class="col-lg-4 col-md-4 col-12 pt-4">
+                        <div class="col-lg-3 col-md-4 col-12 pt-4">
                             <div class="card card-course images">
                                 <div class="card-body">
                                     <div class="col img-modal"
@@ -30,12 +28,7 @@
                             </div>
                         </div>
                         @endforeach
-
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 mt-2 mb-4 ms-lg-5 mx-auto">
-                @include('template.featured-products')
             </div>
         </div>
     </div>

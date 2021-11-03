@@ -104,6 +104,9 @@
 		background-color:white;
 		box-shadow: 0px 3px 6px #00000029;
 	}
+	.margin-left {
+		margin-left: 2rem!important;
+	}
 </style>
 @stop
 @section('content')
@@ -140,11 +143,12 @@
 
 
 <div class="container-fluid">
-	<div class="row">
+	<div class="row" style="margin-top: 30px";>
 		<div class="col-lg-12">
-			<h1 class="page-header">
-				<small>Orders</small>
-			</h1>
+			<div class="margin-top">
+				<h1>Orders</h1>
+			</div>
+			<hr style="border: 1px solid black">
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success">{{Session::get('flash_message')}}</div>
 			@endif
@@ -152,11 +156,6 @@
 			@if(Session::has('flash_error'))
 				<div class="alert alert-danger">{{Session::get('flash_error')}}</div>
 			@endif
-			<ol class="breadcrumb">
-				<li class="active">
-					<i class="fa fa-search"></i> ORder Search
-				</li>
-			</ol>
 		</div>
 	</div>
 	<div class="row">
@@ -169,7 +168,7 @@
 			
 		
 				<span class="input-group-btn">
-					<select class="form-control" name="type">
+					<select class="form-control margin-left" name="type">
 						<option value="all" @if($type=='all') selected @endif>All</option>
 						<option value="processing" @if($type=='processing') selected @endif>processing</option>
 						<option value="pick-up" @if($type=='pick-up') selected @endif>pick-up</option>
@@ -202,23 +201,23 @@
 
 	<div class="row">
 		
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-lg-12">
 			<div class="panel panel-default panel-custom">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-md-5 col-lg-4">
+						<div class="col-lg-3">
 							<div class="form-group">
 						        <div class="input-group">
 						        	<form method="get" action="{{ route('admin-products.index',['products']) }}">
 							        	{{csrf_field()}}
 							            <input type="text" class="form-control" placeholder="Search for..." name="search" value="{{ Request::get('search') }}">
-							            	<input type="submit" name="" value="submit" class="btn btn-primary"> 
+							            	<input type="submit" name="" value="submit" class="btn btn-primary btn-admin-submit"> 
 							            </span>
 						            </form>
 						        </div>
 							</div>
 					    </div>
-						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<div class="col-lg-2">
 							<a class="btn btn-success addBtn" href="{{route('admin-products.create')}}">
 								<i class="fa fa-plus-circle"></i> Add Product
 							</a>
@@ -227,9 +226,9 @@
 				</div>
 				<div class="panel-body" style="padding:0px;">
 					<div class="table-responsive">
-						<table class="table" style="border: 1px solid black;">
-							<thead bgcolor="#337ab7" style="color:white;">
-								<tr style="border: 1px solid black;">
+						<table class="table">
+							<thead>
+								<tr>
 									<th>Order #</th>
 									<th>Date</th>
 									<th>Customer</th>
@@ -242,7 +241,7 @@
 								</tr>
 							</thead>
 							@foreach ($orders as $x)
-							<tr style="border: 1px solid black;">
+							<tr>
 								<td>{{ $x->order_id }}</td>
 								<td>{{ Carbon\Carbon::parse($x->created_at)->toDateString() }}</td>
 								<td>{{ $x->user->first_name }} {{ $x->user->last_name }}</td>

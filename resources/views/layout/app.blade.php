@@ -286,6 +286,12 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .btn-admin-submit {
+            margin-top: 2rem!important;
+        }
+        .margin-top {
+            margin-top: 3.5rem!important;
+        }
     </style>
     
 </head>

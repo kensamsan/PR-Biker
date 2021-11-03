@@ -41,10 +41,6 @@
                     <h2 class="fw-bold"><b>PHP {{ number_format($rental->price,2)}}</b></h2>
                     <div class="row">
                         <div class="col-lg-4 d-flex col-md-2">
-                           <!--  <span class="me-3">
-                                <i class="far fa-calendar-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5" for="">2015</label>
-                            </span> -->
                             <span>
                                 <i class="fas fa-map-marker-alt fs-4 pe-2 icon-color"></i>
                                 <label class="fs-5 lead" for="">{{$rental->city->name}}</label>
@@ -54,25 +50,18 @@
                     <hr>
                     <h3 class="fw-bold"><b>Description:</b></h3>
                     <p class="paragraph-alignment">{{$rental->description}}</p>
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col-lg-6 d-flex col-md-2">
-                 
                             <form method="post" action="{{ route('client-rent-now') }}">
                             {{csrf_field()}}
                                 <input type="hidden" name="rental_id" value="{{$rental->id}}">
-                              <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light" value="Rent Now">
-                        
+                              <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light" value="Rent Now">     
                             </form>
                         </div>                  
                     </div>
-                    <!-- <a href="#" class="read fw-bold"><b>read more</b></a> -->
-                 
-                    {{-- Listings --}}
-                    @include('template.similar-listings')
                 </div>
             </div>
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/carousel.js"></script>

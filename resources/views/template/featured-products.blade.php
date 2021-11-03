@@ -1,4 +1,4 @@
-<h1 class="text-lg-start text-center fw-bold">Feature Products</h1>
+<h1 class="text-lg-start text-center fw-bold">Featured Products</h1>
 <div class="card mb-3 border-0 mt-4" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4">

@@ -3,137 +3,158 @@
 @section('app_name', Session::get('software_name'))
 @section('css')
 <style>
-	.list-group-custom > a.list-group-item
-	{
+	.list-group-custom>a.list-group-item {
 		font-size: 1.6em;
 	}
-	.list-group-custom > a.list-group-item.active, .list-group-custom > a.list-group-item.active:focus, .list-group-custom > a.list-group-item.active:hover {
+
+	.list-group-custom>a.list-group-item.active,
+	.list-group-custom>a.list-group-item.active:focus,
+	.list-group-custom>a.list-group-item.active:hover {
 		background-color: #0063E0;
-    	border-color: #707070;
+		border-color: #707070;
 	}
-	.custom-box
-	{
+
+	.custom-box {
 		background: #FFFFFF 0% 0% no-repeat padding-box;
 		border: 1px solid #C6C6C6;
 		border-radius: 3px;
 		padding: 10px 15px;
 	}
-	.text-field
-	{
+
+	.text-field {
 		font: normal 20px/30px Helvetica Neue;
 		font-weight: 500;
 		letter-spacing: 0px;
 		color: #000000;
 	}
-	@media(min-width: 1200px)
-    {
-    	.table-responsive {
-            overflow: visible;
-        }
-    }
-	@media(min-width: 768px)
-	{
-		.btn-edit
-		{
+
+	@media(min-width: 1200px) {
+		.table-responsive {
+			overflow: visible;
+		}
+	}
+
+	@media(min-width: 768px) {
+		.btn-edit {
 			float: right;
 		}
-		 div.dataTables_wrapper div.dataTables_paginate {
-	    	margin-right:20px !important;
-	    }
-	    table.dataTable {
-	    	margin-top: -1px !important;
-	    	margin-bottom: 0px !important;
-	    }
+
+		div.dataTables_wrapper div.dataTables_paginate {
+			margin-right: 20px !important;
+		}
+
+		table.dataTable {
+			margin-top: -1px !important;
+			margin-bottom: 0px !important;
+		}
 	}
-	@media(max-width: 767px)
-	{
-		.btn-edit
-		{
+
+	@media(max-width: 767px) {
+		.btn-edit {
 			text-align: center;
 		}
-		.table-responsive
-    	{
-    		margin-bottom: -10px;
-    	}
-	    #usersTable_wrapper
-	    {
-	    	margin-right: -15px;
-	    }
-	    table.dataTable {
-	    	margin-top: -2px !important;
-	    	margin-bottom: 0px !important;
-	    }
+
+		.table-responsive {
+			margin-bottom: -10px;
+		}
+
+		#usersTable_wrapper {
+			margin-right: -15px;
+		}
+
+		table.dataTable {
+			margin-top: -2px !important;
+			margin-bottom: 0px !important;
+		}
 	}
+
 	.input-group .form-control {
-        z-index: 0 !important;
-    }
-    .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-        z-index: 0 !important;
-    }
-	.panel-custom > .panel-heading
-	{
+		z-index: 0 !important;
+	}
+
+	.input-group-btn:last-child>.btn,
+	.input-group-btn:last-child>.btn-group {
+		z-index: 0 !important;
+	}
+
+	.panel-custom>.panel-heading {
 		padding: 25px 15px 15px 15px;
 	}
-	.dataTables_wrapper > .table-scrollable{
-    	background-color: #EBEDEF;
-    }
-    div.table-responsive>div.dataTables_wrapper>div[class^="row"]:last-child {
-    	background-color: white;
-    }
-    .table>thead
-    {
-    	background-color: #EBEDEF;
-    	color: black;
-    }
-    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-    	vertical-align: middle;
-    }
-    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
-    	margin: 10px 0;
-    }
-	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
-	{
+
+	.dataTables_wrapper>.table-scrollable {
+		background-color: #EBEDEF;
+	}
+
+	div.table-responsive>div.dataTables_wrapper>div[class^="row"]:last-child {
+		background-color: white;
+	}
+
+	.table>thead {
+		background-color: #EBEDEF;
+		color: black;
+	}
+
+	.table>thead>tr>th,
+	.table>tbody>tr>th,
+	.table>tfoot>tr>th,
+	.table>thead>tr>td,
+	.table>tbody>tr>td,
+	.table>tfoot>tr>td {
+		vertical-align: middle;
+	}
+
+	div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+		margin: 10px 0;
+	}
+
+	.pagination>.active>a,
+	.pagination>.active>span,
+	.pagination>.active>a:hover,
+	.pagination>.active>span:hover,
+	.pagination>.active>a:focus,
+	.pagination>.active>span:focus {
 		background-color: #1790da !important;
-    	border-color: #1790da !important;
+		border-color: #1790da !important;
 	}
-	.table-striped > tbody > tr:nth-of-type(even) {
-	    background-color: #fff;
+
+	.table-striped>tbody>tr:nth-of-type(even) {
+		background-color: #fff;
 	}
-	.table-responsive
-	{
-		background-color:white;
+
+	.table-responsive {
+		background-color: white;
 		box-shadow: 0px 3px 6px #00000029;
+	}
+	.btn-admin-submit{
+		margin-top: 2rem!important;
 	}
 </style>
 @stop
 @section('content')
 <div class="container-fluid">
 	<div class="row" style="margin-top:30px;">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">				
-				<h2>Products List</h2> <small></small>
+		<div class="col-lg-12">
+			<div class="margin-top">
+				<h1>Product List</h1>
+				<hr style="border: 1px solid black">
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-lg-12">
 			<div class="panel panel-default panel-custom">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-md-5 col-lg-4">
-							<div class="form-group">
-						        <div class="input-group">
-						        	<form method="get" action="{{ route('admin-products.index',['products']) }}">
-							        	{{csrf_field()}}
-							            <input type="text" class="form-control" placeholder="Search for..." name="search" value="{{ Request::get('search') }}">
-							            	<input type="submit" name="" value="submit" class="btn btn-primary"> 
-							            </span>
-						            </form>
-						        </div>
-							</div>
-					    </div>
-						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<div class="col-lg-4">					
+								<form method="get" action="{{ route('admin-products.index',['products']) }}">
+									{{csrf_field()}}
+									<input type="text" class="form-control" placeholder="Search for..." name="search"
+										value="{{ Request::get('search') }}">
+									<input type="submit" name="" value="submit"
+										class="btn btn-primary btn-admin-submit">
+								</form>
+						</div>
+						<div class="col-lg-2">
 							<a class="btn btn-success addBtn" href="{{route('admin-products.create')}}">
 								<i class="fa fa-plus-circle"></i> Add Product
 							</a>
@@ -154,47 +175,63 @@
 							</thead>
 							<tbody>
 								@foreach($products as $p)
-									<tr>
-										<td>{{$p->id}}</td>
-										<td>{{$p->product_name}}</td>
-										<td>{{$p->price}}</td>
-										<td>
-											@if($p->visibility=='inactive')
-												<span class="label label-warning">Inactive</span>	
-											@else
-												<span class="label label-success">Active</span>	
-											@endif
-										</td>
-										<td>
-											<div class="btn-group">
-					                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					                                Action <span class="caret"></span>
-					                            </button>
-					                            <ul class="dropdown-menu dropdown-menu-right">
-					                            	<li>
-					                                    <a href="{{route('admin-products.edit',$p->id)}}" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp; View Details</a>
-					                                </li>
-					                             
-					                            	<li>
-				                                        <a href="{{  route('admin-products.product-image.index',$p->id)  }}" title="Roles" class=""><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp; Image</a>
-				                                    </li>
-					                            	<li>
-				                                        <a href="{{  route('admin.product.stock',[$p->id])  }}" title="Roles" class=""><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp; Stock</a>
-				                                    </li>
-				                               
-				                                    <li>
-				                                        @if($p->visibility == "inactive" )
-															<a href="#" id="{{$p->id}}" class="btnActiveUser" data-name="{{ $p->product_name }}" title="Active" data-toggle="modal" data-target="#confirmationActiveSection"><i class="fa fa-toggle-on" aria-hidden="true"></i>&nbsp; Set Active</a>
-														@else
-															<a href="#" id="{{$p->id}}" class="btnInactiveUser" data-name="{{ $p->product_name }}" title="Inactive" data-toggle="modal" data-target="#confirmationInactiveSection"><i class="fa fa-toggle-off" aria-hidden="true"></i>&nbsp; Set Inactive</a>
-														@endif
-			    	                                </li>
-			                                
-					                               
-					                            </ul>
-					                        </div>
-										</td>
-									</tr>
+								<tr>
+									<td>{{$p->id}}</td>
+									<td>{{$p->product_name}}</td>
+									<td>{{$p->price}}</td>
+									<td>
+										@if($p->visibility=='inactive')
+										<span class="label label-warning">Inactive</span>
+										@else
+										<span class="label label-success">Active</span>
+										@endif
+									</td>
+									<td>
+										<div class="btn-group">
+											<button type="button" class="btn btn-primary btn-sm dropdown-toggle"
+												data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Action <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li>
+													<a href="{{route('admin-products.edit',$p->id)}}"><span
+															class="glyphicon glyphicon-eye-open"
+															aria-hidden="true"></span>&nbsp; View Details</a>
+												</li>
+
+												<li>
+													<a href="{{  route('admin-products.product-image.index',$p->id)  }}"
+														title="Roles" class=""><i class="fa fa-unlock-alt"
+															aria-hidden="true"></i>&nbsp; Image</a>
+												</li>
+												<li>
+													<a href="{{  route('admin.product.stock',[$p->id])  }}"
+														title="Roles" class=""><i class="fa fa-unlock-alt"
+															aria-hidden="true"></i>&nbsp; Stock</a>
+												</li>
+
+												<li>
+													@if($p->visibility == "inactive" )
+													<a href="#" id="{{$p->id}}" class="btnActiveUser"
+														data-name="{{ $p->product_name }}" title="Active"
+														data-toggle="modal" data-target="#confirmationActiveSection"><i
+															class="fa fa-toggle-on" aria-hidden="true"></i>&nbsp; Set
+														Active</a>
+													@else
+													<a href="#" id="{{$p->id}}" class="btnInactiveUser"
+														data-name="{{ $p->product_name }}" title="Inactive"
+														data-toggle="modal"
+														data-target="#confirmationInactiveSection"><i
+															class="fa fa-toggle-off" aria-hidden="true"></i>&nbsp; Set
+														Inactive</a>
+													@endif
+												</li>
+
+
+											</ul>
+										</div>
+									</td>
+								</tr>
 								@endforeach
 							</tbody>
 						</table>
@@ -205,11 +242,13 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div id="confirmationDeleteSection" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+			<div id="confirmationDeleteSection" class="modal fade" role="dialog" data-backdrop="static"
+				data-keyboard="false">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+									aria-hidden="true">&times;</span></button>
 							<h4 class="modal-title">Confirmation</h4>
 						</div>
 						<div class="modal-body">
@@ -228,11 +267,13 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div id="confirmationActiveSection" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+			<div id="confirmationActiveSection" class="modal fade" role="dialog" data-backdrop="static"
+				data-keyboard="false">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+									aria-hidden="true">&times;</span></button>
 							<h4 class="modal-title">Confirmation</h4>
 						</div>
 						<div class="modal-body">
@@ -251,11 +292,13 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div id="confirmationInactiveSection" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+			<div id="confirmationInactiveSection" class="modal fade" role="dialog" data-backdrop="static"
+				data-keyboard="false">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+									aria-hidden="true">&times;</span></button>
 							<h4 class="modal-title">Confirmation</h4>
 						</div>
 						<div class="modal-body">
@@ -276,122 +319,107 @@
 @stop
 @section('script')
 <script>
-	$(window).on('resize', function(){
-        if($(this).width() < 768)
-        {
-            if(!$('.addBtn').hasClass('btn-block'))   
-            {
-                $('.addBtn').addClass('btn-block');
-            }
-        }
-        else if($(this).width() > 767 && $(this).width() < 992)
-        {
-           	if(!$('.addBtn').hasClass('btn-block'))   
-	        {
-	            $('.addBtn').addClass('btn-block');
-	        }
-        }
-        else if($(this).width() > 991 && $(this).width() < 1200)
-        {
-            if($('.addBtn').hasClass('btn-block'))
-            {
-                $('.addBtn').removeClass('btn-block');
-            }
-        }
-        else
-        {
-            if($('.addBtn').hasClass('btn-block'))
-            {
-                $('.addBtn').removeClass('btn-block');
-            }
-        }
-    });
-    if($(window).width() < 768)
-    {
-        if(!$('.addBtn').hasClass('btn-block'))   
-        {
-            $('.addBtn').addClass('btn-block');
-        }
-    }
-    else if($(window).width() > 767 && $(window).width() < 992)
-    {
-        if(!$('.addBtn').hasClass('btn-block'))   
-        {
-            $('.addBtn').addClass('btn-block');
-        }
-    }
-    else if($(window).width() > 991 && $(window).width() < 1200)
-    {
-        if($('.addBtn').hasClass('btn-block'))
-        {
-            $('.addBtn').removeClass('btn-block');
-        }
-    }
-    else
-    {
-        if($('.addBtn').hasClass('btn-block'))
-        {
-            $('.addBtn').removeClass('btn-block');
-        }
-    }
-	$(document).ready(function(){
+	$(window).on('resize', function () {
+		if ($(this).width() < 768) {
+			if (!$('.addBtn').hasClass('btn-block')) {
+				$('.addBtn').addClass('btn-block');
+			}
+		} else if ($(this).width() > 767 && $(this).width() < 992) {
+			if (!$('.addBtn').hasClass('btn-block')) {
+				$('.addBtn').addClass('btn-block');
+			}
+		} else if ($(this).width() > 991 && $(this).width() < 1200) {
+			if ($('.addBtn').hasClass('btn-block')) {
+				$('.addBtn').removeClass('btn-block');
+			}
+		} else {
+			if ($('.addBtn').hasClass('btn-block')) {
+				$('.addBtn').removeClass('btn-block');
+			}
+		}
+	});
+	if ($(window).width() < 768) {
+		if (!$('.addBtn').hasClass('btn-block')) {
+			$('.addBtn').addClass('btn-block');
+		}
+	} else if ($(window).width() > 767 && $(window).width() < 992) {
+		if (!$('.addBtn').hasClass('btn-block')) {
+			$('.addBtn').addClass('btn-block');
+		}
+	} else if ($(window).width() > 991 && $(window).width() < 1200) {
+		if ($('.addBtn').hasClass('btn-block')) {
+			$('.addBtn').removeClass('btn-block');
+		}
+	} else {
+		if ($('.addBtn').hasClass('btn-block')) {
+			$('.addBtn').removeClass('btn-block');
+		}
+	}
+	$(document).ready(function () {
 		@if(Session::has('flash_message'))
-			Swal.fire(
-			  'Success',
-			  '{{Session::get('flash_message')}}',
-			  'success'
-			)
+		Swal.fire(
+			'Success',
+			'{{Session::get('
+			flash_message ')}}',
+			'success'
+		)
 		@endif
 		@if(Session::has('flash_error'))
-			Swal.fire(
-			  'Error',
-			  '{{Session::get('flash_error')}}',
-			  'error'
-			)
+		Swal.fire(
+			'Error',
+			'{{Session::get('
+			flash_error ')}}',
+			'error'
+		)
 		@endif
 		let usersTable = $('#usersTable').DataTable({
-            "columnDefs": [
-                { "orderable": false , "targets": [4] },
-              ],
-            "order": [[ 0, "desc" ]],
-            "filter": true,
-            "paging" : true,
-            "lengthChange": false,
-            "info" : false,
-            "pagingType": "simple_numbers"
-        });
-        $('#usersTable_filter').remove();
-        $('.btnSearch').on('click',function(){
-        	usersTable.search($('input[name="search"]').val()).draw();
-        });
-        $(document).on("keypress", "input[name='search']", function(e) {
-		    if (e.which == 13) {
-		         $('.btnSearch').trigger('click');
-		    }
+			"columnDefs": [{
+				"orderable": false,
+				"targets": [4]
+			}, ],
+			"order": [
+				[0, "desc"]
+			],
+			"filter": true,
+			"paging": true,
+			"lengthChange": false,
+			"info": false,
+			"pagingType": "simple_numbers"
 		});
-		$('.btnDeleteUser').click(function(){
+		$('#usersTable_filter').remove();
+		$('.btnSearch').on('click', function () {
+			usersTable.search($('input[name="search"]').val()).draw();
+		});
+		$(document).on("keypress", "input[name='search']", function (e) {
+			if (e.which == 13) {
+				$('.btnSearch').trigger('click');
+			}
+		});
+		$('.btnDeleteUser').click(function () {
 			$('#confirmationDeleteSection .userFullName').html($(this).data('name'));
-			$('#btnDeleteUser').attr('href','/settings/users/' + $(this).attr('id') + '/delete');
+			$('#btnDeleteUser').attr('href', '/settings/users/' + $(this).attr('id') + '/delete');
 		});
-		$('.btnActiveUser').click(function(){
+		$('.btnActiveUser').click(function () {
 			$('#confirmationActiveSection .userFullName').html($(this).data('name'));
-			$('#btnActiveUser').attr('href','/admin-products-visibility/' + $(this).attr('id') + '/active');
+			$('#btnActiveUser').attr('href', '/admin-products-visibility/' + $(this).attr('id') +
+				'/active');
 		});
-		$('.btnInactiveUser').click(function(){
+		$('.btnInactiveUser').click(function () {
 			$('#confirmationInactiveSection .userFullName').html($(this).data('name'));
-			$('#btnInactiveUser').attr('href','/admin-products-visibility/' + $(this).attr('id') + '/inactive');
+			$('#btnInactiveUser').attr('href', '/admin-products-visibility/' + $(this).attr('id') +
+				'/inactive');
 		});
-		$('#btnDeleteUser').click(function(){
+		$('#btnDeleteUser').click(function () {
 			$(this).html('<i class="fa fa-spinner fa-spin"></i> &nbsp;Loading');
-			$(this).attr('disabled',true);
+			$(this).attr('disabled', true);
 		});
-		$('#btnActiveUser').click(function(){
+		$('#btnActiveUser').click(function () {
 			$(this).html('<i class="fa fa-spinner fa-spin"></i> &nbsp;Loading');
-			$(this).attr('disabled',true);
+			$(this).attr('disabled', true);
 		});
-		$('#btnInactiveUser').click(function(){
+		$('#btnInactiveUser').click(function () {
 			$(this).html('<i class="fa fa-spinner fa-spin"></i> &nbsp;Loading');
-			$(this).attr('disabled',true);
+			$(this).attr('disabled', true);
 		});
 	});
 </script>
