@@ -65,7 +65,7 @@
                             {{csrf_field()}}
                                 <input type="hidden" name="product_id" value="{{$p->id}}">
                                 <input type="hidden" name="qty" value="1">
-                              <input type="submit" class="px-5 my-4 btn btn-custom-outline text-uppercase lead text-light" value="add to cart">
+                              <input type="submit" class="px-5 my-4 btn btn-custom-outline text-uppercase lead text-light mb-5" value="add to cart">
                         
                             </form>
                             @else
