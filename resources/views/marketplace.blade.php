@@ -21,7 +21,7 @@
             <div class="row">
                 @foreach($products as $x)
                 <div class="col-lg-3 col-md-4 col-12 pt-4">
-                    <div class="card card-course images">
+                    <div class="card card-course images h-100">
                         <div class="card-body">
                             <div class="col img-modal"
                                 style="background: url('{{ asset("uploads/products/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;"
