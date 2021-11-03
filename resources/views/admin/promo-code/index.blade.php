@@ -130,11 +130,11 @@
 </div>
 
 <div class="container-fluid">
-	<div class="row">
+	<div class="row" style="margin-top: 30px">
 		<div class="col-lg-12">
-			<h1 class="page-header">
-				<small>Promo Code</small>
-			</h1>
+			<div class="page-header">				
+				<h2>Promo Code</h2> <small></small>
+			</div>
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success">{{Session::get('flash_message')}}</div>
 			@endif
@@ -142,11 +142,6 @@
 			@if(Session::has('flash_error'))
 				<div class="alert alert-danger">{{Session::get('flash_error')}}</div>
 			@endif
-			<ol class="breadcrumb">
-				<li class="active">
-					<i class="fa fa-search"></i> Promo Code Search
-				</li>
-			</ol>
 		</div>
 	</div>
 	<div class="row">
@@ -183,7 +178,7 @@
 					<div class="table-responsive">
 						<table class="table table-striped" id="usersTable">
 							<thead>
-								<tr style="border: 1px solid black;">
+								<tr>
 									<th>Code</th>
 									<th>Description</th>
 									<th>Type</th>

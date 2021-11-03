@@ -130,11 +130,11 @@
 </div>
 
 <div class="container-fluid">
-	<div class="row">
+	<div class="row" style="margin-top: 30px";>
 		<div class="col-lg-12">
-			<h1 class="page-header">
-				<small>Tag</small>
-			</h1>
+			<div class="page-header">				
+				<h2>Tags</h2> <small></small>
+			</div>
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success">{{Session::get('flash_message')}}</div>
 			@endif
@@ -142,11 +142,6 @@
 			@if(Session::has('flash_error'))
 				<div class="alert alert-danger">{{Session::get('flash_error')}}</div>
 			@endif
-			<ol class="breadcrumb">
-				<li class="active">
-					<i class="fa fa-search"></i> Tag Search
-				</li>
-			</ol>
 		</div>
 	</div>
 	<div class="row">
@@ -183,7 +178,7 @@
 					<div class="table-responsive">
 						<table class="table table-striped" id="usersTable">
 							<thead>
-								<tr style="border: 1px solid black;">
+								<tr>
 									<th>Title</th>
 									<th>Status</th>
 									<th></th>
@@ -191,7 +186,7 @@
 							</thead>
 							<tbody>
 							@foreach ($t as $x)
-								<tr style="border: 1px solid black;">
+								<tr>
 									<td>{{ $x->tag_name }}</td>
 									<td>
 										@if($x->active==0)
