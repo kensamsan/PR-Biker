@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="ms-5 ms-sm">
-                    <h2 class="lead display-6">{{$rental->product_name}}</h2>
+                    <h2 class="lead display-6">{{$rental->bike_name}}</h2>
                     <h2 class="fw-bold"><b>PHP {{ number_format($rental->price,2)}}</b></h2>
                     <div class="row">
                         <div class="col-lg-4 d-flex col-md-2">

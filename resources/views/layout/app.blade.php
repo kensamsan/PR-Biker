@@ -387,9 +387,12 @@
 
                     <li class="" id="listSettings"><a href="javascript:;" data-toggle="collapse" data-target="#settings" >Settings <i class="fa fa-fw fa-caret-left pull-right" id="caret-icon"></i></a>
                         <ul id="settings" class="collapse {{(\Request::route()->getName() == 'activity_logs.index' || \Request::route()->getName() == 'settings.index' ) ? 'in' : ''}}">
-                          
+                          <!-- 
                             <li>
                                 <a class="{{(\Request::route()->getName() == 'settings.activity.logs.index') ? 'active' : ''}}" href="{{route('settings.activity.logs.index')}}">Application</a>
+                            </li> -->
+                            <li>
+                                <a class="{{(\Request::route()->getName() == 'categories.index') ? 'active' : ''}}" href="{{route('categories.index')}}">Categories</a>
                             </li>
                             <li>
                                 <a class="{{(\Request::route()->getName() == 'roles.index') ? 'active' : ''}}" href="{{route('roles.index')}}">Roles</a>

@@ -203,6 +203,7 @@ Route::group(['prefix' => ''], function () {
 			Route::resource('roles','RoleController');
 		});
 
+			Route::resource('categories','CategoryController');
 		//Settings - Manage Profile
 		Route::group(['prefix' => 'settings'], function () {
 			Route::get('manage-profile', 'SettingsController@manageProfile')->name('settings.manage.profile');

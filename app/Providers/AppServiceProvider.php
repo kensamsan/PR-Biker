@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use App\Product;
+use View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,6 +15,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        View::composer('*', function($view)
+        {
+            $view->with('featured_product',  Product::inRandomOrder()->limit(5)->get());
+
+            
+
+
+        });
+        
     }
 
     /**
