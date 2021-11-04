@@ -32,6 +32,72 @@ use Darryldecode\Cart\Helpers\Helpers;
 class CartController extends Controller
 {
     //
+    public function removeItem($id)
+	{
+		\Cart::session(Auth::user()->id)->remove($id); 
+		// \Cart::clear();
+
+		return redirect()->back()->with('flash_message', 'Item Removed');
+
+	}
+	
+    public function addQty($id)
+	{
+
+
+		$ct = \Cart::session(Auth::user()->id)->get($id);
+		Log::info($ct);
+		$item_qty = $ct->quantity;
+		$p = Product::find($ct->id);
+
+		$po = Transaction::where('product_id','=',$p->id)->where('type','=','po')->sum('qty');
+		$so = Transaction::where('product_id','=',$p->id)->where('type','=','so')->sum('qty');
+		$res = Transaction::where('product_id','=',$p->id)->where('type','=','res')->sum('qty');
+		$tot = $po-$so-$res;
+		// Log::info('$tot>0');
+		// Log::info($tot>$item_qty);
+		if($tot>$item_qty)
+		{
+	
+
+
+			\Cart::update($id, array(
+			 'quantity' => 1
+			));
+
+			return redirect()->back()->with('flash_message', 'Added Qty');
+		}
+		else
+		{
+
+			return redirect()->back()->with('error_message', 'Out of Stock');
+		}
+
+
+		
+
+	}
+	public function subQty($id)
+	{
+
+		if(\Cart::session(Auth::user()->id)->get($id)->quantity > 1)
+		{
+			\Cart::session(Auth::user()->id)->update($id, array(
+				'quantity' => -1
+			));
+			return redirect()->back()->with('flash_message', 'Subtracted Qty');
+		}
+		else
+		{
+				\Cart::remove($id);
+				return redirect()->back()->with('flash_message', 'Item Removed');
+		}
+		
+
+		// 
+
+	}
+
     public function applyPromo(Request $request)
 	{
 		
