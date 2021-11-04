@@ -64,9 +64,9 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4" type="number">
                     {{ Form::label('price', 'Price') }}
-                    {{ Form::number('price','',array('class'=>'form-control span6','placeholder' => 'price')) }}
+                    {{ Form::text('price','',array('class'=>'form-control span6','placeholder' => 'price')) }}
                     <span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
                 </div>
                 <div class="col-lg-4">
@@ -84,7 +84,7 @@
 
 
             <div class="row top10">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-5">
                     <input type="submit" class="btn btn-background" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
                 </div>
             </div>

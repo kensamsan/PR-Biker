@@ -1,4 +1,5 @@
 @extends('template.master')
+@section('title', 'Payment Information')
 
 <link rel="stylesheet" href="/css/store/checkout.css">
 <link rel="stylesheet" href="/css/store/store.css">
