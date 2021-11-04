@@ -1,16 +1,14 @@
 @extends('template.master')
-
+@section('title', 'Billing Information')
 @section('content')
 
 <link rel="stylesheet" href="/css/store/checkout.css">
 <link rel="stylesheet" href="/css/store/store.css">
 <link rel="stylesheet" href="/css/store/normalize.css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
+{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
 
 <main>
 
@@ -35,11 +33,11 @@
                     <div class="col-lg-5 px-5 my-3 checkout-form">
                         <h3 class="fw-bold mb-5 fst-italic"><b>BILLING INFORMATION</b></h5>
                       
-                        <p style="color: #707070">Contact Number <a href="#" class="updateNum" data-toggle="modal" data-target="#myModalNumber" style="color: #F2B533"><strong>@if(Auth::user()->contact=='') Add Number @else Update Number @endif </strong></a></p>
+                        <p style="color: #707070">Contact Number <a href="#" class="updateNum" data-toggle="modal" data-target="#myModalNumber" style="color: #EA5656"><strong>@if(Auth::user()->contact=='') Add Number @else Update Number @endif </strong></a></p>
                         <input type="text" name="contact_number" class="form-control mt-2" style="color: grey" value="{{Auth::user()->contact}}" required readonly="true">
                         <p class="mt-3 mb-2"><span class="text-bold">Billing Address</span> 
                         </p>
-                       <p style="color: #707070">Select a shipping address from your address book or <br><a href="#" data-toggle="modal" data-target="#myModal" style="color: #F2B533"><strong>enter new address</strong></a></p>
+                       <p style="color: #707070">Select a shipping address from your address book or <br><a href="#myModal" data-toggle="modal" style="color: #EA5656"><strong>Enter new address</strong></a></p>
                         <div class="row my-3">
                             <div class="col">
                                 <select name="billing_id" class="form-control" required="true">
@@ -89,7 +87,7 @@
                             </table>
                         </div>
                         <hr>
-                        <p class="px-2"><span class="text-bold">SUBTOTAL</span><span class="float-right">₱ {{ number_format(\Cart::session(Auth::user()->id)->getSubTotal(),2) }}</span></p>
+                        <p class="px-2"><span class="text-bold">SUBTOTAL</span><span class="float-end">₱ {{ number_format(\Cart::session(Auth::user()->id)->getSubTotal(),2) }}</span></p>
                     </div>
                 </div>
             </form>
@@ -187,7 +185,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" class="btn btn-warning" value="Submit"/>
+        <input type="submit" class="btn btn-background" value="Submit"/>
       </div>
       {!! Form::close() !!}
     </div>
@@ -229,4 +227,9 @@
 
 
     </main>
+
+    <!-- Bootstrap Script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  <script type="text/javascript">
 @endsection

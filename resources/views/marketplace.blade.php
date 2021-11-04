@@ -16,7 +16,7 @@
         @endforeach
     </div>
 
-    <div class="col-lg-8 jusify-content-center mx-auto">
+    <div class="col-lg-9 jusify-content-center mx-auto">
         <div class="mb-5">
             <div class="row">
                 @foreach($products as $x)
