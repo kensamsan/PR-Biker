@@ -125,8 +125,7 @@
 
                             <div class="row mt-4 align-items-center">
                                 <div class="col-lg-6 my-2">
-                                    <small><a href="/billing" class="link-main-custom align-middle">RETURN TO
-                                            BILLING</a></small>
+                                    <small><a href="{{ route('client-view-cart') }}" class="link-main-custom align-middle">RETURN TO CART</a></small>
                                 </div>
                                 <div class="col-lg-6 my-2">
                                      <input type="submit" value="CONTINUE TO PAYMENT" class="btn btn-shop" onclick="required()"><br>

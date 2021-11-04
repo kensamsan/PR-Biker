@@ -95,7 +95,7 @@
                     </div>
                     <div class="row align-items-center">
                         <div class="col-lg-6 my-2">
-                            <small><a href="/shipping" class="link-main-custom align-middle">RETURN TO SHIPPING</a></small>
+                            <small><a href="{{ route('client-view-cart') }}" class="link-main-custom align-middle">RETURN TO CART</a></small>
                         </div>
                         <div class="col-lg-6 my-2">
                             <!-- <a href="#" class="btn btn-background float-lg-end">SUBMIT ORDER  &nbsp;<i class="fas fa-arrow-right"></i></a> -->
