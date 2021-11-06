@@ -12,11 +12,10 @@
                 <div class=" align-self-center" id="logo-register"><img src="/images/whitelogo.svg" alt="white logo"></div>
                 <p class="tagline text-center fs-4 fst-italic fw-bold">Shop, Buy and, Ride</p>
             </div>
-            <div class="register-form col-lg-6 col-md-8 col-sm-12 mb-5">
+            <div class="register-form col-lg-6 col-md-8 col-sm-12 mb-5 pb-5">
                 <div class="mt-5 p-5 bg-light mx-auto my-auto">
                     <div class="form-header">
                         <h1 class="fs-1 text-uppercase fst-italic fw-bolder">Register An Account:</h1>
-                        <p class=" fs-4 fst-italic lead">Get started by using your existing social accounts:</p>
                     </div>
                     {{--<div class="flex-row gap-2 d-md-block"> 
                         <div class=" gap-2 d-md-block pb-2">
@@ -28,7 +27,6 @@
                     </div>
                     --}}
 
-                    <p class=" fs-4 fst-italic lead">Or Register Manually:</p>
                     <div>
                     <form class="" action="{{ route('store-account') }}" method="post">
                     {{ csrf_field() }}

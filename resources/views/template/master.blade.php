@@ -50,6 +50,7 @@
     }
 </style>
 <body class="d-flex flex-column min-100-vh">
+    
     <!--Dark navbar-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -85,24 +86,24 @@
                                     Profile
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item" href="{{url('settings')}}">
                                     <i class="fw-bold me-1 bi bi-gear"></i>
                                     Settings
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a class="dropdown-item" href="{{url('my-orders')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
                                     Order Tracking
                                 </a>
                             </li> 
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item" href="{{url('my-listings')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
                                     My Listings
                                 </a>
-                            </li>  
+                            </li>   --}}
                             <li>
                                 <a class="dropdown-item" href="{{url('my-rentals')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
@@ -145,15 +146,11 @@
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
-
             <div class="col-lg-0 pt-3">
-
                 <div class="d-flex justify-content">
-
                     <p class="fw-normal fst-italic">&copy; 2021 Bikers &nbsp; &nbsp;</p>
                     <a href="{{route('terms')}}" class="footer-link fw-normal">&nbsp; Terms &nbsp; &#8226; &nbsp;</a>
                     <a href="{{route('privacy')}}" class="footer-link fw-normal">&nbsp; Privacy &nbsp;</a>
-
                 </div>
             </div>
         </div>

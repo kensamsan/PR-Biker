@@ -8,22 +8,18 @@
                 <div class="col-lg-3 text-lg-start text-center">
                     <a href="{{url('')}}"><img src="/images/navbarlogo.svg" alt="" class="img-fluid"></a>       
                 </div>
-                <div id="search-item" class="col-lg-4 mb-3 mb-lg-0">
-                    <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar">
-                </div>
-                <div class="col-lg-3 mb-3 mb-lg-0">
-                    <div class="input-group">
-                        <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
+                <div id="search-item" class=" d-flex col-lg-7 mb-3 mb-lg-0">
+                    <div class="input-group mx-auto w-75">
+                        <input type="search" class="form-control fw-bold" placeholder="Search for an item">
                         <span class="input-group-text btn" id="basic-addon1">
                             <i class="bi bi-search"></i>
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex align-items-center" id="cart-area">
+                <div class="col-lg-2 d-flex ms-lg-auto align-items-center" id="cart-area">
                     <a class="text-light btn w-100 rounded-pill border-0 fs-6 fw-bold btn-background me-3" id="btn-rent" href="{{url('rent')}}"> Rent a bike</a>
                     <a href="{{url('cart')}}"><i class="fas fa-shopping-cart icon-color fs-5" id="cart-size"></i></a>
                 </div>
-
             </div>
         </div>
     </nav>    

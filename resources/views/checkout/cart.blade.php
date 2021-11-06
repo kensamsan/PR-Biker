@@ -1,6 +1,7 @@
 @extends('template.master')
 @section('title', 'Cart')
 @section('content')
+
 <link rel="stylesheet" href="/css/store/checkout.css">
 
 <main>
@@ -42,7 +43,6 @@
                                 <a href="{{ route('client-remove-item',$x->id) }}"><i class="fa fa-times cart-actions p-0"></i></a>
                             </td>
                       </tr>
-
 
                     @endforeach
 
