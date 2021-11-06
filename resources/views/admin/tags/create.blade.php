@@ -111,8 +111,11 @@
 <div class="container-fluid">
 	<div class="row" style="margin-top:30px;">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">				
-				<h2>Tag Create</h2> <small></small>
+			<div class="page-header d-flex">
+				<span class="align-items-center d-flex">
+					<i class="fas fa-chevron-left fa-2x"></i>
+					<h2 class="margin-left-sm" style="margin:0px;">Add Tag</h2>
+				</span>					
 			</div>
 		</div>
 	</div>

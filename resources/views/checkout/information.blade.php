@@ -98,8 +98,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add new Billing Address</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
        {{ Form::open(array('route' => ['account.billing-address.store-modal',$user->id], 'method' => 'store','files'=>true)) }}
@@ -218,7 +218,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" class="btn btn-warning" value="Submit"/>
+        <input type="submit" class="btn btn-background" value="Submit"/>
       </div>
       {!! Form::close() !!}
     </div>

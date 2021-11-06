@@ -300,9 +300,19 @@
         .margin-left {
             margin-left: 3.5rem!important;
         }
+
+        .margin-left-sm {
+            margin-left: 1rem!important;
+        }
+
         .margin-bottom {
             margin-bottom: 2rem!important;
         }
+
+        .margin-bottom-sm {
+            margin-bottom: 1rem!important;
+        }
+
         .mx-auto {
             margin-left: auto;
             margin-right: auto;
@@ -310,6 +320,18 @@
 
         .no-border {
             border: none !important;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .justify-content-center {
+            justify-content: center;
         }
 
     </style>

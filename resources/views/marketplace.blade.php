@@ -62,14 +62,8 @@
     @if(Session::has('order_placed'))
     Swal.fire({
         title: 'Thank you for your Purchase!',
-        html: 'your order number is  <b>{{Session::get('
-        order_id ')}}</b>,<br/> ' +
-        'For more details, track your delivery status<br/>' +
-        'under My Account>Track my Orders<br/>' +
-        'We sent a confirmation email to<br/>' +
-        '{{Session::get('
-        email ')}}<br/>' +
-        'with the order details',
+        html:'For more details, track your delivery status<br/>' +
+        'under My Account > Track my Orders<br/>',
         type: 'success',
         confirmButtonText: 'Continue Shopping'
     })

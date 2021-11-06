@@ -58,7 +58,7 @@
                                             <input type="radio" id="grab" name="shipping" class="custom-control-input"
                                                 data-target="#grabinfo" data-toggle="collapse" aria-expanded="false"
                                                 required onclick="shippingMethod('courier')" value="courier" />
-                                            <label class="custom-control-label" for="grab">Grab/Lalamove Delivery</label>
+                                            <label class="custom-control-label" for="grab">Lalamove</label>
                                         </div>
                                     </div>
                                     <div class="col text-right">PHP 0.00</label></div>
@@ -80,7 +80,7 @@
                                     </div>
                                 </div> -->
                                 <!-- Greater Metro Manila -->
-                                <div class="row mt-3 pb-0">
+                                {{-- <div class="row mt-3 pb-0">
                                     <div class="col">
                                         <div class="custom-control custom-control-inline">
                                             <input type="radio" id="manila" name="shipping" class="custom-control-input"
@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="col text-right">PHP 150.00</label></div>
-                                </div>
+                                </div> --}}
                                 <div class="row collapse" id="manilainfo">
                                     <div class="col">
                                         <div class="pl-4 pt-2">
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                                 <!-- Provincial -->
-                                <div class="row mt-3 pb-0">
+                                {{-- <div class="row mt-3 pb-0">
                                     <div class="col">
                                         <div class="custom-control custom-control-inline">
                                             <input type="radio" id="provincial" name="shipping" class="custom-control-input"
@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div class="col text-right">PHP 250.00</label></div>
-                                </div>
+                                </div> --}}
                                 <div class="row collapse" id="provincialinfo">
                                     <div class="col">
                                         <div class="pl-4 pt-2">
@@ -189,7 +189,7 @@
         }
         else if(val=='courier')
         {
-            $('#shippingLabel').text("GRAB/LALAMOVE");
+            $('#shippingLabel').text("LALAMOVE");
             $('#shippingValue').text("₱ 0");
             subtotal = subtotal+0;
             $('#shippingTotal').text("₱ "+subtotal);
