@@ -61,7 +61,7 @@
                                             <label class="custom-control-label" for="grab">Lalamove</label>
                                         </div>
                                     </div>
-                                    <div class="col text-right">PHP 0.00</label></div>
+                                    <div class="col text-right">PHP 250.00</label></div>
                                 </div>
                                <!--  <div class="row collapse" id="grabinfo">
                                     <div class="col">
@@ -148,11 +148,7 @@
                                                 <span class="text-bold">₱ {{number_format($x->price)}}</span>
                                             </td>
                                         </tr>
-
-                                       
-
                                     @endforeach
-                                
                                 </tbody>
                             </table>
                         </div>
@@ -162,7 +158,7 @@
                             <span class="float-end">₱ {{ number_format(\Cart::session(Auth::user()->id)->getSubTotal(),2) }}</span>
                         </p>
                         <p class="px-2 mb-0"> SHIPPING : 
-                                <span class="ml-5" id="shippingLabel">GRAB/LALAMOVE</span>
+                                <span class="ml-5" id="shippingLabel">Lalamove</span>
                                 <span class="float-end" id="shippingValue">₱ 0</span>
                         </p>
                         <br><br>
@@ -185,28 +181,28 @@
             $('#shippingLabel').text("PICK UP AT STORE");
             $('#shippingValue').text("₱ 0");
             subtotal = subtotal+0;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else if(val=='courier')
         {
             $('#shippingLabel').text("LALAMOVE");
-            $('#shippingValue').text("₱ 0");
-            subtotal = subtotal+0;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingValue').text("₱ 250.00");
+            subtotal = subtotal+250;
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else if(val=='gma')
         {
             $('#shippingLabel').text("GREATER METRO MANILA");
             $('#shippingValue').text("₱ 150");
             subtotal = subtotal+150;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else
         {
             $('#shippingLabel').text("PROVINCIAL");
             $('#shippingValue').text("₱ 250");
             subtotal = subtotal+250;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
     }
 </script>

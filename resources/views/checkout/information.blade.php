@@ -33,11 +33,11 @@
                     <div class="col-lg-5 px-5 my-3 checkout-form">
                         <h3 class="fw-bold mb-5 fst-italic"><b>BILLING INFORMATION</b></h5>
                       
-                        <p style="color: #707070">Contact Number <a href="#" class="updateNum" data-toggle="modal" data-target="#myModalNumber" style="color: #EA5656"><strong>@if(Auth::user()->contact=='') Add Number @else Update Number @endif </strong></a></p>
+                        <p style="color: #707070">Default Contact Number or <a href="#" class="updateNum" data-toggle="modal" data-target="#myModalNumber" style="color: #EA5656"><strong>@if(Auth::user()->contact=='') Add Number @else Update Number @endif </strong></a></p>
                         <input type="text" name="contact_number" class="form-control mt-2" style="color: grey" value="{{Auth::user()->contact}}" required readonly="true">
                         <p class="mt-3 mb-2"><span class="text-bold">Billing Address</span> 
                         </p>
-                       <p style="color: #707070">Select a shipping address from your address book or <br><a href="#myModal" data-toggle="modal" style="color: #EA5656"><strong>Enter new address</strong></a></p>
+                       <p style="color: #707070">Default Address or <a href="#myModal" data-toggle="modal" style="color: #EA5656"><strong>Enter New Address</strong></a></p>
                         <div class="row my-3">
                             <div class="col">
                                 <select name="billing_id" class="form-control" required="true">
@@ -99,7 +99,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="myModalLabel">Add new Billing Address</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close btn-background rounded border border-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
        {{ Form::open(array('route' => ['account.billing-address.store-modal',$user->id], 'method' => 'store','files'=>true)) }}
@@ -128,7 +128,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     {{ Form::label('address', 'Address') }}
-                                    {{ Form::text('address','',array('class'=>'form-control span6','placeholder' => 'Unit #,House #, building name,street','required'=>'required')) }}
+                                    {{ Form::text('address','',array('class'=>'form-control span6','placeholder' => 'Unit No.,House No., Building Name,Street Name','required'=>'required')) }}
                                     <span class="errors" style="color:#FF0000">{{$errors->first('address')}}</span>
                                 </div>
                             </div>
@@ -157,16 +157,16 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     {{ Form::label('email', 'Email') }}
                                     {{ Form::text('email',$user->email,array('class'=>'form-control span6','placeholder' => 'Email','required'=>'required')) }}
                                     <span class="errors" style="color:#FF0000">{{$errors->first('email')}}</span>
                                 </div>
-                                <div class="col-lg-6">
+                                {{-- <div class="col-lg-6">
                                     {{ Form::label('contact', 'Contact No.') }}
                                     {{ Form::number('contact',$user->contact,array('class'=>'form-control span6','placeholder' => 'Contact No.','required'=>'required')) }}
                                     <span class="errors" style="color:#FF0000">{{$errors->first('contact')}}</span>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
@@ -197,13 +197,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="myModalLabel" style="float: left">Contact Number</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close btn-background rounded border border-danger"  data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
        {{ Form::open(array('route' => ['account.contact.store-modal',$user->id], 'method' => 'store','files'=>true)) }}
                 
                 <div class="row">
                     <div class="col-lg-12">
+                        <p>Note: "+639" will be automatically added to your Number.</p>
                         <label for="contact"><b>Contact Number</b></label>
                         {{ Form::text('contact','',array('class'=>'form-control span6','placeholder' => 'Contact No.','required'=>'required')) }}
                     </div>

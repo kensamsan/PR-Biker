@@ -26,7 +26,6 @@
                         </div>
                     </div>
                     --}}
-
                     <div>
                     <form class="" action="{{ route('store-account') }}" method="post">
                     {{ csrf_field() }}
@@ -93,8 +92,8 @@
                             <div class="col-lg-7 col mt-4">
                                 <div class="form-check">
                                   <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                                  <label class="form-check-label fw-bolder fst-italic" for="gridCheck" id="terms" >
-                                    Accept Terms and Conditions
+                                  <label class="form-check-label fw-bolder fst-italic" for="gridCheck" id="terms" > 
+                                    Accept <a href="">Terms</a> and <a href="">Policy</a>
                                   </label>
                                 </div>                                            
                             </div>

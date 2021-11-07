@@ -44,7 +44,7 @@
                         @elseif($shipping=='gma')
                             <div class="col">GREATER METRO MANILA</div>
                         @elseif($shipping=='courier')
-                            <div class="col">GRAB/LALAMOVE</div>
+                            <div class="col">LALAMOVE</div>
                         @else
                             <div class="col">PICK UP AT STORE</div>
                         @endif
