@@ -4,6 +4,9 @@
 @section('css')
 
 <style>
+    body {
+		overflow-x: hidden;
+	}
 	.list-group-custom > a.list-group-item
 	{
 		font-size: 1.6em;
@@ -131,15 +134,32 @@
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="product_name">Product Name</label>
-							<input type="text" name="product_name" class="orm-control" placeholder="Product Name"> 
+							<input type="text" name="product_name" class="form-control" placeholder="Product Name"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('product_name')}}</span>
 						</div>
 					</div>
-
+					<div class="row">
+						<div class="col-lg-4 margin-top margin-left">
+							<label for="yearpicker">Year</label>
+							<br>
+							<select name="yearpicker" id="yearpicker" class="form-control">
+								<option>Year</option>
+								@for ($i = 2000; $i<=Carbon\Carbon::now()->timezone("Asia/Manila")->format("Y"); $i++)
+								<option value="{{$i}}">{{$i}}</option>
+								@endfor
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 margin-top margin-left">
+							<label for="location">Location</label>
+							<input type="text" name="location" class="form-control" placeholder="Location"> 
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-lg-4 col-lg-4 margin-top margin-left">
-							<label for="category_id">Categories</label>
-							<select name="category_id">
+							<label for="category_id">Categories</label> <br>
+							<select class="form-control" name="category_id">
 								@foreach($categories as $x)
 								<option value="{{$x->id}}">{{ $x->category_name }}</option>
 								@endforeach
@@ -150,13 +170,11 @@
 					<div class="row">
 						<div class="col-lg-12 margin-top margin-left">
 							{{ Form::label('tag_id', 'Tags') }}
-
 								@foreach($tags as $x)
 								<div class="checkbox">
 								  <label><input type="checkbox" name="tag_id[]" value="{{$x->id}}">{{$x->tag_name}}</label>
 								</div>
 								@endforeach
-							
 							<span class="errors" style="color:#FF0000">{{$errors->first('category_name')}}</span>
 						</div>
 					</div>
@@ -170,21 +188,21 @@
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="price">Price</label>
-							<input type="number" name="price" class="orm-control" placeholder="Price"> 
+							<input required class="form-control" type="text" name="price" maxlength="7"/>
 							<span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="visibility">Visibility</label>
-							<input type="radio" name="visibility"  value="active">active
-							<input type="radio" name="visibility"  value="inactive">inactive
+							<div class="d-flex">
+								<input id="active" type="radio" name="visibility" value="active">&nbsp;active&nbsp;&nbsp;
+								<input type="radio" name="visibility" value="inactive">&nbsp;inactive
+							</div>
 							<span class="errors" style="color:#FF0000">{{$errors->first('visibility')}}</span>
 						</div>
 					</div>
 				
-					
-					
 					<div class="row top10">
 						<div class="col-lg-4 margin-top margin-left margin-bottom">
 							<input type="submit" class="btn btn-default btn-primary" value="Submit" onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
@@ -204,11 +222,15 @@
 			</div>
 		</div>
 	</div>
-	
 </div>
 @stop
 @section('script')
 <script>
-	
+	$("#datepicker").datepicker({
+    format: "yyyy",
+    viewMode: "years", 
+    minViewMode: "years",
+    autoclose:true 
+});
 </script>
 @stop

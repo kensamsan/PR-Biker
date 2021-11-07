@@ -67,7 +67,8 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-lg px-0 mx-0">
+            {{-- Top Navbar --}}
+            <div class="col-lg-12 px-0 mx-0">
                 <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
                     <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
                         <li class="nav-item active">
