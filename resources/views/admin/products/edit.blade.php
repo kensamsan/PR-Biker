@@ -4,6 +4,10 @@
 @section('css')
 
 <style>
+body {
+	overflow-x: hidden;
+}
+
 	.list-group-custom > a.list-group-item
 	{
 		font-size: 1.6em;
@@ -105,15 +109,20 @@
 		background-color:white;
 		box-shadow: 0px 3px 6px #00000029;
 	}
+
+	#desc-edit{
+		height: 15vh;
+	}
+
 </style>
 @stop
 @section('content')
 <div class="container-fluid">
 	<div class="row" style="margin-top:30px;">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">				
-				<h2>Products List</h2> <small></small>
-			</div>
+			<h1 class="page-header">				
+				<small><a href="{{ route('admin-products.index') }}">Details</a> > {{$p->product_name}}</small>
+			</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -128,7 +137,7 @@
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="product_name">Product Name</label>
-							<input type="text" name="product_name" class="orm-control" placeholder="Product Name" value="{{ $p->product_name }}"> 
+							<input type="text" name="product_name" class="form-control" placeholder="Product Name" value="{{ $p->product_name }}"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('product_name')}}</span>
 						</div>
 					</div>
@@ -136,7 +145,8 @@
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="category_id">Categories</label>
-							<select name="category_id">
+							<br>
+							<select class="form-control" name="category_id">
 								@foreach($categories as $x)
 								<option value="{{$x->id}}" @if($x->id==$p->category_id) selected @endif>{{ $x->category_name }}</option>
 								@endforeach
@@ -174,22 +184,24 @@
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="description">Description</label>
-							<textarea name="description" class="form-control">{{$p->description}}</textarea>
+							<textarea name="description" class="form-control remove-resize" id="desc-edit">{{$p->description}}</textarea>
 							<span class="errors" style="color:#FF0000">{{$errors->first('description')}}</span>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="price">Price</label>
-							<input type="number" name="price" class="orm-control" placeholder="Price" value="{{ $p->price }}"> 
+							<input type="number" name="price" class="form-control" placeholder="Price" value="{{ $p->price }}"> 
 							<span class="errors" style="color:#FF0000">{{$errors->first('price')}}</span>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 margin-top margin-left">
 							<label for="visibility">Visibility</label>
-							<input type="radio" name="visibility"  value="active" @if($x->visibility=='active') checked="checked" @endif >active
-							<input type="radio" name="visibility"  value="inactive" @if($x->visibility=='inactive') checked="checked" @endif >inactive
+							<div class="d-flex">
+								<input type="radio" name="visibility"  value="active" @if($x->visibility=='active') checked="checked" @endif >&nbsp;active&nbsp;&nbsp;
+								<input type="radio" name="visibility"  value="inactive" @if($x->visibility=='inactive') checked="checked" @endif >&nbsp;inactive
+							</div>
 							<span class="errors" style="color:#FF0000">{{$errors->first('visibility')}}</span>
 						</div>
 					</div>

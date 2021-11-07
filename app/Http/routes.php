@@ -117,7 +117,6 @@ Route::group(['prefix' => ''], function () {
 		Route::get('/checkout-apply-promo/','CartController@applyPromo')->name('client-apply-promo');
 		Route::get('/checkout-clear/','CartController@clearCart')->name('client-clear-cart');
 
-
 		Route::resource('account','AccountController');
 		Route::resource('account.billing-address','BillingAddressController');
 		Route::post('account-billing-address-rent/{id}','BillingAddressController@addBillingAddressModalFromRent')->name('account.billing-address.store-modal-rent');
