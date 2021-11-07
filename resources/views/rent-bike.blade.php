@@ -12,7 +12,7 @@
             <div class="mb-5">
                 <div class="row">
                     @foreach($rentals as $x)
-                        <div class="col-lg-3 col-md-4 col-12 pt-4">
+                   <div class="col-lg-3 col-md-4 col-12 pt-4">
                             <div class="card card-course images">
                                 <div class="card-body">
                                     <div class="col img-modal"
