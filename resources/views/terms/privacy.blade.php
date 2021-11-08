@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <h1 class="fs-1 fw-bold text-dark my-5 ms-lg-5 text-lg-start text-center">Privacy Policy</h1>
 </div>
-<div class="container-fluid mb-5 m-sm-0 ms-6">
+<div class="container mb-5 m-sm-0 ms-6 me-6">
     <p>Effective date: 2021-11-01</p>
     <p>1. <b>Introduction</b></p>
     <p>Welcome to <b> Biker</b>.</p>

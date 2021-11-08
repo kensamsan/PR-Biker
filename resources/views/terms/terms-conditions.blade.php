@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <h1 class="fs-1 fw-bold text-dark my-5 ms-lg-5 text-lg-start text-center">Terms And Conditions</h1>
 </div>
-<div class="container-fluid mb-5 m-sm-0 ms-6">
+<div class="container mb-5 m-sm-0 ms-6 me-6">
     <p>Welcome to Biker</p>
 
     <p>These terms and conditions outline the rules and regulations for the use of biker's Website, located at

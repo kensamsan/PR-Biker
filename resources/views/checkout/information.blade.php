@@ -74,7 +74,7 @@
                                         <td class="w-50">
                                             <p class="p-small">{{ $x->name }}</p>
                                         </td>
-                                        <td class="text-right w-75">x{{ $x->qty }} <br>
+                                        <td class="text-right w-75">x{{ $x->quantity }} <br>
                                             <span class="text-bold">₱ {{ number_format($x->price) }}</span>
                                         </td>
                                     </tr>
