@@ -1,4 +1,5 @@
 @extends('template.master')
+@section('title', 'Rent Date')
 @section('content')
 
 <link rel="stylesheet" href="/css/store/checkout.css">

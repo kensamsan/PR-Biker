@@ -8,21 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>Bikers | @yield('title')</title>
     <link rel="icon" href="/images/Bikers_favicon.png">
-    
 
     <!-- Bootrsrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     {{-- Font Awesome --}}
     <script src="https://kit.fontawesome.com/064c566762.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+    <!-- Input Mask 5.0.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 
 </head>
 <style>
@@ -50,6 +49,7 @@
     }
 </style>
 <body class="d-flex flex-column min-100-vh">
+    
     <!--Dark navbar-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -85,24 +85,24 @@
                                     Profile
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item" href="{{url('settings')}}">
                                     <i class="fw-bold me-1 bi bi-gear"></i>
                                     Settings
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a class="dropdown-item" href="{{url('my-orders')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
                                     Order Tracking
                                 </a>
                             </li> 
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item" href="{{url('my-listings')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
                                     My Listings
                                 </a>
-                            </li>  
+                            </li>   --}}
                             <li>
                                 <a class="dropdown-item" href="{{url('my-rentals')}}">
                                     <i class="fw-bold me-1 bi bi-truck"></i>
@@ -145,15 +145,11 @@
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
-
             <div class="col-lg-0 pt-3">
-
                 <div class="d-flex justify-content">
-
                     <p class="fw-normal fst-italic">&copy; 2021 Bikers &nbsp; &nbsp;</p>
                     <a href="{{route('terms')}}" class="footer-link fw-normal">&nbsp; Terms &nbsp; &#8226; &nbsp;</a>
                     <a href="{{route('privacy')}}" class="footer-link fw-normal">&nbsp; Privacy &nbsp;</a>
-
                 </div>
             </div>
         </div>
@@ -164,7 +160,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
    
-
 </body>
 
 </html>

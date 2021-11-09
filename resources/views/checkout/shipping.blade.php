@@ -58,10 +58,10 @@
                                             <input type="radio" id="grab" name="shipping" class="custom-control-input"
                                                 data-target="#grabinfo" data-toggle="collapse" aria-expanded="false"
                                                 required onclick="shippingMethod('courier')" value="courier" />
-                                            <label class="custom-control-label" for="grab">Grab/Lalamove Delivery</label>
+                                            <label class="custom-control-label" for="grab">Lalamove</label>
                                         </div>
                                     </div>
-                                    <div class="col text-right">PHP 0.00</label></div>
+                                    <div class="col text-right">PHP 250.00</label></div>
                                 </div>
                                <!--  <div class="row collapse" id="grabinfo">
                                     <div class="col">
@@ -80,7 +80,7 @@
                                     </div>
                                 </div> -->
                                 <!-- Greater Metro Manila -->
-                                <div class="row mt-3 pb-0">
+                                {{-- <div class="row mt-3 pb-0">
                                     <div class="col">
                                         <div class="custom-control custom-control-inline">
                                             <input type="radio" id="manila" name="shipping" class="custom-control-input"
@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="col text-right">PHP 150.00</label></div>
-                                </div>
+                                </div> --}}
                                 <div class="row collapse" id="manilainfo">
                                     <div class="col">
                                         <div class="pl-4 pt-2">
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                                 <!-- Provincial -->
-                                <div class="row mt-3 pb-0">
+                                {{-- <div class="row mt-3 pb-0">
                                     <div class="col">
                                         <div class="custom-control custom-control-inline">
                                             <input type="radio" id="provincial" name="shipping" class="custom-control-input"
@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div class="col text-right">PHP 250.00</label></div>
-                                </div>
+                                </div> --}}
                                 <div class="row collapse" id="provincialinfo">
                                     <div class="col">
                                         <div class="pl-4 pt-2">
@@ -148,11 +148,7 @@
                                                 <span class="text-bold">₱ {{number_format($x->price)}}</span>
                                             </td>
                                         </tr>
-
-                                       
-
                                     @endforeach
-                                
                                 </tbody>
                             </table>
                         </div>
@@ -162,7 +158,7 @@
                             <span class="float-end">₱ {{ number_format(\Cart::session(Auth::user()->id)->getSubTotal(),2) }}</span>
                         </p>
                         <p class="px-2 mb-0"> SHIPPING : 
-                                <span class="ml-5" id="shippingLabel">GRAB/LALAMOVE</span>
+                                <span class="ml-5" id="shippingLabel">Lalamove</span>
                                 <span class="float-end" id="shippingValue">₱ 0</span>
                         </p>
                         <br><br>
@@ -185,28 +181,28 @@
             $('#shippingLabel').text("PICK UP AT STORE");
             $('#shippingValue').text("₱ 0");
             subtotal = subtotal+0;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else if(val=='courier')
         {
-            $('#shippingLabel').text("GRAB/LALAMOVE");
-            $('#shippingValue').text("₱ 0");
-            subtotal = subtotal+0;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingLabel').text("LALAMOVE");
+            $('#shippingValue').text("₱ 250.00");
+            subtotal = subtotal+250;
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else if(val=='gma')
         {
             $('#shippingLabel').text("GREATER METRO MANILA");
             $('#shippingValue').text("₱ 150");
             subtotal = subtotal+150;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
         else
         {
             $('#shippingLabel').text("PROVINCIAL");
             $('#shippingValue').text("₱ 250");
             subtotal = subtotal+250;
-            $('#shippingTotal').text("₱ "+subtotal);
+            $('#shippingTotal').text("₱ "+ subtotal);
         }
     }
 </script>

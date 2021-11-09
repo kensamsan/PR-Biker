@@ -44,7 +44,7 @@
                         @elseif($shipping=='gma')
                             <div class="col">GREATER METRO MANILA</div>
                         @elseif($shipping=='courier')
-                            <div class="col">GRAB/LALAMOVE</div>
+                            <div class="col">LALAMOVE</div>
                         @else
                             <div class="col">PICK UP AT STORE</div>
                         @endif
@@ -54,6 +54,14 @@
                     <p class="text-bold mb-4">CHOOSE PAYMENT METHOD <span class="text-required">*</span></p>
                     <div class="mb-lg-5">
                     <!-- GCash -->
+                    <div class="row pb-0">
+                        <div class="col">
+                            <div class="custom-control custom-control-inline">
+                                <input type="radio" id="bank" name="payment_method" class="custom-control-input" required="required" value="bank" checked="checked" />
+                                <label class="custom-control-label" for="</form>">Cash On Delivery (COD)</label>
+                            </div>                              
+                        </div>
+                    </div>
                         <div class="row pb-0">
                             <div class="col">
                                 <div class="custom-control custom-control-inline">
@@ -75,7 +83,7 @@
                         </div>
                         <div class="mt-3 ps-lg-3 ps-4">
                             <label class="fw-bold" for="">Send proof of payment:</label>
-                            <p class="pt-1">sample@email.com</p>
+                            <p class="pt-1">Order Tracking > View > Upload Bank Deposit Slip</p>
                         </div>
                         <div class="row collapse" id="gcashinfo">
                             <div class="col">

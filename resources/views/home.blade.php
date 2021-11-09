@@ -95,11 +95,10 @@
         @if(Session::has('register_ok'))
                 Swal.fire({
                 title: 'Thank you for Registering!',
-                html:
-             
-                    'We sent a confirmation email to<br/>' +
-                    '{{Session::get('email')}}<br/>' +
-                    'Please check mail',
+                // html:
+                //     'We sent a confirmation email to<br/>' +
+                //     '{{Session::get('email')}}<br/>' +
+                //     'Please check mail',
                 type: 'success',
                 confirmButtonText: 'Okay'
                 })

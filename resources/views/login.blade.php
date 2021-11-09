@@ -31,7 +31,7 @@
                             <span style='font-size: 1rem; color:#EA5656;' class="text-center ml-auto badge badge-danger">{{Session::get('flash_error')}}</span>
                             <div class="row">
                                 <div class="forgot-pass col">
-                                    <a href="{{url('password')}}">Forgot Password?</a>
+                                    {{-- <a href="{{url('password')}}">Forgot Password?</a> --}}
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="d-grid d-md-flex justify-content-md-end">

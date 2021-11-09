@@ -133,7 +133,7 @@
 	<div class="row" style="margin-top: 30px";>
 		<div class="col-lg-12">
 			<div class="page-header">				
-				<h2>Tags</h2> <small></small>
+				<h2>Categories</h2> <small></small>
 			</div>
 			@if(Session::has('flash_message'))
 				<div class="alert alert-success">{{Session::get('flash_message')}}</div>
@@ -169,7 +169,7 @@
 					    </div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
 							<a class="btn btn-success addBtn" href="{{route('categories.create')}}">
-								<i class="fa fa-plus-circle"></i> Add Tag
+								<i class="fa fa-plus-circle"></i> Add Category
 							</a>
 						</div>
 					</div>

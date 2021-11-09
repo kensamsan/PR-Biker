@@ -22,7 +22,8 @@ class HomeController extends Controller
      public function rentBike()
     {
         $rentals = Rentals::where('status','=','posted')->get();
-      
+        
+        Log::info($rentals);
          return view('rent-bike',[
             'rentals'=>$rentals,
             ]);

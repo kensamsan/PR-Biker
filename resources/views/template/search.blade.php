@@ -9,21 +9,29 @@
                     <a href="{{url('')}}"><img src="/images/navbarlogo.svg" alt="" class="img-fluid"></a>       
                 </div>
                 <div id="search-item" class="col-lg-4 mb-3 mb-lg-0">
-                    <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar">
+                    <div class="input-group">
+                        <input style="background:#F3F3F5" type="text" class="form-control fw-bold" placeholder="Search for an Item" aria-label="Username" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        {{-- <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar"> --}}
+                        {{-- <span class="input-group-text" id="basic-addon1">
+                            <i class="bi bi-search"></i>
+                        </span> --}}
+                    </div>
                 </div>
                 <div class="col-lg-3 mb-3 mb-lg-0">
                     <div class="input-group">
-                        <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
-                        <span class="input-group-text btn" id="basic-addon1">
+                        <select style="color:gray; padding-left:25px;" type="text" class="location-bar form-control fw-bold">
+                            <option>Barangays of Las Piñas City</option>
+                        </select>
+                        {{-- <span class="input-group-text btn" id="basic-addon1">
                             <i class="bi bi-search"></i>
-                        </span>
+                        </span> --}}
                     </div>
                 </div>
                 <div class="col-lg-2 d-flex align-items-center" id="cart-area">
                     <a class="text-light btn w-100 rounded-pill border-0 fs-6 fw-bold btn-background me-3" id="btn-rent" href="{{url('rent')}}"> Rent a bike</a>
                     <a href="{{url('cart')}}"><i class="fas fa-shopping-cart icon-color fs-5" id="cart-size"></i></a>
                 </div>
-
             </div>
         </div>
     </nav>    

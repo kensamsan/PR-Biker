@@ -15,6 +15,13 @@
         rel="stylesheet">
     {{-- Google Fonts --}}
     
+    <!-- jQuery 3.6.0 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Input Mask 5.0.5 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -67,7 +74,8 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-lg px-0 mx-0">
+            {{-- Top Navbar --}}
+            <div class="col-lg-12 px-0 mx-0">
                 <nav class="navbar navbar-expand-lg navbar-light " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)">
                     <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
                         <li class="nav-item active">
@@ -94,5 +102,7 @@
             </div>
         </div>
     </div>
+
+    
 </body>
 </html>

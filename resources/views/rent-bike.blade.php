@@ -12,13 +12,13 @@
             <div class="mb-5">
                 <div class="row">
                     @foreach($rentals as $x)
-                        <div class="col-lg-3 col-md-4 col-12 pt-4">
+                   <div class="col-lg-3 col-md-4 col-12 pt-4">
                             <div class="card card-course images">
                                 <div class="card-body">
                                     <div class="col img-modal"
                                         style="background: url('{{ asset("uploads/rentals/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;"
                                         data-src="{{ asset("uploads/rentals/".$x->getProductImage()) }}"></div>
-                                    <label class="mt-3 fs-5 fw-bold">{{$x->product_name}}</label>
+                                    <label class="mt-3 fs-5 fw-bold">{{$x->bike_name}}</label>
                                     <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                                 </div>
                                 <div class="card card-course-foot shadow border-0">

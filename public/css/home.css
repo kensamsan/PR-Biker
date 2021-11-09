@@ -2,7 +2,12 @@
     .search-location {
         width: auto;
     }
- }
+
+    .open-cycles {
+        text-align: center;
+    }
+}
+
 /* dark navbar */
 #user-photo {
     width: 27px;

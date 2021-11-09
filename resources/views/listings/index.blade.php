@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/profile.css">
 <div class="row ms-4">
     <div class="headers col-lg-6 mt-5">
-        <h1 class="fst-italic fw-bolder">My Listings </h1>
+        <h1 class="fst-italic fw-bolder">My Listings</h1>
     </div>
 </div>
 <div class="container-fluid d-flex justify-content-center mt-3 mb-5">
