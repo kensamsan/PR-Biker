@@ -377,15 +377,15 @@
 		});
 		$('.btnDeleteUser').click(function(){
 			$('#confirmationDeleteSection .userFullName').html($(this).data('name'));
-			$('#btnDeleteUser').attr('href','/settings/users/' + $(this).attr('id') + '/delete');
+			$('#btnDeleteUser').attr('href','/users/' + $(this).attr('id') + '/delete');
 		});
 		$('.btnActiveUser').click(function(){
 			$('#confirmationActiveSection .userFullName').html($(this).data('name'));
-			$('#btnActiveUser').attr('href','/settings/users/' + $(this).attr('id') + '/activate');
+			$('#btnActiveUser').attr('href','/users/' + $(this).attr('id') + '/activate');
 		});
 		$('.btnInactiveUser').click(function(){
 			$('#confirmationInactiveSection .userFullName').html($(this).data('name'));
-			$('#btnInactiveUser').attr('href','/settings/users/' + $(this).attr('id') + '/deactivate');
+			$('#btnInactiveUser').attr('href','/users/' + $(this).attr('id') + '/deactivate');
 		});
 		$('#btnDeleteUser').click(function(){
 			$(this).html('<i class="fa fa-spinner fa-spin"></i> &nbsp;Loading');

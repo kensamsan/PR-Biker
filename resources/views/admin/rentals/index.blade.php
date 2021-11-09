@@ -222,6 +222,11 @@
 
 												@endif
 
+												<li>
+													<a href="{{route('admin-rentals.view',$p->id)}}"><span
+															class="glyphicon glyphicon-eye-open"
+															aria-hidden="true"></span>&nbsp; View</a>
+												</li>
 
 
 

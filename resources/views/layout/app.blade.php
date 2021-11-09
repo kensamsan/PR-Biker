@@ -398,9 +398,9 @@
                             <li>
                                 <a class="{{(\Request::route()->getName() == 'roles.index') ? 'active' : ''}}" href="{{route('roles.index')}}">Roles</a>
                             </li>
-                            <li>
+                        <!--     <li>
                                 <a class="{{(\Request::route()->getName() == 'settings.activity.logs.index') ? 'active' : ''}}" href="{{route('settings.activity.logs.index')}}">Activity Log</a>
-                            </li>
+                            </li> -->
 
                         </ul>
                     </li>

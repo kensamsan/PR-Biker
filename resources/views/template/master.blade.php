@@ -76,11 +76,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/images/image-placeholder.jpeg" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
+                            <img src="/uploads/users/{{Auth::user()->photo}}" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{url('profile')}}">
+                                <a class="dropdown-item" href="{{url('my-profile')}}">
                                     <i class="me-1 bi bi-person"></i>
                                     Profile
                                 </a>

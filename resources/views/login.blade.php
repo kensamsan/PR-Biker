@@ -25,7 +25,8 @@
                                 <input name='username' type="email" class="form-control" placeholder="Email Address">
                             </div>
                             <div class="mb-3 justify-content-center">
-                                <input name='password' type="password" class="form-control" placeholder="Password">
+                                <input name='password' id="password" type="password" class="form-control" placeholder="Password">
+                                <input type="checkbox" onclick="myFunction()">Show Password 
                             </div>
                             <span style='font-size: 1rem; color:#EA5656;' class="text-center ml-auto badge badge-danger">{{Session::get('flash_error')}}</span>
                             <div class="row">
@@ -46,4 +47,14 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        } 
+    </script>
 @endsection
