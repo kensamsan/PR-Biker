@@ -327,8 +327,6 @@
                         </div>
 
                         <input type="submit" name="CHECKOUT">
-
-
             </div>
 
         </div>
