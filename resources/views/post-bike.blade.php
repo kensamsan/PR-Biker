@@ -19,7 +19,7 @@
             {{ Form::open(['url' => '/post-bike-submit', 'method' => 'post', 'files' => true]) }}
 
             <div class="row">
-                <div class="col-lg-4 mb-3">
+                <div class="col-lg-4">
                     {{ Form::label('bike_name', 'Bike Name') }}
                     {{ Form::text('bike_name', '', ['class' => 'form-control span6', 'placeholder' => 'Bike Name']) }}
                     <span class="errors" style="color:#FF0000">{{ $errors->first('bike_name') }}</span>
@@ -36,19 +36,14 @@
                 </div>
             </div>
 
-            <div class="row top10">
-                <div class="col-lg-4 mb-3">
+            <div class="row mt-2">
+                <div class="col-lg-4">
                     {{ Form::label('City', 'City') }}
                     <input type="text" class="form-control" value="Las Piñas City" disabled>
-                  
                 </div>
-                <div class="col-lg-2">
-                    {{ Form::label('brgy', 'Baranggay') }}
+                <div class="col-lg-4">
+                    {{ Form::label('brgy', 'Barangay') }}
                     <input type="text" name="brgy" value="{{Auth::user()->getBillingAddressBrgy() }}" readonly="true" class="form-control">
-                </div>
-                 <div class="col-lg-6">
-                    {{ Form::label('Address', 'Address') }}
-                    <input type="text" name="address" value="{{Auth::user()->getBillingAddress() }}" readonly="true" class="form-control">
                 </div>
                 <!-- 
                         <div class="col-lg-4">
@@ -57,7 +52,13 @@
                             <input type="time" name="dt_from_time" class="form-control">
                         </div> -->
             </div>
-            <div class="row">
+            <div class="row mt-2">
+                <div class="col-lg-8">
+                    {{ Form::label('Address', 'Address') }}
+                    <input type="text" name="address" value="{{Auth::user()->getBillingAddress() }}" readonly="true" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-3">
                 <div class="col-lg-4" type="number">
                     {{ Form::label('price', 'Price') }}
                     <input type="text" class="form-control" placeholder="Price" name="price" >
@@ -73,14 +74,14 @@
                             <input type="time" name="dt_to_time" class="form-control">
                         </div> -->
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-lg-4" type="number">
                     {{ Form::label('fb_url', 'Facebook URL') }}
                     <input type="text" class="form-control" placeholder="" name="fb_url">
                     <span class="errors" style="color:#FF0000">{{ $errors->first('fb_url') }}</span>
                 </div>
                 <div class="col-lg-4">
-                    {{ Form::label('contact_number', 'contact_number') }}
+                    {{ Form::label('contact_number', 'Contact Number') }}
                     <input type="text" class="form-control" placeholder="" name="contact_number">
                 </div>
                 <!-- <div class="col-lg-4">
@@ -89,7 +90,7 @@
                             <input type="time" name="dt_to_time" class="form-control">
                         </div> -->
             </div>
-            <div class="row top10">
+            <div class="row mt-5">
                 <div class="col-lg-4 mb-5">
                     <input type="submit" class="btn btn-background" value="Submit"
                         onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />

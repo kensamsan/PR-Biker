@@ -76,7 +76,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/uploads/users/{{Auth::user()->photo}}" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
+                            <img style="width:25px;height:25px;"src="/uploads/users/{{Auth::user()->photo}}" class="user-photo" alt="user's photo"> {{Auth::user()->full_name}} 
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>
@@ -142,9 +142,9 @@
         <div class="container-fluid">
 
             <h2><b>FOLLOW US:</b> </h2>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com/biker.ph/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/bikershop_2021/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/biker_2021" class="fa fa-twitter"></a>
             <div class="col-lg-0 pt-3">
                 <div class="d-flex justify-content">
                     <p class="fw-normal fst-italic">&copy; 2021 Bikers &nbsp; &nbsp;</p>

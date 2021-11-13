@@ -1,5 +1,5 @@
 @extends('template.master')
-@section('title', 'Post A Bike')
+@section('title', 'Address')
 @section('content')
 
     <style>
@@ -108,8 +108,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div style="border-top:none;" class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><a style="text-decoration:none; color:black;" href="{{ route('account.billing-address.index',[Auth::user()->id])}}">Close</a></button>
                         <input type="submit" class="btn btn-background" value="Submit" />
                     </div>
                     {!! Form::close() !!}

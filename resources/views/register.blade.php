@@ -93,7 +93,7 @@
                                 <div class="form-check">
                                   <input class="form-check-input" type="checkbox" id="gridCheck" required>
                                   <label class="form-check-label fw-bolder fst-italic" for="gridCheck" id="terms" > 
-                                    Accept <a href="">Terms</a> and <a href="">Policy</a>
+                                    Accept <a href="{{ url('terms')}}">Terms</a> and <a href="{{ url('privacy')}}">Policy</a>
                                   </label>
                                 </div>                                            
                             </div>

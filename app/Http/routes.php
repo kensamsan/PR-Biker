@@ -133,9 +133,6 @@ Route::group(['prefix' => ''], function () {
 		// Route::get('wishlist-add-to-cart-variation/{product_id}/variation/{variation_id}', 'CartController@addToCartVariation')->name('wishlist-add-to-cart-variation');
 		// Route::get('wishlist-add-to-cart/product/{product_id}/variation/{variation_id}', 'WishlistController@addToCartVariation')->name('wishlist-add-to-cart-variation');
 
-
-		
-
 		//Dashboard
 		Route::group(['middleware' => ['permission:is_allow_dashboard']], function(){
 			Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
