@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('contact');
             $table->string('photo')->default('anon.png');           
+            $table->string('id_photo')->default('anon.png');           
             $table->tinyInteger('active')->default(0);
             $table->string('remember_token', 100)->nullable();
             $table->string('verification_code', 255)->nullable();

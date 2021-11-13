@@ -23,6 +23,10 @@ class Rentals extends Model
 		'status',
 		'payment_method',
 		'payment_status',
+		'fb_url',
+		'contact_number',
+		'address',
+		'brgy',
 	];
 	public function rentalDeposit()
 	{

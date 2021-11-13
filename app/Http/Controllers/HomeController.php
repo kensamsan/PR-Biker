@@ -19,11 +19,32 @@ use Log;
 use Session;
 class HomeController extends Controller
 {
+    public function searchRentBike(Request $request)
+    {
+  
+        $brgy = ($request->input('brgy') == '-1' ? '-1' : $request->input('brgy'));
+    
+        $rentals = Rentals::where('status','=','posted')
+            ->whereRaw("(('".$brgy."'='-1') OR (brgy='".$request->input('brgy')."'))")
+           ->Where(function ($query) use ($request) {
+                $query->where('bike_name','like', '%'.$request->search.'%')
+              
+                ->orWhere('bike_unit','like', '%'.$request->search.'%');
+            })
+        ->get();
+        Log::info($rentals);
+       
+         return view('rent-bike',[
+            'rentals'=>$rentals,
+            ]);
+
+    }
+
      public function rentBike()
     {
         $rentals = Rentals::where('status','=','posted')->get();
         
-        Log::info($rentals);
+       
          return view('rent-bike',[
             'rentals'=>$rentals,
             ]);
@@ -57,7 +78,7 @@ class HomeController extends Controller
     public function postBikeSubmit(Request $request)
     {
   
-
+        Log::info($request);
         $validator = Validator::make($request->all(), [
             'bike_name' => 'required',    
             
@@ -65,7 +86,7 @@ class HomeController extends Controller
 
         if ($validator->fails()) {
             return redirect()
-                ->route()
+              
                 ->back()
                         ->withErrors($validator)
                         ->withInput();
@@ -82,6 +103,10 @@ class HomeController extends Controller
                     'city_id'=>$request->city,
                     'description'=>$request->description,                  
                     'status'=>'waiting-approval',                  
+                    'brgy'=>$request->brgy,                           
+                    'address'=>$request->address,                           
+                    'fb_url'=>$request->fb_url,                           
+                    'contact_number'=>$request->contact_number,                           
 
                     ]);
 

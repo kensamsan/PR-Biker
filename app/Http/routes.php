@@ -37,6 +37,7 @@ Route::group(['prefix' => ''], function () {
 	{
 		Route::get('/my-profile','UserController@myProfile')->name('my-profile');
 
+		Route::post('search-rent-bike','HomeController@searchRentBike')->name('search-rent-bike');
 		Route::get('rent','HomeController@rent')->name('rent');
 		Route::get('rent-bike','HomeController@rentBike')->name('rent-bike');
 		Route::get('post-bike','HomeController@postBike')->name('post-bike');

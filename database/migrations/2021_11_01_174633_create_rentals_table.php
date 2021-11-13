@@ -19,9 +19,15 @@ class CreateRentalsTable extends Migration
             $table->string('bike_name');
             $table->string('bike_unit');
             $table->decimal('price',18,2);
-            $table->integer('city_id')->unsigned();
-            $table->foreign('city_id')->references('id')->on('cities');
+            $table->integer('city_id')->unsigned()->nullable();
+            $table->foreign('city_id')->references('id')->on('cities')->nullable();
             $table->string('description',2000);
+
+            $table->string('fb_url');
+            $table->string('contact_number');
+            $table->string('brgy');
+            $table->string('address');
+
 
             $table->integer('renter_id')->unsigned()->nullable();
             $table->foreign('renter_id')->references('id')->on('users');

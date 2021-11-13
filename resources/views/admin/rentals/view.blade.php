@@ -265,7 +265,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h5><strong>Bike Name</strong></h5>
-					<p style="font-size: 0.9em;">{{ $rental->bike_name }}</p>
+					<p style="font-size: 0.9em;">{{ $rental->bike_name }} {{ $rental->user_id}}</p>
 					<h5><strong>Bike Unit</strong></h5>
 					<p style="font-size: 0.9em;">{{ $rental->bike_unit }}</p>
 					<h5><strong>Price</strong></h5>
@@ -278,7 +278,8 @@
 					<p style="font-size: 0.9em;">{{ $rental->user->first_name }} {{ $rental->user->middle_name }} {{ $rental->user->last_name }}</p>
 					<h5><strong>Rentee Address</strong></h5>
 					<p style="font-size: 0.9em;">{{ $rental->user->getBillingAddress() }}</p>
-				
+					<h5><strong>ID PHOTO</strong></h5>
+					<img src="/uploads/users/{{ App\User::where('id','=',$rental->user_id)->first()->id_photo }}"  style="width:250px;height:250px;">
 				</div>
 			</div>
 
