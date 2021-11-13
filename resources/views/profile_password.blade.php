@@ -85,7 +85,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" style="background-color: #fff">
                         <h4 class="panel-title">
-                            <i class="fa fa-info-circle"></i> {{$user->first_name}} {{$user->middle_name}} {{$user->last_name}} 
+                            <i class="fas fa-info-circle"></i> {{$user->first_name}} {{$user->middle_name}} {{$user->last_name}} 
                         </h4>
                     </div>
                     <div class="panel-body">
@@ -97,7 +97,7 @@
                                 </div>  
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="form-group {{ $errors->first('new_password') ? 'has-error' : '' }} ">
                                     {{ Form::label('new_password', 'New Password', array('class'=>'control-label')) }}
@@ -111,10 +111,10 @@
                                 </div>  
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-4">
                             <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
-                                <button type="submit" class="btn btn-success btn-block btnUserSubmit">
-                                    &nbsp;Submit
+                                <button type="submit" class="btn btn-background btn-block btnUserSubmit">
+                                    &nbsp;Change Password
                                 </button>
                             </div>
                         </div>
