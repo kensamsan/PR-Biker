@@ -178,7 +178,8 @@ class HomeController extends Controller
     }
     public function home()
     {
-    	$product = Product::where('listing','=','products')->get();
+    	$product = Product::where('visibility','=','active')
+        ->where('listing','=','products')->get();
        
         return view('home',[
             'products'=>$product
