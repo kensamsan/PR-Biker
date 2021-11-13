@@ -21,11 +21,11 @@ class CreateBillingAddressesTable extends Migration
             $table->string('last_name');
             $table->string('address');           
             $table->string('brgy');
-            $table->string('region');
-            $table->string('city');
+            $table->string('region')->nullable();
+            $table->string('city')->nullable();
             $table->string('email');
             $table->string('contact');
-            $table->string('landmark');
+            $table->string('landmark')->nullable();
             $table->string('zip');
             $table->timestamps();
         });

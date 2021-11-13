@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\PrivilegeRole;
+use App\BillingAddress;
 use App\RoleUser;
 use App\Privilege;
+use Log;
 use Illuminate\Database\Eloquent\SoftDeletes;
 class User extends Authenticatable
 {
@@ -27,6 +29,8 @@ class User extends Authenticatable
         'status',
         'active',
         'verification_code',
+        'id_photo',
+        'bank_details',
     ];
 
     /**
@@ -40,6 +44,38 @@ class User extends Authenticatable
 
     protected $table = 'users';
 
+    public function getBillingAddress()
+    {
+        $id = $this->id;
+        $b = BillingAddress::where('user_id','=',$id)->get();
+    
+        if(count($b)>0)
+        {
+            return $b->first()->address;
+        }
+        else
+        {
+            return 'please create billing address';
+        }
+        
+    }
+    public function getBillingAddressBrgy()
+    {
+        $id = $this->id;
+        $b = BillingAddress::where('user_id','=',$id)->get();
+    
+        if(count($b)>0)
+        {
+            return $b->first()->brgy;
+        }
+        else
+        {
+            return 'please create billing address';
+        }
+        
+    }
+
+
     public function billingAddress()
     {
         return $this->hasMany('App\BillingAddress');
@@ -49,6 +85,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+   
+
     public function checkPrivileges($privileges)
     {
         $id = $this->id;

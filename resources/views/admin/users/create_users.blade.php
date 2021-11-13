@@ -104,27 +104,10 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
 			<div class="list-group list-group-custom">
-			  	<a href="{{route('settings.manage.profile')}}" class="list-group-item">
-			    	<i class="fa fa-fw fa-user-circle"></i>&nbsp;<small>Manage Profile</small>
-			  	</a>
+			
 			  	@if(Session::get('is_allow_users') > 0)
-				  	<a href="{{route('settings.users.index')}}" class="list-group-item active">
+				  	<a href="{{route('users.index')}}" class="list-group-item active">
 				    	<i class="fa fa-fw fa-users"></i>&nbsp;<small>Users List</small>
-				  	</a>
-			  	@endif
-			  	@if(Session::get('is_allow_activity_logs') > 0)
-				  	<a href="{{route('settings.activity.logs.index')}}" class="list-group-item">
-				    	<i class="fa fa-fw fa-clipboard-list"></i>&nbsp;<small>Activity Logs</small>
-				  	</a>
-			  	@endif
-			  	@if(Session::get('is_allow_purpose_types') > 0)
-				  	<a href="{{route('settings.purpose.types.index')}}" class="list-group-item">
-				    	<i class="fa fa-fw fa-list-ul"></i>&nbsp;<small>Purpose of Travel List</small>
-				  	</a>
-			  	@endif
-			  	@if(Session::get('is_allow_check_points') > 0)
-				  	<a href="{{route('settings.check.points.index')}}" class="list-group-item">
-				    	<i class="fa fa-fw fa-map-pin"></i>&nbsp;<small>Checkpoint List</small>
 				  	</a>
 			  	@endif
 			</div>
@@ -132,7 +115,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					{{ Form::open(array('route' => ['settings.users.store'],'method' => 'POST','files' => true,'id'=>'userForm')) }}
+					{{ Form::open(array('route' => ['users.store'],'method' => 'POST','files' => true,'id'=>'userForm')) }}
 						<div class="row">
 							<div class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-5 col-lg-2">
 								<div class="form-group {{ $errors->first('photo') ? 'has-error' : '' }}">
@@ -242,7 +225,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="pull-right">
-									<a href="{{route('settings.users.index')}}" class="btn btn-default btnCancel">Cancel</a>
+									<a href="{{route('users.index')}}" class="btn btn-default btnCancel">Cancel</a>
 									<button class="btn btn-success btnSubmit" type="button">Submit</button>
 								</div>
 							</div>

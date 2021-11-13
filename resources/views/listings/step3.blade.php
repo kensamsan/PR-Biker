@@ -2,112 +2,9 @@
 @section('title', 'Billing Information')
 @section('content')
 
-{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
 <link rel="stylesheet" href="/css/store/checkout.css">
 
 <main>
-    {{-- Modal --}}
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Add new Billing Address</h4>
-                    <button type="button" class="close btn-background rounded border border-danger" data-dismiss="modal"
-                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    {{ Form::open(array('route' => ['account.billing-address.store-modal-rent',Auth::user()->id], 'method' => 'store','files'=>true)) }}
-                    <div class="row">
-                        <div class="col-lg-12">
-                            {{ Form::label('type', 'Type') }}
-                            <select name="type" class="form-control">
-                                <option value="home">Home</option>
-                                <option value="work">Work</option>
-                            </select>
-                            <span class="errors" style="color:#FF0000">{{$errors->first('title')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            {{ Form::label('first_name', 'Recipient First Name') }}
-                            {{ Form::text('first_name',Auth::user()->first_name,array('class'=>'form-control span6','placeholder' => 'First Name','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('first_name')}}</span>
-                        </div>
-                        <div class="col-lg-6">
-                            {{ Form::label('last_name', 'Recipient Last Name') }}
-                            {{ Form::text('last_name',Auth::user()->last_name,array('class'=>'form-control span6','placeholder' => 'Last Name','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('address')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            {{ Form::label('address', 'Address') }}
-                            {{ Form::text('address','',array('class'=>'form-control span6','placeholder' => 'Unit #,House #, building name,street','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('address')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            {{ Form::label('brgy', 'Barangay') }}
-                            {{ Form::text('brgy','',array('class'=>'form-control span6','placeholder' => 'Barangay','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('brgy')}}</span>
-                        </div>
-                        <div class="col-lg-6">
-                            {{ Form::label('zip', 'Zip') }}
-                            {{ Form::text('zip','',array('class'=>'form-control span6','placeholder' => 'Zip','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('zip')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            {{ Form::label('region', 'Region') }}
-                            {{ Form::text('region','',array('class'=>'form-control span6','placeholder' => 'Metro Manila/NCR','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('region')}}</span>
-                        </div>
-                        <div class="col-lg-6">
-                            {{ Form::label('city', 'City') }}
-                            {{ Form::text('city','',array('class'=>'form-control span6','placeholder' => 'City','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('city')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            {{ Form::label('email', 'Email') }}
-                            {{ Form::text('email',Auth::user()->email,array('class'=>'form-control span6','placeholder' => 'Email','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('email')}}</span>
-                        </div>
-                        <div class="col-lg-6">
-                            {{ Form::label('contact', 'Contact No.') }}
-                            {{ Form::number('contact',Auth::user()->contact,array('class'=>'form-control span6','placeholder' => 'Contact No.','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('contact')}}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            {{ Form::label('landmark', 'Landmark') }}
-                            {{ Form::text('landmark','',array('class'=>'form-control span6','placeholder' => 'Landmark','required'=>'required')) }}
-                            <span class="errors" style="color:#FF0000">{{$errors->first('landmark')}}</span>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row top10">
-                        <div class="col-lg-4">
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-warning" value="Submit" />
-                </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="myModalNumber" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -293,14 +190,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 ps-lg-3 ps-4">
-                                        <label>Bank Name:</label>
-                                        <span class="text-uppercase">bpi</span>
-                                        <br>
-                                        <label>Account Name:</label>
-                                        <span>Gabriel Carlos Jornales Checa</span>
-                                        <br>
-                                        <label>Account Number:</label>
-                                        <span>0123456789</span>
+                                        {{App\User::find($rental->user_id)->bank_details}}
 
                                     </div>
                                     <div class="mt-3 ps-lg-3 ps-4">
@@ -327,10 +217,120 @@
                         </div>
 
                         <input type="submit" name="CHECKOUT">
+                        </form>
             </div>
 
         </div>
 
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Add new Billing Address</h4>
+                    <button type="button" class="close btn-background rounded border border-danger" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    {{ Form::open(array('route' => ['account.billing-address.store-modal-rent',Auth::user()->id], 'method' => 'store','files'=>true)) }}
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {{ Form::label('type', 'Type') }}
+                            <select name="type" class="form-control">
+                                <option value="home">Home</option>
+                                <option value="work">Work</option>
+                            </select>
+                            <span class="errors" style="color:#FF0000">{{$errors->first('title')}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            {{ Form::label('first_name', 'Recipient First Name') }}
+                            {{ Form::text('first_name',Auth::user()->first_name,array('class'=>'form-control span6','placeholder' => 'First Name','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('first_name')}}</span>
+                        </div>
+                        <div class="col-lg-6">
+                            {{ Form::label('last_name', 'Recipient Last Name') }}
+                            {{ Form::text('last_name',Auth::user()->last_name,array('class'=>'form-control span6','placeholder' => 'Last Name','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('address')}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {{ Form::label('address', 'Address') }}
+                            {{ Form::text('address','',array('class'=>'form-control span6','placeholder' => 'Unit #,House #, building name,street','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('address')}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            {{ Form::label('brgy', 'Barangay') }}
+                             <select name="brgy" style="color:gray; padding-left:25px;" type="text" class="form-control fw-bold">
+                         
+                            <option value="ALMANZA DOS">ALMANZA DOS</option>
+                            <option value="ALMANZA UNO">ALMANZA UNO</option>
+                            <option value="B. F. INTERNATIONAL VILLAGE">B. F. INTERNATIONAL VILLAGE</option>
+                            <option value="DANIEL FAJARDO">DANIEL FAJARDO</option>
+                            <option value="ELIAS ALDANA">ELIAS ALDANA</option>
+                            <option value="ILAYA">ILAYA</option>
+                            <option value="MANUYO DOS">MANUYO DOS</option>
+                            <option value="MANUYO UNO">MANUYO UNO</option>
+                            <option value="PAMPLONA DOS">PAMPLONA DOS</option>
+                            <option value="PAMPLONA TRES">PAMPLONA TRES</option>
+                            <option value="PAMPLONA UNO">PAMPLONA UNO</option>
+                            <option value="PILAR">PILAR</option>
+                            <option value="PULANG LUPA DOS">PULANG LUPA DOS</option>
+                            <option value="PULANG LUPA UNO">PULANG LUPA UNO</option>
+                            <option value="TALON DOS">TALON DOS</option>
+                            <option value="TALON KUATRO">TALON KUATRO</option>
+                            <option value="TALON SINGKO">TALON SINGKO</option>
+                            <option value="TALON TRES">TALON TRES</option>
+                            <option value="TALON UNO">TALON UNO</option>
+                            <option value="ZAPOTE">ZAPOTE</option>  
+                        </select>
+                        </div>
+                        <div class="col-lg-6">
+                            {{ Form::label('zip', 'Zip') }}
+                            {{ Form::text('zip','',array('class'=>'form-control span6','placeholder' => 'Zip','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('zip')}}</span>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-lg-6">
+                            {{ Form::label('email', 'Email') }}
+                            {{ Form::text('email',Auth::user()->email,array('class'=>'form-control span6','placeholder' => 'Email','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('email')}}</span>
+                        </div>
+                        <div class="col-lg-6">
+                            {{ Form::label('contact', 'Contact No.') }}
+                            {{ Form::number('contact',Auth::user()->contact,array('class'=>'form-control span6','placeholder' => 'Contact No.','required'=>'required')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('contact')}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {{ Form::label('landmark', 'Landmark') }}
+                            {{ Form::text('landmark','',array('class'=>'form-control span6','placeholder' => 'Landmark')) }}
+                            <span class="errors" style="color:#FF0000">{{$errors->first('landmark')}}</span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row top10">
+                        <div class="col-lg-4">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-warning" value="Submit" />
+                </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
     </div>
 </main>
 

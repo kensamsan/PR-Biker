@@ -38,17 +38,18 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="ms-5 ms-sm">
-                    <h2 class="lead display-6">{{$rental->bike_name}}</h2>
+                    <h2 class="lead display-6">{{$rental->bike_unit}}</h2>
                     <h2 class="fw-bold"><b>PHP {{ number_format($rental->price,2)}}</b></h2>
                     <div class="row">
                         <div class="col-lg-4 d-flex col-md-2">
                             <span>
                                 <i class="fas fa-map-marker-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5 lead" for="">{{$rental->city->name}}</label>
+                                <label class="fs-5 lead" for="">{{$rental->brgy}}</label>
                             </span>
                         </div>
                     </div>
                     <hr>
+                    <h2 class="lead display-6">{{$rental->bike_name}}</h2>
                     <h3 class="fw-bold"><b>Description:</b></h3>
                     <p class="paragraph-alignment">{{$rental->description}}</p>
                     <div class="row mb-5">

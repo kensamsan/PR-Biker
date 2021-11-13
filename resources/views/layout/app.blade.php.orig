@@ -503,10 +503,16 @@
                                 <a class="{{ \Request::route()->getName() == 'roles.index' ? 'active' : '' }}"
                                     href="{{ route('roles.index') }}">Roles</a>
                             </li>
+<<<<<<< HEAD
                         <!--     <li>
+                                <a class="{{(\Request::route()->getName() == 'settings.activity.logs.index') ? 'active' : ''}}" href="{{route('settings.activity.logs.index')}}">Activity Log</a>
+                            </li> -->
+=======
+                            <li>
                                 <a class="{{ \Request::route()->getName() == 'settings.activity.logs.index' ? 'active' : '' }}"
                                     href="{{ route('settings.activity.logs.index') }}">Activity Log</a>
-                            </li> -->
+                            </li>
+>>>>>>> 8bf2d155dbab72bebe336b15411abc3504db2fc0
 
                         </ul>
                     </li>

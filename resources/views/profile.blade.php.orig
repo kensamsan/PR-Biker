@@ -4,7 +4,28 @@
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
 <link rel="icon" href="Images/navbarwhitebike.svg">
+<<<<<<< HEAD
 <style>
+=======
+
+<style>
+    .bi {
+    color: #EA5656;
+}
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 mt-3">
+            <img class="img-fluid" src="/images/navbarlogo.svg" alt="logo">
+        </div>
+        <div class="col-lg-4 col-6 mt-2">
+            <div class="headers fs-1 fst-italic lead" id="user-settings">YOUR PROFILE</div>
+        </div>
+    </div>
+    <hr>
+</div>
+>>>>>>> 8bf2d155dbab72bebe336b15411abc3504db2fc0
 
       .caption{
         display: none;
@@ -135,19 +156,6 @@
                                 {{ Form::text('username',$user->username,array('class'=>'form-control validate[required]','placeholder' => 'Username')) }}
                             </div>  
                         </div>
-                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4">
-                            <div class="form-group {{ $errors->first('username') ? 'has-error' : '' }} ">
-                                {{ Form::label('bank_details', 'Bank Detail', array('class'=>'control-label')) }}
-                                <textarea class="form-control" name="bank_details">{{$user->bank_details}}</textarea>
-                            </div>  
-                        </div>
-                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4">
-                            <div class="form-group {{ $errors->first('username') ? 'has-error' : '' }} ">
-                              {{ Form::label('id_photo', 'ID_PHOTO', array('class'=>'control-label')) }}<br/>
-                              <img src="{{URL::asset('/uploads/users/'.$user->id_photo ) }}" class="img-responsive " alt=""  style="width:200px;height:200px">
-                               {!! Form::file('id_photo', array('id'=>'id_photo', 'class'=>'hidden')) !!} 
-                            </div>  
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-10 col-lg-2">
@@ -162,6 +170,7 @@
         </div>
 
         <div class="col-lg-3">
+<<<<<<< HEAD
                <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: #fff">
                     <h4 class="panel-title">
@@ -185,17 +194,23 @@
                                 </div>
                             </div>
                         </div>
+=======
+                <div class="profile-card card" id="product-profile">
+                    <p class="fst-italic fs-5 ms-2 mt-2">Your Profile:</p>
+                    <img src="/uploads/users/{{Auth::user()->photo}}" class="card-img-top" alt="user's photo">
+                    <div class="card-body">
+                        <p class="card-text fw-bold fst-italic fs-5" id="user-name">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</p>
+                        <p class="card-text fw-normal fst-italic" id="user-email">{{Auth::user()->email}}</p>
+                        <a class="fw-normal fs-6 fst-italic lead mt-5 me-1" href="{{url('settings')}}"><i class="bi bi-gear me-1"></i>Tweak your profile</a>
+                        <a class="fw-normal fs-6 fst-italic lead mt-5" href="{{url('my-orders')}}"><i class="bi bi-cart-plus me-1"></i>My Orders</a>
+>>>>>>> 8bf2d155dbab72bebe336b15411abc3504db2fc0
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <a href="{{route('profile.password')}}" ><i class="fa fa-lock"></i> Change Password</a>
-                    <a href="{{route('account.billing-address.index',[Auth::user()->id])}}" ><i class="fa fa-lock"></i> Billing Address</a>
+                    <a href="{{route('profile.password')}}" class="btn btn-info btn-block"><i class="fa fa-lock"></i> Change Password</a>
                 </div>  
             </div>
-
         </div>
-  
-
     </div>  
     {!! Form::close() !!}
 </div>

@@ -24,7 +24,7 @@ class BillingAddressController extends Controller
 		//
 		$user = User::find($user_id);
 		$billingAddress = BillingAddress::where('user_id','=',$user->id)->get();
-		return view('billing-address.list_billing_address', [
+		return view('billing-address.index', [
 			'user'=>$user,
 			'billingAddress'=>$billingAddress,
 		]);
@@ -38,8 +38,12 @@ class BillingAddressController extends Controller
 	public function create($user_id)
 	{
 		//
+		if(Auth::user()->id!=$user_id)
+		{
+			return abort(404);
+		}
 		$user = User::find($user_id);
-		return view('billing-address.add_billing_address', [
+		return view('billing-address.create', [
 			'user'=>$user,
 		]);
 	}
@@ -54,17 +58,17 @@ class BillingAddressController extends Controller
 		public function addBillingAddressModalFromRent($user_id,Request $request)
 	{
 		//
-		Log::info($request);
+
 
 		$validator = Validator::make($request->all(), [
 				'first_name' => 'required|min:2|max:255',    
 			'last_name' => 'required|min:2|max:255',    
 			'address' => 'required|min:2|max:255',    
-			'landmark' => 'required|min:2|max:255',    
+		 
 			'brgy' => 'required|min:2|max:255',    
-			'city' => 'required|min:2|max:50',    
+			 
 			'zip' => 'required|min:2|max:5',    			
-			'region' => 'required|min:2',    			
+					
 			'email' => 'required|email',    			
 			'contact' => array('required'),
 					
@@ -143,17 +147,17 @@ class BillingAddressController extends Controller
 	public function addBillingAddressModal($user_id,Request $request)
 	{
 		//
-		Log::info($request);
+
 
 		$validator = Validator::make($request->all(), [
-				'first_name' => 'required|min:2|max:255',    
+			'first_name' => 'required|min:2|max:255',    
 			'last_name' => 'required|min:2|max:255',    
 			'address' => 'required|min:2|max:255',    
-			'landmark' => 'required|min:2|max:255',    
+		 
 			'brgy' => 'required|min:2|max:255',    
-			'city' => 'required|min:2|max:50',    
+			 
 			'zip' => 'required|min:2|max:5',    			
-			'region' => 'required|min:2',    			
+					
 			'email' => 'required|email',    			
 			'contact' => array('required'),
 					
@@ -260,17 +264,15 @@ class BillingAddressController extends Controller
 		
 
 		$validator = Validator::make($request->all(), [
-			'first_name' => 'required|min:2|max:255',    
-			'last_name' => 'required|min:2|max:255',    
+			
 			'address' => 'required|min:2|max:255',    
-			'landmark' => 'required|min:2|max:255',    
+		 
 			'brgy' => 'required|min:2|max:255',    
-			'city' => 'required|min:2|max:50',    
+			 
 			'zip' => 'required|min:2|max:5',    			
-			'region' => 'required|min:2',    			
-			'email' => 'required|email',    			
-			'contact' => array('required','numeric','regex:/[0-9]{10}/'),
-			'type' => 'required',    			
+					
+		
+			'contact' => array('required'),   			
 		],[
 			'contact.numeric' => 'Invalid contact number'
 		]);
@@ -296,13 +298,13 @@ class BillingAddressController extends Controller
 			'type'=>$request->input('type'),
 			'user_id'=>$user_id,
 			]);
-		DB::table('activity_log')->insert([
-			'username'  =>  Auth::user()->username.'@'.\Request::ip(),
-			'entry'  =>  'added billing-address for user :'.$user_id,
-			'comment'  =>  '',
-			'family'  =>  'insert',
-			'created_at' => \Carbon\Carbon::now()
-			]);
+		// DB::table('activity_log')->insert([
+		// 	'username'  =>  Auth::user()->username.'@'.\Request::ip(),
+		// 	'entry'  =>  'added billing-address for user :'.$user_id,
+		// 	'comment'  =>  '',
+		// 	'family'  =>  'insert',
+		// 	'created_at' => \Carbon\Carbon::now()
+		// 	]);
 
 
 		return redirect()->route('account.billing-address.index',$user_id)->with('flash_message', 'Billing Address Added!!');
@@ -330,9 +332,13 @@ class BillingAddressController extends Controller
 	public function edit($user_id,$id)
 	{
 		//
+		if(Auth::user()->id!=$user_id)
+		{
+			return abort(404);
+		}
 		$user = User::find($user_id);
 		$billingAddress = BillingAddress::find($id);
-		return view('billing-address.edit_billing_address', [
+		return view('billing-address.edit', [
 			'user'=>$user,
 			'billingAddress'=>$billingAddress,
 		]);
@@ -351,19 +357,15 @@ class BillingAddressController extends Controller
 		//
 		// Log::info($request);
 		$validator = Validator::make($request->all(), [
-			'first_name' => 'required|min:2|max:255',    
-			'last_name' => 'required|min:2|max:255',    
+			
 			'address' => 'required|min:2|max:255',    
 			'brgy' => 'required|min:2|max:255',    
-			'city' => 'required|min:2|max:50',    
-			'landmark' => 'required|min:2|max:50',    
+		
 			'zip' => 'required|min:2|max:5',    			
-			'region' => 'required|min:2',    			
-			'email' => 'required|email',    			
-			'contact' => array('required','numeric','regex:/[0-9]{10}/'),
+			
+				
+		
 			'type' => 'required',    					
-		],[
-			'contact.numeric' => 'Invalid contact number'
 		]);
 
 		if ($validator->fails()) {
@@ -387,13 +389,13 @@ class BillingAddressController extends Controller
 		$billingAddress->contact = $request->contact;
 		$billingAddress->save();
 
-		DB::table('activity_log')->insert([
-			'username'  =>  Auth::user()->username.'@'.\Request::ip(),
-			'entry'  =>  'updated billing-address for user :'.$user_id,
-			'comment'  =>  '',
-			'family'  =>  'update',
-			'created_at' => \Carbon\Carbon::now()
-			]);
+		// DB::table('activity_log')->insert([
+		// 	'username'  =>  Auth::user()->username.'@'.\Request::ip(),
+		// 	'entry'  =>  'updated billing-address for user :'.$user_id,
+		// 	'comment'  =>  '',
+		// 	'family'  =>  'update',
+		// 	'created_at' => \Carbon\Carbon::now()
+		// 	]);
 
 
 		return redirect()->route('account.billing-address.index',$user_id)->with('flash_message', 'Billing Address Updated!!');

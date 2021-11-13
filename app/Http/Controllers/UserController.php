@@ -25,6 +25,32 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
    
+
+    public function myProfile()
+    {
+
+        $user = User::where('id',Auth::user()->id)->firstOrFail();
+         if($user->hasRole('superuser')==1)
+            {
+                return view('admin.profile',
+                [
+                    'user' => $user
+                ]
+                );
+            }
+            else
+            {
+                 return view('profile',
+                [
+                    'user' => $user
+                ]
+                );
+            }
+            
+
+       
+    }
+
     public function index(Request $request)
     {
         //
@@ -91,6 +117,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        Log::info($request);
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'middle_name' => 'max:255',
@@ -102,7 +129,7 @@ class UserController extends Controller
         ]);
         if ($validator->fails())
         {
-            return redirect()->route('settings.users.create')
+            return redirect()->route('users.create')
                         ->withErrors($validator)
                         ->withInput();
         }
@@ -170,7 +197,7 @@ class UserController extends Controller
                 $activity_log->created_at = \Carbon\Carbon::now();
                 $activity_log->save();
                 DB::commit();
-                return redirect()->route('settings.users.index')->with('flash_message', 'User Added!!');
+                return redirect()->route('users.index')->with('flash_message', 'User Added!!');
             }
             catch(\Exception $e)
             {
@@ -225,6 +252,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+    
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'middle_name' => 'max:255',
@@ -235,12 +263,14 @@ class UserController extends Controller
         ]);
         if ($validator->fails())
         {
-            return redirect()->route('settings.users.edit',$id)
+          
+            return redirect()->route('users.edit',$id)
                         ->withErrors($validator)
                         ->withInput();
         }
         else
         {
+            Log::info($request);
             $photo_temp = '';
             $user =  User::where('id',$id)->firstOrFail();
             DB::beginTransaction();
@@ -306,6 +336,60 @@ class UserController extends Controller
                             ->withErrors(['errors' =>  ['Uploaded file is not a valid file. Please try again. ']]);
                     }
                 } 
+                 if($request->hasFile('id_photo'))
+                {
+                    if($request->id_photo->isValid())
+                    {
+                        if($user->id_photo != 'anon.png')
+                        {
+                            if(file_exists('uploads/users/'.$user->id_photo))
+                            {
+                                if(unlink('uploads/users/'.$user->id_photo))
+                                {
+                                    $activity_log = new ActivityLog();
+                                    $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                                    $activity_log->entry = 'Deleted image '.$user->id_photo.' for user '.$user->id;
+                                    $activity_log->comment = '';
+                                    $activity_log->family = 'delete';
+                                    $activity_log->created_at = \Carbon\Carbon::now();
+                                    $activity_log->save();
+                                }
+                            }
+                            // Storage::disk('users')->delete($user->photo);
+                        }
+                        $destinationPath = 'uploads/users';
+                        $photoExtension = $request->id_photo->getClientOriginalExtension(); 
+                        $filename = 'user_photo_'.$user->id.'_'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
+                        $request->file('id_photo')->move($destinationPath, $filename);
+                        // Storage::disk('users')->put($filename,file_get_contents($request->photo->getRealPath()));
+                        if(file_exists('uploads/users/'.$filename))
+                        {
+                            $photo_temp = $filename;
+                            $activity_log = new ActivityLog();
+                            $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                            $activity_log->entry = 'Added image '.$filename.' for user '.$user->id;
+                            $activity_log->comment = '';
+                            $activity_log->family = 'insert';
+                            $activity_log->created_at = \Carbon\Carbon::now();
+                            $activity_log->save();
+                            $user->id_photo = $photo_temp;
+                            $user->save();
+                        }
+                        else
+                        {
+                            DB::rollback();
+                            return redirect()->back()
+                                ->withErrors(['errors' =>  ['There were problems uploading the image. Please try again. ']]);
+                        }
+                    }
+                    else
+                    {
+                        DB::rollback();
+                        return redirect()->back()
+                            ->withErrors(['errors' =>  ['Uploaded file is not a valid file. Please try again. ']]);
+                    }
+                } 
+
                 $activity_log = new ActivityLog();
                 $activity_log->username = Auth::user()->username.'@'.\Request::ip();
                 $activity_log->entry = 'Updated user: '.$user->first_name.' '.$user->middle_name.' '.$user->last_name.' with id:'.$user->id;
@@ -314,7 +398,7 @@ class UserController extends Controller
                 $activity_log->created_at = \Carbon\Carbon::now();
                 $activity_log->save();
                 DB::commit();
-                return redirect()->route('settings.users.index')->with('flash_message', 'User Updated!!');
+                return redirect()->route('users.index')->with('flash_message', 'User Updated!!');
             }
             catch(\Exception $e)
             {
@@ -653,8 +737,155 @@ class UserController extends Controller
 
        
     }
+    public function updateMyProfile(Request $request)
+    {
+ 
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required|max:255',
+            'middle_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'photo' => 'image|mimes:jpeg,jpg,png',
+            'username' => 'required|min:4|unique:users,username,'.Auth::user()->id.',id,deleted_at,NULL',
+            'email_address' => 'required|email|unique:users,email,'.Auth::user()->id.',id,deleted_at,NULL',
+        ]);
+        if ($validator->fails())
+        {
+            return redirect()->route('my-profile')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        else
+        {
+
+            $photo_temp = '';
+            $user =  User::where('id',Auth::user()->id)->firstOrFail();
+            DB::beginTransaction();
+            try
+            {
+                $user->first_name = ucwords($request->first_name);
+                $user->middle_name = ucwords($request->middle_name);
+                $user->last_name = ucwords($request->last_name);
+                $user->username = $request->username;
+                $user->email = $request->email_address;
+                $user->contact = $request->contact_no;
+                $user->bank_details = $request->bank_details;
+                $user->save();
+                if($request->hasFile('photo'))
+                {
+                    if($request->photo->isValid())
+                    {
+                        if($user->photo != 'anon.png')
+                        {
+                            // Storage::disk('users')->delete($user->photo);
+                            if(file_exists('uploads/users/'.$user->photo))
+                            {
+                                if(unlink('uploads/users/'.$user->photo))
+                                {
+                                    $activity_log = new ActivityLog();
+                                    $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                                    $activity_log->entry = 'Deleted image '.$user->photo.' for user '.$user->id;
+                                    $activity_log->comment = '';
+                                    $activity_log->family = 'delete';
+                                    $activity_log->created_at = \Carbon\Carbon::now();
+                                    $activity_log->save();
+                                }
+                            }
+                        }
+                        $destinationPath = 'uploads/users';
+                        $photoExtension = $request->photo->getClientOriginalExtension(); 
+                        $filename = 'user_photo_'.$user->id.'_'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
+                        $request->file('photo')->move($destinationPath, $filename);
+                        // Storage::disk('users')->put($filename,file_get_contents($request->photo->getRealPath()));
+                        if(file_exists('uploads/users/'.$filename))
+                        {
+                            $photo_temp = $filename;
+                            $activity_log = new ActivityLog();
+                            $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                            $activity_log->entry = 'Added image '.$filename.' for user '.$user->id;
+                            $activity_log->comment = '';
+                            $activity_log->family = 'insert';
+                            $activity_log->created_at = \Carbon\Carbon::now();
+                            $activity_log->save();
+                            $user->photo = $photo_temp;
+                            $user->save();
+                        }
+                        else
+                        {
+                            DB::rollback();
+                            return redirect()->back()
+                                ->withErrors(['errors' =>  ['There were problems uploading the image. Please try again. ']]);
+                        }
+                    }
+                    else
+                    {
+                        DB::rollback();
+                        return redirect()->back()
+                            ->withErrors(['errors' =>  ['Uploaded file is not a valid file. Please try again. ']]);
+                    }
+                } 
+                if($request->hasFile('id_photo'))
+                {
+                    if($request->id_photo->isValid())
+                    {
+                        $destinationPath = 'uploads/users';
+                        $photoExtension = $request->id_photo->getClientOriginalExtension(); 
+                        $filename = 'user_photo_'.$user->id.'_'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
+                        $request->file('id_photo')->move($destinationPath, $filename);
+                        // Storage::disk('users')->put($filename,file_get_contents($request->photo->getRealPath()));
+                        if(file_exists('uploads/users/'.$filename))
+                        {
+                            $photo_temp = $filename;
+                            $activity_log = new ActivityLog();
+                            $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                            $activity_log->entry = 'Added image '.$filename.' for user '.$user->id;
+                            $activity_log->comment = '';
+                            $activity_log->family = 'insert';
+                            $activity_log->created_at = \Carbon\Carbon::now();
+                            $activity_log->save();
+                            $user->id_photo = $photo_temp;
+                            $user->save();
+                        }
+                        else
+                        {
+                            DB::rollback();
+                            return redirect()->back()
+                                ->withErrors(['errors' =>  ['There were problems uploading the image. Please try again. ']]);
+                        }
+                    }
+                    else
+                    {
+                        DB::rollback();
+                        return redirect()->back()
+                            ->withErrors(['errors' =>  ['Uploaded file is not a valid file. Please try again. ']]);
+                    }
+                } 
+                $activity_log = new ActivityLog();
+                $activity_log->username = Auth::user()->username.'@'.\Request::ip();
+                $activity_log->entry = 'Updated user: '.$user->first_name.' '.$user->middle_name.' '.$user->last_name.' with id:'.$user->id;
+                $activity_log->comment = '';
+                $activity_log->family = 'update';
+                $activity_log->created_at = \Carbon\Carbon::now();
+                $activity_log->save();
+                DB::commit();
+                return redirect()->route('my-profile')->with('flash_message', 'Profile Updated!!');
+            }
+            catch(\Exception $e)
+            {
+                DB::rollback();
+                Log::alert($e);
+                abort(500);
+            }
+            catch(\Throwable $e)
+            {
+                DB::rollback();
+                Log::alert($e);
+                abort(500);
+            }
+        }
+    }
     public function updateProfile(Request $request)
     {
+        Log::info($request);
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'middle_name' => 'required|max:255',
@@ -771,6 +1002,7 @@ class UserController extends Controller
     }
     public function updateProfilePassword(Request $request)
     {
+
         $user = User::where('id','=',Auth::user()->id)->firstOrFail();
 
         $validator = Validator::make($request->all(), [

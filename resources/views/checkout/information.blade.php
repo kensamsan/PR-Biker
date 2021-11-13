@@ -169,7 +169,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 {{ Form::label('landmark', 'Landmark') }}
-                                {{ Form::text('landmark', '', ['class' => 'form-control span6', 'placeholder' => 'Landmark', 'required' => 'required']) }}
+                                {{ Form::text('landmark', '', ['class' => 'form-control span6', 'placeholder' => 'Landmark']) }}
                                 <span class="errors"
                                     style="color:#FF0000">{{ $errors->first('landmark') }}</span>
                             </div>

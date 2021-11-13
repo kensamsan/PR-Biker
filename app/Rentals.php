@@ -23,6 +23,10 @@ class Rentals extends Model
 		'status',
 		'payment_method',
 		'payment_status',
+		'fb_url',
+		'contact_number',
+		'address',
+		'brgy',
 	];
 	public function rentalDeposit()
 	{
@@ -36,6 +40,12 @@ class Rentals extends Model
 	{
 		return $this->belongsTo('App\User');
 	}
+
+	public function user()
+	{
+		return $this->belongsTo('App\User','user_id');
+	}
+
 
 	public function rentalImage() {
 		return $this->hasMany('App\RentalImages','rental_id');

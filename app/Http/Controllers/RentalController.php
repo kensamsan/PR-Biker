@@ -144,7 +144,7 @@ class RentalController extends Controller
 	}
 	public function clientRentalInformation(Request $request)
 	{
-		Log::info($request);
+	
 
 		$rental = Rentals::find($request->rental_id);
 		return view('listings.step2',[
@@ -188,6 +188,17 @@ class RentalController extends Controller
 				]);
     	return redirect()->back()->with('flash_success','Approved');
     	
+    }
+
+    public function view($id)
+    {
+   
+    	$rental = Rentals::find($id);
+
+    	return view('admin.rentals.view', [
+			'rental'=>$rental,
+			
+		]);
     }
    
     public function delivered($id)

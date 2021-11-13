@@ -35,6 +35,9 @@ Route::group(['prefix' => ''], function () {
 
 	Route::group(['middleware' => ['auth']], function()
 	{
+		Route::get('/my-profile','UserController@myProfile')->name('my-profile');
+
+		Route::post('search-rent-bike','HomeController@searchRentBike')->name('search-rent-bike');
 		Route::get('rent','HomeController@rent')->name('rent');
 		Route::get('rent-bike','HomeController@rentBike')->name('rent-bike');
 		Route::get('post-bike','HomeController@postBike')->name('post-bike');
@@ -143,12 +146,14 @@ Route::group(['prefix' => ''], function () {
 		Route::put('/profile/password/update','UserController@updateProfilePassword')->name('profile.password.update');
 		Route::get('/profile','UserController@profile')->name('profile');
 		Route::put('/profile/update','UserController@updateProfile')->name('profile.update');
+		Route::put('/my-profile/update','UserController@updateMyProfile')->name('my-profile.update');
 		Route::get('/logout', 'Auth\AuthController@logout')->name('logout');
 		//Dashboard
 
 		Route::group(['middleware' => ['permission:is_allow_products']], function(){
 
 			Route::resource('admin-rentals','RentalController');
+			Route::get('admin-rentals-view/{id}','RentalController@view')->name('admin-rentals.view');
 			Route::get('admin-rentals-cancel/{id}','RentalController@cancel')->name('admin-rentals.cancel');
 			Route::get('admin-rentals-delivered/{id}','RentalController@delivered')->name('admin-rentals.delivered');
 			Route::get('admin-rentals-approve/{id}','RentalController@approve')->name('admin-rentals.approve');
@@ -181,8 +186,8 @@ Route::group(['prefix' => ''], function () {
 		Route::group(['middleware' => ['permission:is_allow_users']], function(){
 			Route::resource('users','UserController');
 				// Route::get('users/', 'UserController@index')->name('settings.users.index');
-				// Route::get('users/create', 'UserController@create')->name('settings.users.create');
 				// Route::post('users', 'UserController@store')->name('settings.users.store');
+				// Route::get('users/create', 'UserController@create')->name('settings.users.create');
 				// Route::get('users/{id}/edit', 'UserController@edit')->name('settings.users.edit');
 				// Route::put('users/{id}/update', 'UserController@update')->name('settings.users.update');
 				// Route::get('users/{id}/role/edit', 'UserController@editRole')->name('settings.users.edit.role');
