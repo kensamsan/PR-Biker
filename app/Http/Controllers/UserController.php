@@ -1000,6 +1000,16 @@ class UserController extends Controller
                 ]
             );
     }
+    public function accountProfilePassword()
+    {
+        Log::info('asd');
+        $user = User::where('id',Auth::user()->id)->firstOrFail();
+        return view('profile_password',
+                [
+                    'user' => $user
+                ]
+            );
+    }
     public function updateProfilePassword(Request $request)
     {
 
@@ -1037,7 +1047,7 @@ class UserController extends Controller
                     $activity_log->created_at = \Carbon\Carbon::now();
                     $activity_log->save();
                     DB::commit();
-                    return redirect()->route('profile')->with('flash_message', 'Account Password Updated!!');
+                    return redirect()->route('my-profile')->with('flash_message', 'Account Password Updated!!');
                 }
                 catch(\Exception $e)
                 {

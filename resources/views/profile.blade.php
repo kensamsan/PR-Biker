@@ -182,7 +182,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-footer mt-3">
-                                        <a style="text-decoration:none; color:black;" href="{{ route('profile.password')}}"><i class="fas fa-lock me-2"></i>Change
+                                        <a style="text-decoration:none; color:black;" href="{{ route('account.profile.password')}}"><i class="fas fa-lock me-2"></i>Change
                                             Password</a>
                                             <br>
                                         <a style="text-decoration:none; color:black;" href="{{ route('account.billing-address.index', [Auth::user()->id])}}"><i class="fas fa-address-book me-2"></i>Billing Address</a>
@@ -202,38 +202,7 @@
 
             </div>
 
-            {{-- <div class="col-lg-3">
-               <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: #fff">
-                    <h4 class="panel-title">
-                        <i class="fa fa-camera"></i> Photo
-                    </h4>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
-                            <div class="form-group">
-                                <div  class="img_caption" >
-                                    <img src="{{URL::asset('/uploads/users/'.$user->photo ) }}" id="prof_id" class="img-responsive req_file_view2" alt=""  style=" width: auto; background-color: #013b4a; margin: 0 auto;">
-                                    <label for="image_id" class="caption text-center">
-                                        <i class="fa fa-camera hidden"></i> 
-                                            Update Photo
-                                        </label> 
-                                    <label class="caption-cam">
-                                        <i class="fa fa-camera"></i>
-                                    </label>
-                                    {!! Form::file('photo', array('id'=>'image_id', 'class'=>'hidden')) !!} 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer">
-                    <a href="{{route('profile.password')}}" ><i class="fa fa-lock"></i> Change Password</a>
-                    <a href="{{route('account.billing-address.index',[Auth::user()->id])}}" ><i class="fa fa-lock"></i> Billing Address</a>
-                </div>  
-            </div>
-        </div> --}}
+           
 
 
         </div>

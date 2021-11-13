@@ -36,6 +36,7 @@ Route::group(['prefix' => ''], function () {
 	Route::group(['middleware' => ['auth']], function()
 	{
 		Route::get('/my-profile','UserController@myProfile')->name('my-profile');
+		Route::get('/change-password','UserController@accountProfilePassword')->name('account.profile.password');
 
 		Route::post('search-rent-bike','HomeController@searchRentBike')->name('search-rent-bike');
 		Route::get('rent','HomeController@rent')->name('rent');
@@ -128,6 +129,7 @@ Route::group(['prefix' => ''], function () {
 		Route::resource('account.order','OrderController');
 		Route::get('order-print/{id}','OrderController@printOrder')->name('order-print');
 		Route::get('order-cancel','OrderController@cancelOrder')->name('order-cancel');
+		
 		// Route::resource('account.wishlist', 'WishlistController');
 		// Route::get('wishlist-add-to-cart/{product_id}', 'WishlistController@addToCart')->name('wishlist-add-to-cart');
 		// Route::get('wishlist-add-to-cart-variation/{product_id}/variation/{variation_id}', 'CartController@addToCartVariation')->name('wishlist-add-to-cart-variation');
