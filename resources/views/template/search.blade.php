@@ -21,7 +21,7 @@
                 <div class="col-lg-3 mb-3 mb-lg-0">
                     <div class="input-group">
                         <select name="brgy" style="color:gray; padding-left:25px;" type="text" class="location-bar form-control fw-bold">
-                            <option value="-1">Barangays of Las Pinas City</option>
+                            <option value="-1">Barangays of Las Piñas City</option>
                             <option value="ALMANZA DOS">ALMANZA DOS</option>
                             <option value="ALMANZA UNO">ALMANZA UNO</option>
                             <option value="B. F. INTERNATIONAL VILLAGE">B. F. INTERNATIONAL VILLAGE</option>
