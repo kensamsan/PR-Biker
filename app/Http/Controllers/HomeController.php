@@ -83,9 +83,9 @@ class HomeController extends Controller
             'bike_name' => 'required',
             'bike_unit' => 'required',
             'fb_url' => 'required',
-            'price' => 'required|numeric|digits:7', 
+            'price' => 'required|numeric|between:1,9999999.99',
             'description' => 'required',
-            'bike_image' => 'required',      
+            // 'bike_image' => 'required',      
             
         ]);
 
@@ -111,7 +111,7 @@ class HomeController extends Controller
                     'brgy'=>$request->brgy,                           
                     'address'=>$request->address,                           
                     'fb_url'=>$request->fb_url,                           
-                    'contact_number'=>$request->contact_number,                           
+                    'contact_number'=>$request->contact_number or 0,                           
 
                     ]);
 
