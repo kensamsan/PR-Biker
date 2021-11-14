@@ -55,7 +55,11 @@
             <div class="row mt-3">
                 <div class="col-lg-4">
                     {{ Form::label('price', 'Price') }}
+<<<<<<< HEAD
                     <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7">
+=======
+                    <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+>>>>>>> fd2fd11aae086c7d3a12314ef3b1ce4d7ccc0af9
                     <span class="errors" style="color:#FF0000">{{ $errors->first('price') }}</span>
                 </div>
                 <div class="col-lg-4">
