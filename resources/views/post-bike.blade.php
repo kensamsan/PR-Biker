@@ -55,8 +55,7 @@
             <div class="row mt-3">
                 <div class="col-lg-4">
                     {{ Form::label('price', 'Price') }}
-                    {{-- <input type="text" class="form-control" placeholder="Price" name="price" > --}}
-                    <input type="text" class="form-control" placeholder="Price" name="price_value" data-mask data-mask-format="9999999.99">
+                    <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7">
                     <span class="errors" style="color:#FF0000">{{ $errors->first('price') }}</span>
                 </div>
                 <div class="col-lg-4">
@@ -67,7 +66,7 @@
             <div class="row mt-3">
                 <div class="col-lg-4" type="number">
                     {{ Form::label('fb_url', 'Facebook URL') }}
-                    <input type="text" class="form-control" placeholder="" name="fb_url">
+                    <input type="text" class="form-control" placeholder="" name="fb_url" required>
                     <span class="errors" style="color:#FF0000">{{ $errors->first('fb_url') }}</span>
                 </div>
                 <div class="col-lg-4">
