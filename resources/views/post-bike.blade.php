@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     {{ Form::label('bike_name', 'Bike Owner') }}
-                    {{ Form::text('bike_name', '', ['class' => 'form-control span6', 'placeholder' => 'Bike Name']) }}
+                    {{ Form::text('bike_name', '', ['class' => 'form-control span6', 'placeholder' => 'Owner Name']) }}
                     <span class="errors" style="color:#FF0000">{{ $errors->first('bike_name') }}</span>
                 </div>
                 <div class="col-lg-4">
@@ -31,8 +31,9 @@
                 </div>
                 <div class="col-lg-4">
                     {{ Form::label('images', 'Images') }} <br>
-                    <input type="file" name="images[]" multiple accept="image/png, image/jpeg">
-                    <span class="errors" style="color:#FF0000">{{ $errors->first('bike_name') }}</span>
+                    <input type="file" name="images[]" multiple accept="image/png, image/jpeg" required>
+                    <br>
+                    <span class="errors" style="color:#FF0000">{{ $errors->first('bike_image') }}</span>
                 </div>
             </div>
 
@@ -55,22 +56,19 @@
             <div class="row mt-3">
                 <div class="col-lg-4">
                     {{ Form::label('price', 'Price') }}
-<<<<<<< HEAD
-                    <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7">
-=======
                     <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
->>>>>>> fd2fd11aae086c7d3a12314ef3b1ce4d7ccc0af9
                     <span class="errors" style="color:#FF0000">{{ $errors->first('price') }}</span>
                 </div>
                 <div class="col-lg-4">
                     {{ Form::label('description', 'Description') }}
-                    <textarea class="form-control remove-resize" name="description"></textarea>
+                    <textarea class="form-control remove-resize" name="description" required></textarea>
+                    <span class="errors" style="color:#FF0000">{{ $errors->first('description') }}</span>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-lg-4" type="number">
                     {{ Form::label('fb_url', 'Facebook URL') }}
-                    <input type="text" class="form-control" placeholder="" name="fb_url" required>
+                    <input type="text" class="form-control" placeholder="Facebook URL" name="fb_url">
                     <span class="errors" style="color:#FF0000">{{ $errors->first('fb_url') }}</span>
                 </div>
                 <div class="col-lg-4">
@@ -81,7 +79,7 @@
             <div class="row mt-5">
                 <div class="col-lg-4 mb-5">
                     <input type="submit" class="btn btn-background" value="Submit"
-                        onclick="this.disabled=true;this.value='Submitted, please wait...';this.form.submit();" />
+                        onclick="this.disabled=true;this.value='Submitting, please wait...';this.form.submit();" />
                 </div>
             </div>
 

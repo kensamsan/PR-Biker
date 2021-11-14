@@ -80,7 +80,12 @@ class HomeController extends Controller
   
         Log::info($request);
         $validator = Validator::make($request->all(), [
-            'bike_name' => 'required',    
+            'bike_name' => 'required',
+            'bike_unit' => 'required',
+            'fb_url' => 'required',
+            'price' => 'required', 
+            'description' => 'required',
+            'bike_image' => 'required',      
             
         ]);
 
