@@ -83,7 +83,7 @@ class HomeController extends Controller
             'bike_name' => 'required',
             'bike_unit' => 'required',
             'fb_url' => 'required',
-            'price' => 'required', 
+            'price' => 'required|numeric|digits:7', 
             'description' => 'required',
             'bike_image' => 'required',      
             
