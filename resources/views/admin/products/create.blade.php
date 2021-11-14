@@ -229,8 +229,9 @@
                             <div class="row">
                                 <div class="col-lg-4 margin-top margin-left">
                                     <label for="price">Price</label>
-                                    <input type="text" class="form-control" placeholder="Price" name="price" data-mask
-                                        data-mask-format="9999999.99" required>
+                                    <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    {{-- <input type="text" class="form-control" placeholder="Price" name="price" data-mask
+                                        data-mask-format="9999999.99" required> --}}
                                     <span class="errors"
                                         style="color:#FF0000">{{ $errors->first('price') }}</span>
                                 </div>

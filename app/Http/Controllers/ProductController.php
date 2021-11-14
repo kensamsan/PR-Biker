@@ -166,8 +166,7 @@ class ProductController extends Controller
 			'category_id' => 'required',    
 			'product_name' => 'required|min:2|max:50',    
 			'visibility' => 'required',    
-			'price' => 'numeric|required',    
-			
+			'price' => 'required|numeric|between:1,9999999.99',
 		]);
 
 		if ($validator->fails()) {
