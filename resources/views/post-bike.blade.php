@@ -61,7 +61,7 @@
             <div class="row mt-3">
                 <div class="col-lg-4" type="number">
                     {{ Form::label('price', 'Price') }}
-                    <input type="text" class="form-control" placeholder="Price" name="price" >
+                    <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     <span class="errors" style="color:#FF0000">{{ $errors->first('price') }}</span>
                 </div>
                 <div class="col-lg-4">
