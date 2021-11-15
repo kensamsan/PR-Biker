@@ -6,7 +6,7 @@
         <div class="container-fluid pb-5 mb-5">
             <div class="row my-5 px-5">
                 <div class="col-lg-9" id="cart-col">
-                    <h2 class="fw-bold"><b>Rent {{ $rental->bike_name }}</b></h2>
+                    <h2>Rent&nbsp;<b>{{ $rental->bike_unit }}</b></h2>
                         <!-- Cart with items -->
                         <form method="post" action="{{ route('client-rental-payment') }}">
                             {{ csrf_field() }}

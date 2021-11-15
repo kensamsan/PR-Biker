@@ -10,17 +10,17 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    @foreach($rental->rentalImage as $x)
-                     <div class="carousel-item @if($rental->rentalImage->first()->id==$x->id) active @endif">
-                        <div class="col-lg-3 col-md-3 px-2">
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background: url('{{ asset("uploads/rentals/".$x->file_name) }}') no-repeat center; background-size: cover; height: 300px;">
+                    @foreach ($rental->rentalImage as $x)
+                        <div class="carousel-item @if ($rental->rentalImage->first()->id == $x->id) active @endif">
+                            <div class="col-lg-3 col-md-3 px-2">
+                                <div class="card">
+                                    <div class="card-img"
+                                        style="background: url('{{ asset('uploads/rentals/' . $x->file_name) }}') no-repeat center; background-size: cover; height: 300px;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    @endforeach                 
+                    @endforeach
                 </div>
                 <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
                     data-bs-slide="prev">
@@ -38,69 +38,76 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="ms-5 ms-sm">
-                    <h2 class="lead display-6">{{$rental->bike_unit}}</h2>
-                    <h2 class="fw-bold"><b>PHP {{ number_format($rental->price,2)}}</b></h2>
+                    <h2 class="lead display-6">{{ $rental->bike_unit }}</h2>
+                    <h2 class="fw-bold"><b>PHP {{ number_format($rental->price, 2) }}</b></h2>
                     <div class="row">
                         <div class="col-lg-4 d-flex col-md-2">
                             <span>
                                 <i class="fas fa-map-marker-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5 lead" for="">{{$rental->brgy}}</label>
+                                <label class="fs-5 lead" for="">{{ $rental->brgy }}</label>
                             </span>
                         </div>
                     </div>
                     <hr>
-                    <h2 class="lead display-6">{{$rental->bike_name}}</h2>
                     <h3 class="fw-bold"><b>Description:</b></h3>
-                    <p class="paragraph-alignment">{{$rental->description}}</p>
-                     <h3 class="fw-bold"><b>address:</b></h3>
-                    <p class="paragraph-alignment">{{$rental->address}}</p>
+                    <p class="paragraph-alignment">{{ $rental->description }}</p>
+                    <h3 class="fw-bold"><b>RENTER INFORMATION</b></h3>
+                    <hr>
+                    <h3 class="fw-bold"><b>Renter Name:</b></h3>
+                    <p class="paragraph-alignment">{{ $rental->bike_name }}</p>
+                    <h3 class="fw-bold"><b>Return bike to this Address:</b></h3>
+                    <p class="paragraph-alignment">{{ $rental->address }}</p>
                     <h3 class="fw-bold"><b>Facebook:</b></h3>
-                    <p class="paragraph-alignment">{{$rental->fb_url}}</p>
+                    <p class="paragraph-alignment">{{ $rental->fb_url }}</p>
                     <h3 class="fw-bold"><b>Contact:</b></h3>
-                    <p class="paragraph-alignment">{{$rental->contact_number}}</p>
-                   <img src="/uploads/users/{{ App\User::find($rental->user_id)->id_photo }}">
+                    <p class="paragraph-alignment">{{ $rental->contact_number }}</p>
+                    <h3 class="fw-bold"><b>Identification Card:</b></h3>
+                    <img style="width:400px;height:230px;"
+                        src="/uploads/users/{{ App\User::find($rental->user_id)->id_photo }}">
                     <div class="row mb-5">
                         <div class="col-lg-6 d-flex col-md-2">
                             <form method="post" action="{{ route('client-rent-now') }}">
-                            {{csrf_field()}}
-                                <input type="hidden" name="rental_id" value="{{$rental->id}}">
-                              <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light" value="Rent Now">     
+                                {{ csrf_field() }}
+                                <input type="hidden" name="rental_id" value="{{ $rental->id }}">
+                                <input type="submit" class="px-5 mt-3 btn btn-custom-outline text-uppercase lead text-light"
+                                    value="Rent Now">
                             </form>
-                        </div>                  
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="/js/carousel.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script type="text/javascript">
-    @if(Session::has('add_to_cart'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script type="text/javascript">
+        @if (Session::has('add_to_cart'))
             Swal.fire({
-              title: '<strong>Added to Cart!</strong>',
-              type: 'info',
-              html:
-                'You can go to checkout or proceed to continue shopping',
-              showCloseButton: true,
-              showCancelButton: true,
-              focusConfirm: false,
-              confirmButtonText:
-                '<i class="fa fa-shopping-cart"></i> checkout!',
-              confirmButtonAriaLabel: 'Proceed to Checkout',
-              cancelButtonText:
-                'Continue Shopping',
-              cancelButtonAriaLabel: 'Continue Shopping'
+            title: '<strong>Added to Cart!</strong>',
+            type: 'info',
+            html:
+            'You can go to checkout or proceed to continue shopping',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+            '<i class="fa fa-shopping-cart"></i> checkout!',
+            confirmButtonAriaLabel: 'Proceed to Checkout',
+            cancelButtonText:
+            'Continue Shopping',
+            cancelButtonAriaLabel: 'Continue Shopping'
             })
             .then((result) => {
             if (result.value) {
-                 window.location.href = "{{Session::get('add_to_cart')}}";
+            window.location.href = "{{ Session::get('add_to_cart') }}";
             }
             });
-          
-
-    @endif
-</script>
+        
+        
+        @endif
+    </script>
 @endsection

@@ -10,8 +10,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel" style="float: left">Contact Number</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close btn-background rounded border border-danger" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     {{ Form::open(array('route' => ['account.contact.store-modal',Auth::user()->id], 'method' => 'store','files'=>true)) }}
@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-warning" value="Submit" />
+                    <input type="submit" class="btn btn-background" value="Submit" />
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -42,7 +42,7 @@
     <div class="container-fluid pb-5 mb-5">
         <div class="row my-5 px-5">
             <div class="col-lg-12" id="cart-col">
-                <h2 class="fw-bold"><b>Rent {{$rental->bike_name}}</b></h4>
+                <h2>Rent&nbsp;<b>{{$rental->bike_unit}}</b></h4>
 
                     <!-- Cart with items -->
                     <form method="post" action="{{ route('client-rental-submit') }}">
@@ -55,7 +55,6 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12 pt-4">
                                 <h3 class="fw-bold mb-5 fst-italic"><b>BILLING INFORMATION</b></h5>
-
                                     <p style="color: #707070">Default Contact Number or <a href="#" class="updateNum"
                                             data-toggle="modal" data-target="#myModalNumber"
                                             style="color: #EA5656"><strong>@if(Auth::user()->contact=='') Add Number
@@ -79,7 +78,6 @@
 
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 pt-4">
-
                                 <p class="text-bold mb-5">CHOOSE SHIPPING METHOD <span class="text-required">*</span>
                                 </p>
                                 <div class="shipping-choices mb-lg-5 pb-lg-5">
@@ -96,59 +94,6 @@
                                         </div>
                                         <div class="col text-right">PHP 0.00</label></div>
                                     </div>
-                                    <!-- Grab -->
-                                    <div class="row mt-3 pb-0">
-                                        <div class="col">
-                                            <div class="custom-control custom-control-inline">
-                                                <input type="radio" id="grab" name="shipping"
-                                                    class="custom-control-input" data-target="#grabinfo"
-                                                    data-toggle="collapse" aria-expanded="false" required
-                                                    onclick="shippingMethod('courier')" value="courier" />
-                                                <label class="custom-control-label" for="grab">Grab/Lalamove
-                                                    Delivery</label>
-                                            </div>
-                                        </div>
-                                        <div class="col text-right">PHP 0.00</label></div>
-                                    </div>
-                                    <!--  <div class="row collapse" id="grabinfo">
-                                    <div class="col">
-                                        <div class="pl-4 pt-2">
-                                            <small>
-                                                Client is responsible for booking a pick up between 8am-6pm (Mon-Fri) <br>
-                                                Name: Big Four Global Technologies <br>
-                                                Address: 11 Nicanor Roxas St., Brgy San Isidro Labrador, Quezon City <br>
-                                                Landmark: Beside Chuchu <br>
-                                                Contact Number: 09312 345 6789 <br><br>
-                                                <span class="text-required text-bold">NOTICE: Book only for pick up once
-                                                    your order status is ready ‘for pick up’. This will allow us time to
-                                                    prepare and process your orders.</span>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                    <!-- Greater Metro Manila -->
-                                    <div class="row mt-3 pb-0">
-                                        <div class="col">
-                                            <div class="custom-control custom-control-inline">
-                                                <input type="radio" id="manila" name="shipping"
-                                                    class="custom-control-input" data-target="#manilainfo"
-                                                    data-toggle="collapse" aria-expanded="false" required
-                                                    onclick="shippingMethod('gma')" value="gma" />
-                                                <label class="custom-control-label" for="manila">Greater Metro
-                                                    Manila</label>
-                                            </div>
-                                        </div>
-                                        <div class="col text-right">PHP 150.00</label></div>
-                                    </div>
-                                    <div class="row collapse" id="manilainfo">
-                                        <div class="col">
-                                            <div class="pl-4 pt-2">
-                                                <small>
-                                                    INFO HERE
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <!-- Provincial -->
                                     <div class="row mt-3 pb-0">
                                         <div class="col">
@@ -157,19 +102,10 @@
                                                     class="custom-control-input" data-target="#provincialinfo"
                                                     data-toggle="collapse" aria-expanded="false" required
                                                     onclick="shippingMethod('provincial')" value="provincial" />
-                                                <label class="custom-control-label" for="provincial">Provincial</label>
+                                                <label class="custom-control-label" for="provincial">Lalamove</label>
                                             </div>
                                         </div>
                                         <div class="col text-right">PHP 250.00</label></div>
-                                    </div>
-                                    <div class="row collapse" id="provincialinfo">
-                                        <div class="col">
-                                            <div class="pl-4 pt-2">
-                                                <small>
-                                                    INFO HERE
-                                                </small>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -327,7 +263,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-warning" value="Submit"  />
+                    <input type="submit" class="btn btn-background" value="Submit"  />
                 </div>
                 {!! Form::close() !!}
             </div>

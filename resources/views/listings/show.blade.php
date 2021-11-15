@@ -12,23 +12,21 @@
     </div>
 </div>
 <div class="container d-flex justify-content-evenly mt-3 mb-5">
-    <div class="row justify-content-center mx-auto">
+    <div class="row my-auto">
         <div class="col-lg-7 listing-container shadow p-4 ms-4 w-100">
       <div class="panel panel-default"  style="width: 100%; margin: auto;">
                 <h3 class="title-style">Rental Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$listing->id}}</span></h3>
                 <br>
-                
             <div class="row">
                 <div class="col-lg-9 text-center">
                     <div class="progressbar-container">
+                        <h4>Rental Status:</h4>
                         <ul class="progressbar">
-
                            {{$listing->status}}
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 text-right">
-                   
                     @if($listing->payment_method=='bank-transfer' && $listing->status=='waiting')
                     <a href="{{ route('order-deposit',$listing->id) }}"><button type="button" class="btn btn-green form-control">Upload Deposit Slip</button></a>
                     @endif

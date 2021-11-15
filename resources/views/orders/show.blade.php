@@ -14,16 +14,15 @@
 </div>
 <div class="container d-flex justify-content-evenly mt-3 mb-5">
     <div class="row my-auto">
-        <div class="col-lg-7 listing-container shadow p-4 ms-4">
+        <div class="col-lg-7 listing-container shadow p-4 ms-4 w-100">
       <div class="panel panel-default"  style="width: 100%; margin: auto;">
                 <h3 class="title-style">Order Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$order->order_id}}</span></h3>
                 <br>
-                
             <div class="row">
                 <div class="col-lg-9 text-center">
                     <div class="progressbar-container">
+                        <h4>Order Status:</h4>
                         <ul class="progressbar">
-
                            {{ $order->status}}
                         </ul>
                     </div>
