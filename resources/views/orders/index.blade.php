@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Order Tracking')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="icon" href="Images/navbarwhitebike.svg">

@@ -154,8 +154,6 @@ class RentalController extends Controller
 			'dt_to'=>$request->dt_to,
 			'dt_to_time'=>$request->dt_to_time,
 			]);
-
-
 	}
 
 	public function clientRentNow(Request $request)

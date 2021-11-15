@@ -1,4 +1,5 @@
 @extends('template.master')
+
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <div class="row ms-4">

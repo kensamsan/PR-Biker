@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Rental Tracking')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <div class="row ms-4">
