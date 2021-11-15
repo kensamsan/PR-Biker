@@ -78,7 +78,7 @@ class HomeController extends Controller
     public function postBikeSubmit(Request $request)
     {
   
-        Log::info($request);
+ 
         $validator = Validator::make($request->all(), [
             'bike_name' => 'required',
             'bike_unit' => 'required',
@@ -185,9 +185,12 @@ class HomeController extends Controller
     {
     	$product = Product::where('visibility','=','active')
         ->where('listing','=','products')->get();
+
+        $rentals = Rentals::where('status','=','posted')->get();
        
         return view('home',[
-            'products'=>$product
+            'products'=>$product,
+            'rentals'=>$rentals,
             ]);
     }
 }

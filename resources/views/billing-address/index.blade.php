@@ -28,6 +28,9 @@
                         <a href="{{ route('account.billing-address.edit',[Auth::user()->id,$x->id]) }}">
                             <button  class="btn btn-details form-control">View</button>
                         </a>
+                        <a href="{{ route('delete-billing-address',[$x->id]) }}">
+                            <button  class="btn btn-details form-control">Delete</button>
+                        </a>
                     </td>
                 </tr>
                 @endforeach 

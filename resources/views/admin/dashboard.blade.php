@@ -192,7 +192,7 @@
 								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 									<div class="flex-row-vertical">
 										<div class="second-column text-center">
-											<p class="card-body total-text-card">0</p>
+											<p class="card-body total-text-card">{{$orderCount+0}}</p>
 										</div>
 										<div class="first-column  text-center">
 											<h4 class="card-header">Total Invoice</h4>
@@ -216,7 +216,7 @@
 								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 									<div class="flex-row-vertical">
 										<div class="second-column text-center">
-											<p class="card-body total-text-card">0</p>
+											<p class="card-body total-text-card">{{$paidRent+0 }}</p>
 										</div>
 										<div class="first-column  text-center">
 											<h4 class="card-header">Paid Rents</h4>
@@ -239,7 +239,7 @@
 								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 									<div class="flex-row-vertical">
 										<div class="second-column text-center">
-											<p class="card-body total-text-card">0</p>
+											<p class="card-body total-text-card">{{$unpaidRent+0}}</p>
 										</div>
 										<div class="first-column  text-center">
 											<h4 class="card-header">Unpaid Total</h4>
@@ -262,7 +262,7 @@
 								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 									<div class="flex-row-vertical">
 										<div class="second-column text-center">
-											<p class="card-body total-text-card">0</p>
+											<p class="card-body total-text-card">{{$pending+0}}</p>
 										</div>
 										<div class="first-column  text-center">
 											<h4 class="card-header">Pending Rents</h4>

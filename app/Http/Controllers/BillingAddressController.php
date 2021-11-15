@@ -23,7 +23,9 @@ class BillingAddressController extends Controller
 	{
 		//
 		$user = User::find($user_id);
-		$billingAddress = BillingAddress::where('user_id','=',$user->id)->get();
+		$billingAddress = BillingAddress::where('user_id','=',$user->id)
+		->where('active','=',1)
+		->get();
 		return view('billing-address.index', [
 			'user'=>$user,
 			'billingAddress'=>$billingAddress,
@@ -89,37 +91,32 @@ class BillingAddressController extends Controller
 		DB::beginTransaction();
 		try
 		{
-			if($billingCount>2)
-				{
-					return redirect()->route('client-checkout-information')->with('error_message', 'Only Two Billing Address allowed!');
-				}
-				else 
-				{
-					$billingAddress = BillingAddress::create([
-						'first_name'=>$request->input('first_name'),
-						'last_name'=>$request->input('last_name'),
-						'address'=>$request->input('address'),
-						'brgy'=>$request->input('brgy'),
-						'city'=>$request->input('city'),
-						'zip'=>$request->input('zip'),
-						'region'=>$request->input('region'),
-						'email'=>$request->input('email'),
-						'landmark'=>$request->input('landmark'),
-						'contact'=>$request->input('contact'),
-						'type'=>$request->input('type'),
-						'user_id'=>$user_id,
-						]);
-					DB::table('activity_logs')->insert([
-						'username'  =>  Auth::user()->username.'@'.\Request::ip(),
-						'entry'  =>  'added billing-address for user :'.$user_id,
-						'comment'  =>  '',
-						'family'  =>  'insert',
-						'created_at' => \Carbon\Carbon::now()
-						]);
-					DB::commit();
+			
+			$billingAddress = BillingAddress::create([
+				'first_name'=>$request->input('first_name'),
+				'last_name'=>$request->input('last_name'),
+				'address'=>$request->input('address'),
+				'brgy'=>$request->input('brgy'),
+				'city'=>$request->input('city'),
+				'zip'=>$request->input('zip'),
+				'region'=>$request->input('region'),
+				'email'=>$request->input('email'),
+				'landmark'=>$request->input('landmark'),
+				'contact'=>$request->input('contact'),
+				'type'=>$request->input('type'),
+				'user_id'=>$user_id,
+				]);
+			DB::table('activity_logs')->insert([
+				'username'  =>  Auth::user()->username.'@'.\Request::ip(),
+				'entry'  =>  'added billing-address for user :'.$user_id,
+				'comment'  =>  '',
+				'family'  =>  'insert',
+				'created_at' => \Carbon\Carbon::now()
+				]);
+			DB::commit();
 
-					return redirect()->route('profile')->with('flash_message', 'Shipping Address Added!!');
-				}
+			return redirect()->route('rent-bike')->with('flash_message', 'Shipping Address Added!!');
+			
 				
 			
 		}
@@ -178,12 +175,7 @@ class BillingAddressController extends Controller
 		DB::beginTransaction();
 		try
 		{
-			if($billingCount>2)
-				{
-					return redirect()->route('client-checkout-information')->with('error_message', 'Only Two Billing Address allowed!');
-				}
-				else 
-				{
+			
 					$billingAddress = BillingAddress::create([
 						'first_name'=>$request->input('first_name'),
 						'last_name'=>$request->input('last_name'),
@@ -208,7 +200,7 @@ class BillingAddressController extends Controller
 					DB::commit();
 
 					return redirect()->route('client-checkout-information')->with('flash_message', 'Shipping Address Added!!');
-				}
+				
 				
 			
 		}
@@ -408,8 +400,13 @@ class BillingAddressController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function delete($id)
 	{
 		//
+	
+		$billingAddress = BillingAddress::find($id);
+		$billingAddress->active = 0;
+		$billingAddress->save();
+		return redirect()->back()->with('flash_message', 'Billing Address Deleted!!');
 	}
 }

@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('product_code')->nullable()->unique();
             $table->string('product_name');
+            $table->string('brgy');
             $table->string('description',1000);
             $table->longtext('details')->nullable();
             $table->decimal('price',18,4);

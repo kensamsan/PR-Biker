@@ -216,7 +216,8 @@
                             </div>
                         </div>
 
-                        <input type="submit" name="CHECKOUT">
+                        <input type="submit" name="CHECKOUT" @if(Auth::user()->bank_details=='') disabled @endif>
+                        @if(Auth::user()->bank_details=='') <span>Please Create Bank Details</span> @endif
                         </form>
             </div>
 
@@ -326,7 +327,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-warning" value="Submit" />
+                    <input type="submit" class="btn btn-warning" value="Submit"  />
                 </div>
                 {!! Form::close() !!}
             </div>

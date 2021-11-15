@@ -123,6 +123,7 @@ Route::group(['prefix' => ''], function () {
 
 		Route::resource('account','AccountController');
 		Route::resource('account.billing-address','BillingAddressController');
+		Route::get('delete-billing-address/{id}','BillingAddressController@delete')->name('delete-billing-address');
 		Route::post('account-billing-address-rent/{id}','BillingAddressController@addBillingAddressModalFromRent')->name('account.billing-address.store-modal-rent');
 		Route::post('account-billing-address/{id}','BillingAddressController@addBillingAddressModal')->name('account.billing-address.store-modal');
 		Route::post('account-billing-contact/{id}','BillingAddressController@addBillingContactModal')->name('account.contact.store-modal');

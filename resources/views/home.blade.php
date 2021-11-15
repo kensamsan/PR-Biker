@@ -75,6 +75,28 @@
                     <img class="modal-content" id="full-image">
                 </div>
                 @endforeach     
+                @foreach ($rentals as $x)
+                <div class="col-lg-3 col-md-6 col-12 p-3">
+                    <div class="card card-course images h-100">
+                        <div class="card-body">
+                            <div class="col img-modal"
+                                style="background: url('{{ asset("uploads/rentals/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;"
+                                data-src="{{ asset("uploads/rentals/".$x->getProductImage()) }}">
+                            </div>
+                            <label class="mt-3 fs-5 fw-bold">{{$x->product_name}}</label>
+                            <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
+                        </div>
+                      
+                        <div class="card card-course-foot shadow">
+                            <a href="{{ route('rental-detail',$x->id) }}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="image-viewer">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="full-image">
+                </div>
+                @endforeach  
             </div>
         </div>
     </section> 

@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->string('contact');
+            $table->string('bank_details');
             $table->string('photo')->default('anon.png');           
             $table->string('id_photo')->default('anon.png');           
             $table->tinyInteger('active')->default(0);

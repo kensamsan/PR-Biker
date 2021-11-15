@@ -43,11 +43,11 @@
                         <div class="col-lg-4 d-flex col-md-2">
                             <span class="me-3">
                                 <i class="far fa-calendar-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5" for="">2015</label>
+                                <label class="fs-5" for="">{{$p->year}}</label>
                             </span>
                             <span>
                                 <i class="fas fa-map-marker-alt fs-4 pe-2 icon-color"></i>
-                                <label class="fs-5 lead" for="">Manila City</label>
+                                <label class="fs-5 lead" for="">{{$p->brgy}}</label>
                             </span>
                         </div>
                     </div>

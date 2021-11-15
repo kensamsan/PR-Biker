@@ -188,8 +188,27 @@
 							<div class="row">
                                 <div class="col-lg-4 margin-top margin-left">
                                     <label for="barangay">Barangay</label>
-                                    <Select type="text" name="barangay" class="form-control">
-										<option>Barangay</option>
+                                    <Select type="text" name="brgy" class="form-control">
+										 <option value="ALMANZA DOS">ALMANZA DOS</option>
+                                        <option value="ALMANZA UNO">ALMANZA UNO</option>
+                                        <option value="B. F. INTERNATIONAL VILLAGE">B. F. INTERNATIONAL VILLAGE</option>
+                                        <option value="DANIEL FAJARDO">DANIEL FAJARDO</option>
+                                        <option value="ELIAS ALDANA">ELIAS ALDANA</option>
+                                        <option value="ILAYA">ILAYA</option>
+                                        <option value="MANUYO DOS">MANUYO DOS</option>
+                                        <option value="MANUYO UNO">MANUYO UNO</option>
+                                        <option value="PAMPLONA DOS">PAMPLONA DOS</option>
+                                        <option value="PAMPLONA TRES">PAMPLONA TRES</option>
+                                        <option value="PAMPLONA UNO">PAMPLONA UNO</option>
+                                        <option value="PILAR">PILAR</option>
+                                        <option value="PULANG LUPA DOS">PULANG LUPA DOS</option>
+                                        <option value="PULANG LUPA UNO">PULANG LUPA UNO</option>
+                                        <option value="TALON DOS">TALON DOS</option>
+                                        <option value="TALON KUATRO">TALON KUATRO</option>
+                                        <option value="TALON SINGKO">TALON SINGKO</option>
+                                        <option value="TALON TRES">TALON TRES</option>
+                                        <option value="TALON UNO">TALON UNO</option>
+                                        <option value="ZAPOTE">ZAPOTE</option>  
 									</Select>
                                 </div>
                             </div>

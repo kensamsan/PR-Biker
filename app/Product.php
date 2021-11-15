@@ -18,6 +18,8 @@ class Product extends Model
 		'details',
 		'visibility',
 		'price',
+		'brgy',
+		'year',
 	];
 	public function productQtyAvailable()
 	{
@@ -81,8 +83,17 @@ class Product extends Model
 	}
 
 	public function productImage() {
-		return $this->hasMany('App\ProductImage');
+		return $this->hasMany('App\ProductImage','id');
 	}
+
+	public function getProductImageCount()
+	{
+		$x = ProductImage::where('product_id','=',$this->id)
+			->count();
+		Log::info($x);
+		return $x;
+	}
+
 
 	public function transaction()
 	{

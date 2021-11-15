@@ -285,7 +285,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h5><strong>Bike Name</strong></h5>
-                            <p style="font-size: 0.9em;">{{ $rental->bike_name }} {{ $rental->user_id }}</p>
+                            <p style="font-size: 0.9em;">{{ $rental->bike_name }}</p>
                             <h5><strong>Bike Unit</strong></h5>
                             <p style="font-size: 0.9em;">{{ $rental->bike_unit }}</p>
                             <h5><strong>Price</strong></h5>

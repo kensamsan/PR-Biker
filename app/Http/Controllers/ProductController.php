@@ -188,6 +188,8 @@ class ProductController extends Controller
 					'details'  =>  $request->input('details'),
 					'visibility'  =>  $request->input('visibility'),
 					'price'  =>  $request->input('price'),
+					'brgy'  =>  $request->input('brgy'),
+					'year'  =>  $request->input('yearpicker'),
 
 				]);
 					if($request->input('tag_id'))
@@ -266,6 +268,7 @@ class ProductController extends Controller
             	$product->details = $request->input('details');
             	$product->visibility = $request->input('visibility');
             	$product->price = $request->input('price');
+            	$product->brgy = $request->input('brgy');
             	$product->save();
 			
 				DB::table('activity_logs')->insert([

@@ -217,9 +217,7 @@
 							</div>
 					    </div>
 						<div class="col-lg-2">
-							<a class="btn btn-success addBtn" href="{{route('admin-products.create')}}">
-								<i class="fa fa-plus-circle"></i> Add Order
-							</a>
+							
 						</div>
 					</div>
 				</div>

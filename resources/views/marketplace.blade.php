@@ -20,6 +20,7 @@
         <div class="mb-5">
             <div class="row">
                 @foreach($products as $x)
+                @if($x->getProductImageCount()>0)
                 <div class="col-lg-3 col-md-4 col-12 pt-4">
                     <div class="card card-course images h-100">
                         <div class="card-body">
@@ -32,10 +33,12 @@
                         </div>
                         <div class="card card-course-foot shadow border-0">
                             <a class="btn btn-background text-light mx-auto fst-italic btn border-0 fs-5 p-2"
-                                href="{{ route('product.show',$x->id) }}">Other Details</a>
+                                href="{{ route('product.show',$x->id) }}">Other Details {{ $x->getProductImageCount() }}</a>
                         </div>
                     </div>
                 </div>
+                @endif
+               
                 @endforeach
             </div>
         </div>

@@ -158,9 +158,9 @@
 				<h4 class="modal-title">Add Stock</h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
-
+			{{ Form::open(['route' => 'admin.product.addstock','files'=>true,'method' => 'post','id'=>'form_add']) }}
 			<div class="modal-body">
-				{{ Form::open(['route' => 'admin.product.addstock','files'=>true,'method' => 'post','id'=>'form_add']) }}
+				
 					<div class="row">
 						<div class="col-lg-12">
 							{{ Form::label('quantity', 'Quantity') }}
@@ -168,14 +168,15 @@
 							<span class="errors" style="color:#FF0000">{{$errors->first('quantity')}}</span>
 						</div>
 					</div>
-				{{ Form::close() }}
+				
 			</div>
 
 			<div class="modal-footer">
 				<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
 				<!-- <a href="#" id="btnAddStockSubmit" class="btn btn-primary">Submit</a> -->
-				<a href="#" id="btnSubmitStock" class="btn btn-primary">Submit</a>
+				<input type="submit" class="btn btn-primary">
 			</div>
+			{{ Form::close() }}
 		</div>
 	</div>
 </div>
@@ -197,14 +198,15 @@
 							<span class="errors" style="color:#FF0000">{{$errors->first('quantity')}}</span>
 						</div>
 					</div>
-				{{ Form::close() }}
+				
 			</div>
 
 			<div class="modal-footer">
 				<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
 				<!-- <a href="#" id="btnAddStockSubmit" class="btn btn-primary">Submit</a> -->
-				<a href="#" id="btnSubmitAdjustStock" class="btn btn-primary">Submit</a>
+				<input type="submit" class="btn btn-primary">
 			</div>
+			{{ Form::close() }}
 		</div>
 	</div>
 </div>

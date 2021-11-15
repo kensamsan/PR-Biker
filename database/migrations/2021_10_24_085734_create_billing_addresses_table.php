@@ -27,6 +27,7 @@ class CreateBillingAddressesTable extends Migration
             $table->string('contact');
             $table->string('landmark')->nullable();
             $table->string('zip');
+            $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
     }

@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\TravelPass;
+use App\Order;
+use App\Rentals;
 use DB;
+use Log;
 use Carbon\Carbon;
 class DashboardController extends Controller
 {
@@ -18,8 +20,16 @@ class DashboardController extends Controller
     public function index()
     {
         //
-       
+        $orderCount = Order::sum('total');
+        $paidRent = Rentals::where('payment_status','paid')->sum('price');
+        $unpaidRent = Rentals::where('payment_status','unpaid')->sum('price');
+        $pending = Rentals::where('status','waiting-approval')->count();
+     
         return view('admin.dashboard',[
+                'orderCount'=>$orderCount,
+                'paidRent'=>$paidRent,
+                'unpaidRent'=>$unpaidRent,
+                'pending'=>$pending,
             ]);
     }
 

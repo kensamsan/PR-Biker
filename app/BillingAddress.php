@@ -22,5 +22,6 @@ class BillingAddress extends Model
 		'contact',
 		'landmark',
 		'zip',
+		'active',
 	];
 }
