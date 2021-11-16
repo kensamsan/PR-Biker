@@ -83,7 +83,7 @@
                                 style="background: url('{{ asset("uploads/rentals/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;"
                                 data-src="{{ asset("uploads/rentals/".$x->getProductImage()) }}">
                             </div>
-                            <label class="mt-3 fs-5 fw-bold">{{$x->product_name}}</label>
+                            <label class="mt-3 fs-5 fw-bold">{{$x->bike_unit}}</label>
                             <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                         </div>
                       
