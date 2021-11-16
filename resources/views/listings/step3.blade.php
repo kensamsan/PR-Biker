@@ -126,7 +126,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 ps-lg-3 ps-4">
-                                        {{App\User::find($rental->user_id)->bank_details}}
+                                        {{App\User::find(Auth::user()->id)->bank_details}}
 
                                     </div>
                                     <div class="mt-3 ps-lg-3 ps-4">

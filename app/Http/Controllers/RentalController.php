@@ -173,6 +173,19 @@ class RentalController extends Controller
 			]);
 	}
 
+	public function cancel($id)
+    {
+    	$rental = Rentals::find($id);
+    	$rental->status = 'cancelled';
+    	$rental->save();
+    	$orderLog = RentalLogs::create([
+					'rental_id'=>$rental->id,
+					'title'=>'cancelled,',
+					'content'=>'cancelled',
+				]);
+    	return redirect()->back()->with('flash_success','cancelled');
+    	
+    }
 	public function approvePayment($id)
     {
     	$rental = Rentals::find($id);

@@ -25,6 +25,7 @@ class HomeController extends Controller
         $brgy = ($request->input('brgy') == '-1' ? '-1' : $request->input('brgy'));
     
         $rentals = Rentals::where('status','=','posted')
+            ->where('user_id','!=',Auth::user()->id)
             ->whereRaw("(('".$brgy."'='-1') OR (brgy='".$request->input('brgy')."'))")
            ->Where(function ($query) use ($request) {
                 $query->where('bike_name','like', '%'.$request->search.'%')
@@ -32,7 +33,7 @@ class HomeController extends Controller
                 ->orWhere('bike_unit','like', '%'.$request->search.'%');
             })
         ->get();
-        Log::info($rentals);
+     
        
          return view('rent-bike',[
             'rentals'=>$rentals,
@@ -42,7 +43,9 @@ class HomeController extends Controller
 
      public function rentBike()
     {
-        $rentals = Rentals::where('status','=','posted')->get();
+        $rentals = Rentals::where('status','=','posted')
+            ->where('user_id','!=',Auth::user()->id)
+            ->get();
         
        
          return view('rent-bike',[
