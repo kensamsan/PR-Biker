@@ -184,6 +184,7 @@ Route::group(['prefix' => ''], function () {
 
 		
 		Route::group(['middleware' => ['permission:is_allow_users']], function(){
+			Route::post('users-search','UserController@search')->name('users-search');
 			Route::resource('users','UserController');
 				// Route::get('users/', 'UserController@index')->name('settings.users.index');
 				// Route::post('users', 'UserController@store')->name('settings.users.store');

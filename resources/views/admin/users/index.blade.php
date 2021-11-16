@@ -123,6 +123,8 @@
 				<div class="panel-heading">
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col-md-5 col-lg-4">
+							<Form method="post" action="{{ route('users-search') }}">
+							{{ csrf_field()}}
 							<div class="form-group">
 						        <div class="input-group">
 						            <input type="text" class="form-control" placeholder="Search for..." name="search" value="{{ Request::get('search') }}">
@@ -131,6 +133,7 @@
 						            </span>
 						        </div>
 							</div>
+							</Form>
 					    </div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
 							<a class="btn btn-success addBtn" href="{{route('users.create')}}">

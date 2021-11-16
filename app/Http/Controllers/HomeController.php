@@ -33,10 +33,17 @@ class HomeController extends Controller
                 ->orWhere('bike_unit','like', '%'.$request->search.'%');
             })
         ->get();
+
+        $products = Product::whereRaw("(('".$brgy."'='-1') OR (brgy='".$request->input('brgy')."'))")
+           ->Where(function ($query) use ($request) {
+                $query->where('product_name','like', '%'.$request->search.'%');
+            })
+        ->get();
      
        
          return view('rent-bike',[
             'rentals'=>$rentals,
+            'products'=>$products,
             ]);
 
     }
