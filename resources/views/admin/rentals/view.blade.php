@@ -294,10 +294,10 @@
                             <p style="font-size: 0.9em;">{{ $rental->description }}</p>
                         </div>
                         <div class="col-md-6">
-                            <h5><strong>Rentee Name</strong></h5>
+                            <h5><strong>Renter Name</strong></h5>
                             <p style="font-size: 0.9em;">{{ $rental->user->first_name }}
                                 {{ $rental->user->middle_name }} {{ $rental->user->last_name }}</p>
-                            <h5><strong>Rentee Address</strong></h5>
+                            <h5><strong>Renter Address</strong></h5>
                             <p style="font-size: 0.9em;">{{ $rental->user->getBillingAddress() }}</p>
                             <h5><strong>ID PHOTO</strong></h5>
                             <img src="/uploads/users/{{ App\User::where('id', '=', $rental->user_id)->first()->id_photo }}"
