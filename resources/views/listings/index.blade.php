@@ -11,9 +11,8 @@
         <div class="col-lg-5 listing-container shadow p-3">
         <table class="table table-hover">
                 <tr>
-                    <th>Bike Name</th>
+                    <th>Owner Name</th>
                     <th>Bike Unit</th>
-                    <th>Ship To</th>
                     <th>Order Status</th>
                     <th>Price</th>
                     <th></th>
