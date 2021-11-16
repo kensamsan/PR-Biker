@@ -177,7 +177,7 @@
 								<tr>
 									<td>{{$p->id}}</td>
 									<td>{{$p->product_name}}</td>
-									<td>{{$p->price}}</td>
+									<td>{{number_format($p->price,2)}}</td>
 									<td>
 										@if($p->visibility=='inactive')
 										<span class="label label-warning">Inactive</span>

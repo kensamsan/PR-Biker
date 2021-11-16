@@ -90,7 +90,7 @@ class Product extends Model
 	{
 		$x = ProductImage::where('product_id','=',$this->id)
 			->count();
-		Log::info($x);
+	
 		return $x;
 	}
 
