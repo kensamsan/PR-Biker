@@ -54,19 +54,22 @@ class HomeController extends Controller
             ->where('user_id','!=',Auth::user()->id)
             ->get();
         
+         $products = Product::get();
+
        
          return view('rent-bike',[
             'rentals'=>$rentals,
+            'products'=>$products,
             ]);
     }
 
     public function showListings($id)
     {
         $rentals = Rentals::findOrFail($id);
-        if($rentals->user_id!=Auth::user()->id)
-        {
-             abort(404);
-        }
+        // if($rentals->user_id!=Auth::user()->id)
+        // {
+        //      abort(404);
+        // }
         $rentalLogs =RentalLogs::where('rental_id','=',$rentals->id)->get();
 
         return view('listings.show', [       

@@ -17,6 +17,7 @@ use App\OrderLog;
 use App\BillingAddress;
 use App\PromoCode;
 use App\OrderPromo;
+use App\OrderItemDiscount;
 use App\User;
 use Darryldecode\Cart\Cart;
 use Srmklive\PayPal\Services\ExpressCheckout;
