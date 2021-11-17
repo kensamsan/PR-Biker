@@ -83,14 +83,14 @@ class Product extends Model
 	}
 
 	public function productImage() {
-		return $this->hasMany('App\ProductImage','id');
+		return $this->hasMany('App\ProductImage','product_id');
 	}
 
 	public function getProductImageCount()
 	{
 		$x = ProductImage::where('product_id','=',$this->id)
 			->count();
-		Log::info($x);
+	
 		return $x;
 	}
 

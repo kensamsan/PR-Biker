@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('description',1000);
             $table->longtext('details')->nullable();
             $table->decimal('price',18,4);
+            $table->integer('year');
             $table->enum('listing',['products','rental']);
             $table->enum('visibility',['inactive','active']);
             $table->tinyInteger('tax_exempt')->default(0);

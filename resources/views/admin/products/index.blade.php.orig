@@ -177,7 +177,11 @@
 								<tr>
 									<td>{{$p->id}}</td>
 									<td>{{$p->product_name}}</td>
+<<<<<<< HEAD
 									<td>{{number_format($p->price,2)}}</td>
+=======
+									<td>{{number_format($p->price,2) }}</td>
+>>>>>>> 3011bdd738d0359a60c3c7f397d6b52b5fdb5bc3
 									<td>
 										@if($p->visibility=='inactive')
 										<span class="label label-warning">Inactive</span>

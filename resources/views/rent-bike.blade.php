@@ -28,6 +28,24 @@
                             </div>
                         </div>
                         @endforeach
+
+                        @foreach($products as $x)
+                   <div class="col-lg-3 col-md-4 col-12 pt-4">
+                            <div class="card card-course images">
+                                <div class="card-body">
+                                    <div class="col img-modal"
+                                        style="background: url('{{ asset("uploads/products/".$x->getProductImage()) }}') no-repeat center; background-size: cover; height: 300px;"
+                                        data-src="{{ asset("uploads/products/".$x->getProductImage()) }}"></div>
+                                    <label class="mt-3 fs-5 fw-bold">{{$x->bike_unit}}</label>
+                                    <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
+                                </div>
+                                <div class="card card-course-foot shadow border-0">
+                                    <a class="btn btn-background text-light mx-auto fst-italic btn border-0 fs-5 p-2"
+                                        href="{{ route('product.show',$x->id) }}">Other Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
                 </div>
             </div>
         </div>

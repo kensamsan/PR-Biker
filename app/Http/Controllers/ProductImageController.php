@@ -47,6 +47,7 @@ class ProductImageController extends Controller
     public function store($product_id,Request $request)
     {
         //
+      
         $destinationPath = 'uploads/products';
         $photoExtension = $request->file('file')->getClientOriginalExtension(); 
         $file = 'file'.uniqid().'.'.$photoExtension;

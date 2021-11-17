@@ -51,6 +51,26 @@ class UserController extends Controller
        
     }
 
+    public function search(Request $request)
+    {
+        //
+
+        $users = User::whereNull('deleted_at')      
+            ->Where(function ($query) use ($request) {
+                    $query->where('first_name','like', '%'.$request->search.'%')
+                    ->orWhere('last_name','like', '%'.$request->search.'%')
+                    ->orWhere('middle_name','like', '%'.$request->search.'%')
+                        ;
+                })
+            ->get();
+        return view('admin.users.index',
+            [
+                'users' => $users,
+            ]
+        );
+    }
+
+
     public function index(Request $request)
     {
         //

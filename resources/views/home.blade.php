@@ -50,6 +50,7 @@
         <div class="container card-container shadow fw-bolder">
             <div class="row my-5">
                 @foreach ($products as $x)
+                @if($x->productQtyAvailable()>0 && $x->getProductImageCount()>0)
                 <div class="col-lg-3 col-md-6 col-12 p-3">
                     <div class="card card-course images h-100">
                         <div class="card-body">
@@ -60,11 +61,7 @@
                             <label class="mt-3 fs-5 fw-bold">{{$x->product_name}}</label>
                             <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
                         </div>
-                        {{-- <div class="card-body">
-                            <img src="/uploads/products/{{$x->getProductImage()}}" class="card-img-top" alt="bike1">
-                            <label class="mt-3 fs-5">{{$x->product_name}}</label>
-                            <p class="fs-5 lh-1 card-text">{{ number_format($x->price,2)}}</p>
-                        </div> --}}
+                        
                         <div class="card card-course-foot shadow">
                             <a href="{{ route('product.show',$x->id) }}" class="btn text-light mx-auto fst-italic btn border-0 fs-5 p-2">Other Details</a>
                         </div>
@@ -74,6 +71,7 @@
                     <span class="close">&times;</span>
                     <img class="modal-content" id="full-image">
                 </div>
+                @endif
                 @endforeach     
                 @foreach ($rentals as $x)
                 <div class="col-lg-3 col-md-6 col-12 p-3">

@@ -10,6 +10,7 @@ use DB;
 use Carbon\Carbon;
 use App\Product;
 use App\Transaction;
+use App\PromoCodeSpecific;
 use App\Order;
 use App\OrderItem;
 use App\OrderLog;

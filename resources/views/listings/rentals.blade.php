@@ -21,7 +21,7 @@
             <tr>
                 <td style="color: black!important">{{ $x->bike_name }}</td>
                 <td style="color: black!important">{{ $x->bike_unit }}</td>
-                <td></td>
+       
                 <td>
                     @if($x->status=='processing')
                     <span class="status proc"></span>Processing
