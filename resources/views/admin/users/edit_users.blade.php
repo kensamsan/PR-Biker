@@ -141,7 +141,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 								<div class="form-group {{ $errors->first('last_name') ? 'has-error' : '' }} ">
 									{{ Form::label('last_name', 'Last Name', array('class'=>'control-label')) }}
-									{{ Form::text('last_name',($errors->any() ? old('last_name') : $user->last_name),array('class'=>'form-control validate[required]','placeholder' => 'Last Name')) }}
+									{{ Form::text('last_name',($errors->any() ? old('last_name') : $user->last_name),array('class'=>'form-control validate[required]','placeholder' => 'Last Name', 'disabled=true')) }}
 									@if($errors->has('last_name'))
 										<p class="help-block text-danger">{{$errors->first('last_name')}}</p>
 									@endif
@@ -150,7 +150,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 								<div class="form-group {{ $errors->first('first_name') ? 'has-error' : '' }} ">
 									{{ Form::label('first_name', 'First Name', array('class'=>'control-label')) }}
-									{{ Form::text('first_name',($errors->any() ? old('first_name') : $user->first_name),array('class'=>'form-control validate[required]','placeholder' => 'First Name')) }}
+									{{ Form::text('first_name',($errors->any() ? old('first_name') : $user->first_name),array('class'=>'form-control validate[required]','placeholder' => 'First Name', 'disabled=true')) }}
 									@if($errors->has('first_name'))
 										<p class="help-block text-danger">{{$errors->first('first_name')}}</p>
 									@endif
@@ -159,7 +159,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 								<div class="form-group {{ $errors->first('middle_name') ? 'has-error' : '' }} ">
 									{{ Form::label('middle_name', 'Middle Name', array('class'=>'control-label')) }}
-									{{ Form::text('middle_name',($errors->any() ? old('middle_name') : $user->middle_name),array('class'=>'form-control validate[required]','placeholder' => 'Middle Name')) }}
+									{{ Form::text('middle_name',($errors->any() ? old('middle_name') : $user->middle_name),array('class'=>'form-control validate[required]','placeholder' => 'Middle Name', 'disabled=true')) }}
 									@if($errors->has('middle_name'))
 										<p class="help-block text-danger">{{$errors->first('middle_name')}}</p>
 									@endif
@@ -170,7 +170,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 								<div class="form-group {{ $errors->first('contact') ? 'has-error' : '' }} ">
 									{{ Form::label('contact', 'Contact No.', array('class'=>'control-label')) }}
-									{{ Form::text('contact',($errors->any() ? old('contact') : $user->contact),array('class'=>'form-control validate[required]','placeholder' => 'Contact No.')) }}
+									{{ Form::text('contact',($errors->any() ? old('contact') : $user->contact),array('class'=>'form-control validate[required]','placeholder' => 'Contact No.', 'disabled=true')) }}
 									@if($errors->has('contact'))
 										<p class="help-block text-danger">{{$errors->first('contact')}}</p>
 									@endif
@@ -179,7 +179,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-4">
 								<div class="form-group {{ $errors->first('email') ? 'has-error' : '' }} ">
 									{{ Form::label('email', 'Email Address', array('class' => 'control-label')) }}
-									{{ Form::email('email',($errors->any() ? old('email') : $user->email),array('class'=>'form-control validate[required,custom[email]]','placeholder' => 'Email Address','formnovalidate'=>'formnovalidate')) }}
+									{{ Form::email('email',($errors->any() ? old('email') : $user->email),array('class'=>'form-control validate[required,custom[email]]','placeholder' => 'Email Address','formnovalidate'=>'formnovalidate', 'disabled=true')) }}
 									@if($errors->has('email'))
 										<p class="help-block text-danger">{{$errors->first('email')}}</p>
 									@endif
@@ -196,7 +196,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 								<div class="form-group {{ $errors->first('username') ? 'has-error' : '' }} ">
 									{{ Form::label('username', 'Username', array('class'=>'control-label')) }}
-									{{ Form::text('username',($errors->any() ? old('username') : $user->username),array('class'=>'form-control validate[required]','placeholder' => 'Username')) }}
+									{{ Form::text('username',($errors->any() ? old('username') : $user->username),array('class'=>'form-control validate[required]','placeholder' => 'Username', 'disabled=true')) }}
 									@if($errors->has('username'))
 										<p class="help-block text-danger">{{$errors->first('username')}}</p>
 									@endif
@@ -206,8 +206,8 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="pull-right">
-									<a href="{{route('users.index')}}" class="btn btn-default btnCancel">Cancel</a>
-									<button class="btn btn-success btnSubmit" type="button">Submit</button>
+									{{-- <a href="{{route('users.index')}}" class="btn btn-default btnCancel">Cancel</a>
+									<button class="btn btn-success btnSubmit" type="button">Submit</button> --}}
 								</div>
 							</div>
 						</div>

@@ -174,12 +174,12 @@
 					                            	<li>
 					                                    <a href="{{route('users.edit',$user->id)}}" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp; View Details</a>
 					                                </li>
-					                                <li>
+					                                {{-- <li>
 					                                    <a href="#" ><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp; Change Password</a>
-					                                </li>
-					                            	<li>
+					                                </li> --}}
+					                            	{{-- <li>
 				                                        <a href="#" title="Roles" class=""><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp; Roles</a>
-				                                    </li>
+				                                    </li> --}}
 				                                    @if($user->id !== Auth::user()->id)
 					                                    <li>
 					                                        @if($user->status === 0 )

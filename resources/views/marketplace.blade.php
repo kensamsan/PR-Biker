@@ -10,9 +10,9 @@
     </h1>
     <div class="row pb-5 text-lg-start text-center">
         @foreach($categories as $x)
-        <div class="col-lg-2 fs-4">
+        {{-- <div class="col-lg-2 fs-4">
             <label for=""><b>{{$x->category_name}}</b></label>
-        </div>
+        </div> --}}
         @endforeach
     </div>
 

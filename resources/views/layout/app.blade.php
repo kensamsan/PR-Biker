@@ -463,9 +463,9 @@
                         <a href="{{ route('admin.promo-codes.index') }}"><i class="fa fa-bullhorn"></i>&nbsp; Promo
                             Code</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('admin.tag.index') }}">Tags</a>
-                    </li>
+                    </li> --}}
 
                     <li class="" id="listSettings"><a href="javascript:;" data-toggle="collapse"
                             data-target="#listings">Listings <i class="fa fa-fw fa-caret-left pull-right"
