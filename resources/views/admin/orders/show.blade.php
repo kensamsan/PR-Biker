@@ -271,7 +271,7 @@
 				</div> 
 		
 			</div>
-			<div class="timeline">
+			{{-- <div class="timeline">
 				<div class="events">
 					<ol>
 						<ul>
@@ -428,7 +428,7 @@
 						</ul>
 					</ol>
 				</div>
-			</div>
+			</div> --}}
 
 			<div class="row">
 				<div class="col-md-12">
