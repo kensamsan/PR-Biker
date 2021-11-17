@@ -11,9 +11,8 @@
     <div class="col-lg-5 listing-container shadow p-3">
         <table class="table table-hover">
             <tr>
-                <th>Bike Name</th>
+                <th>Owner Name</th>
                 <th>Bike Unit</th>
-                <th>Ship To</th>
                 <th>Order Status</th>
                 <th>Price</th>
                 <th></th>
@@ -29,7 +28,7 @@
                     @elseif($x->status=='waiting-approval')
                     <span class="status wait"></span>Waiting For Approval
                     @elseif($x->status=='waiting-ship')
-                    <span class="status wait"></span>Waiting For PAyment Approval, Shipping
+                    <span class="status wait"></span>Waiting For Payment Approval, Shipping
                     @elseif($x->status=='waiting')
                     <span class="status wait"></span>Rented,Waiting for Payment
                     @elseif($x->status=='pick-up')
