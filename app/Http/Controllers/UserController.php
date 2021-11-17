@@ -137,7 +137,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        Log::info($request);
+       
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'middle_name' => 'max:255',

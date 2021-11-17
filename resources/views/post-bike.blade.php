@@ -49,8 +49,15 @@
             </div>
             <div class="row mt-2">
                 <div class="col-lg-8">
+
                     {{ Form::label('Address', 'Address') }}
-                    <input type="text" name="address" value="{{Auth::user()->getBillingAddress() }}" readonly="true" class="form-control">
+                    <select name="address" class="form-control" required="true">
+                        @foreach($billingAddress as $x)
+                        <option value="{{$x->address}} {{$x->city}} {{$x->zip}}" @if($x->id==$billingAddress->last()->id)
+                            selected @endif>{{$x->address}} {{$x->city}} {{$x->zip}}</option>
+                        @endforeach
+                    </select>
+                    <!-- <input type="text" name="address" value="{{Auth::user()->getBillingAddress() }}" readonly="true" class="form-control"> -->
                 </div>
             </div>
             <div class="row mt-3">

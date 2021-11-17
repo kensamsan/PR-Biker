@@ -11,6 +11,7 @@ use App\Province;
 use App\Rentals;
 use App\RentalImages;
 use App\RentalLogs;
+use App\BillingAddress;
 use DB;
 use Hash;
 use Validator;
@@ -174,8 +175,10 @@ class HomeController extends Controller
     public function postBike()
     {
         $provinces = Province::get();
+        $billingAddress =BillingAddress::where('user_id','=',Auth::user()->id)->get();
         return view('post-bike',[
             'provinces'=>$provinces,
+            'billingAddress'=>$billingAddress,
             ]);
 
     }
@@ -199,7 +202,7 @@ class HomeController extends Controller
     	$product = Product::where('visibility','=','active')
         ->where('listing','=','products')->get();
 
-        $rentals = Rentals::where('status','=','posted')->get();
+        $rentals = Rentals::where('status','=','posted')->where('user_id','!=',Auth::user()->id)->get();
        
         return view('home',[
             'products'=>$product,

@@ -80,7 +80,7 @@
                 <tbody>
                     @foreach($rentalLogs as $x)
 
-                        @if(Session::get('is_admin')==0 && $x->title=='UPLOADED DEPOSIT SLIP' && $order->payment_method=='cod')
+                        @if(Session::get('is_admin')==0 && $x->title=='UPLOADED DEPOSIT SLIP' && $listing->payment_method=='cod')
 
                         @else
                         <tr>
