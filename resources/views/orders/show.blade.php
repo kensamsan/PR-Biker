@@ -116,7 +116,7 @@
                     @foreach($orderPromo as $x)
                         @if($x->promo_code_id==null)
                         <div class="row">
-                            <div class="col-8">COD</div>
+                            <div class="col">COD</div>
                             <div class="col text-right">₱ 40</div>
                         </div>
                         @else
@@ -267,7 +267,7 @@
             </div>
             <!--Method-->
             <div class="row no-gutters" id="method">
-                <div class="col-lg-6 p-3" id="method_col">
+                <div class="col-lg-4 p-3" id="method_col">
                     <label> Payment Method</label><br>
                     <p> {{ $order->payment_method }}</p><br>
                 </div>

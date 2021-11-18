@@ -46,10 +46,10 @@
                     <small>{{ Auth::user()->email }}</small><br>
                     <small>{{ Auth::user()->contact }}</small>
                 </div>
-                <div class="col-lg-4 p-3" id="mid_col">
+                {{-- <div class="col-lg-4 p-3" id="mid_col">
                     <label> Billing Address</label><br>
                   
-                </div>
+                </div> --}}
                 <div class="col-lg-4 p-3">
                     <label> Delivery Address</label><br>
                     <p> {{ $listing->address }}</p><br>
@@ -57,10 +57,10 @@
             </div>
             <!--Method-->
             <div class="row no-gutters" id="method">
-                <div class="col-lg-6 p-3" id="method_col">
+                {{-- <div class="col-lg-6 p-3" id="method_col">
                     <label> </label><br>
                     <p> {{ $listing->payment_method }}</p><br>
-                </div>
+                </div> --}}
                 <div class="col-lg-6 p-3">
                     <label> Shipping Method</label><br>
                     <p> @if($listing->shipping_type=='pick-up') PICK UP @else LALAMOVE @endif</p><br>
