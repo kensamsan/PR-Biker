@@ -692,6 +692,7 @@ class CartController extends Controller
 	}
     public function payment(Request $request)
 	{
+		Log::info($request);
 		// foreach(\Cart::session(Auth::user()->id)->getContent() as $x)
 		// {
 		// 	log::info($x);
@@ -704,6 +705,10 @@ class CartController extends Controller
 		elseif($request->shipping=='gma')
 		{
 			$fee= 150;
+		}
+		elseif($request->shipping=='courier')
+		{
+			$fee= 250;
 		}
 
 

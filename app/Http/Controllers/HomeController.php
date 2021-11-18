@@ -92,15 +92,14 @@ class HomeController extends Controller
     public function postBikeSubmit(Request $request)
     {
   
- 
+        Log::info($request);
         $validator = Validator::make($request->all(), [
             'bike_name' => 'required',
             'bike_unit' => 'required',
             'fb_url' => 'required',
             'price' => 'required|numeric|between:1,9999999.99',
             'description' => 'required',
-            // 'bike_image' => 'required',      
-            
+            'images' => 'required',      
         ]);
 
         if ($validator->fails()) {
@@ -138,6 +137,11 @@ class HomeController extends Controller
                 $ct = 0;
                 foreach($request->images as $x)
                 {
+                    if($x==null)
+                    {
+                        Log::info('error');
+                        return redirect()->route('post-bike')->with('flash_error', 'Image Required!!');
+                    }
                     $destinationPath = 'uploads/rentals';
                     $photoExtension = $x->getClientOriginalExtension(); 
                     $filename = 'rental_photo'.Auth::user()->id.'_'.$ct.'-'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
@@ -146,7 +150,7 @@ class HomeController extends Controller
                         'file_original_name'=>$x->getClientOriginalName(),
                         'file_name'=>$filename,
                         ]);
-                    Log::info($x);
+                    
 
                     $x->move($destinationPath, $filename);
 
@@ -199,10 +203,22 @@ class HomeController extends Controller
     }
     public function home()
     {
-    	$product = Product::where('visibility','=','active')
+        
+        if(Auth::check())
+        {
+            $product = Product::where('visibility','=','active')
+            ->where('listing','=','products')->get();
+            $rentals = Rentals::where('status','=','posted')->where('user_id','!=',Auth::user()->id)->get();
+         
+        }
+        else
+        {
+            $product = Product::where('visibility','=','active')
         ->where('listing','=','products')->get();
-
-        $rentals = Rentals::where('status','=','posted')->where('user_id','!=',Auth::user()->id)->get();
+         $rentals = Rentals::where('status','=','posted')->get();
+            
+        }
+    	
        
         return view('home',[
             'products'=>$product,

@@ -21,6 +21,33 @@ use Log;
 class ProductController extends Controller
 {
     //
+    public function toggleproductStatus($id)
+    {
+    	$user = Product::find($id);
+
+		if ($user == null)
+			return redirect()
+				->back()
+				->with('flash_message', 'Product isn\'t present anymore, please try refreshing the page.');
+		try {
+			DB::beginTransaction();
+			$user->visibility = ($user->visibility == 'active') ? 'inactive' : 'active';
+			$user->save();
+	
+			DB::commit();
+		} catch (\Exception $e) {
+			Log::error($e);
+			DB::rollback();
+
+			return redirect()
+				->back()
+				->with('flash_error', 'Something went wrong, please try again later.');
+		}
+
+		return redirect()
+			->back()
+			->with('flash_success', $user->product_name.' is now '.($user->visibility == 'active' ? 'Active' : 'Inactive'));
+    }
     public function show($id)
     {
 		$p = Product::find($id);

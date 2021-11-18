@@ -160,7 +160,7 @@
                     @endif -->
                     @foreach(\Cart::session(Auth::user()->id)->getConditions() as $x)
                           
-                        <p class="px-2 mb-0">Promo: <span class="ml-5">{{$x->getName() }}</span><span class="float-end">₱ {{$x->getValue() }}</span></p>         
+                        <p class="px-2 mb-0">@if($x->getName()=='courier') LALAMOVE @else Promo : @endif <span class="ml-5">{{$x->getName() }}</span><span class="float-end">₱ {{$x->getValue() }}</span></p>         
                
                     @endforeach
                     

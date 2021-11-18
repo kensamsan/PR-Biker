@@ -179,6 +179,7 @@
 									<td>{{$p->product_name}}</td>
 									<td>{{number_format($p->price,2)}}</td>
 									<td>
+									
 										@if($p->visibility=='inactive')
 										<span class="label label-warning">Inactive</span>
 										@else
@@ -210,20 +211,9 @@
 												</li>
 
 												<li>
-													@if($p->visibility == "inactive" )
-													<a href="#" id="{{$p->id}}" class="btnActiveUser"
-														data-name="{{ $p->product_name }}" title="Active"
-														data-toggle="modal" data-target="#confirmationActiveSection"><i
-															class="fa fa-toggle-on" aria-hidden="true"></i>&nbsp; Set
-														Active</a>
-													@else
-													<a href="#" id="{{$p->id}}" class="btnInactiveUser"
-														data-name="{{ $p->product_name }}" title="Inactive"
-														data-toggle="modal"
-														data-target="#confirmationInactiveSection"><i
-															class="fa fa-toggle-off" aria-hidden="true"></i>&nbsp; Set
-														Inactive</a>
-													@endif
+												<a class="dropdown-item" href="{{ route('products.toggle-status', [$p->id]) }}"><i class="fas {{ $p->visibility == 'active' ? 'fa-toggle-off' : 'fa-toggle-on' }} mr-2"></i>Set as {{ $p->visibility == 'active' ? 'Inactive' : 'Active' }}</a>
+
+													
 												</li>
 
 
@@ -239,6 +229,8 @@
 			</div>
 		</div>
 	</div>
+
+
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div id="confirmationDeleteSection" class="modal fade" role="dialog" data-backdrop="static"
@@ -314,6 +306,8 @@
 			</div>
 		</div>
 	</div>
+
+
 </div>
 @stop
 @section('script')
