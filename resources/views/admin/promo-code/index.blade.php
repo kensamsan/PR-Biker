@@ -217,7 +217,7 @@
 											@endif
 							<!-- 				<a  class="btn btn-warning " href="{{ route('set-banner',$x->id) }}"><i class="fas fa-pencil-alt"></i> Set Banner</a>	 -->
 											<a  class="btn btn-default " href="{{ route('admin.promo-codes.edit',$x->id) }}"><i class="fas fa-pencil-alt"></i> Edit</a>	
-											<a  class="btn btn-danger btnDeletePromoCode" href="#" id="{{$x->id}}" data-toggle="modal" data-target="#confirmationGrade"><i class="fas fa-times-circle"></i> Delete</a>					
+										<!-- 	<a  class="btn btn-danger btnDeletePromoCode" href="#" id="{{$x->id}}" data-toggle="modal" data-target="#confirmationGrade"><i class="fas fa-times-circle"></i> Delete</a> -->					
 										</div>
 									</td>
 								</tr>

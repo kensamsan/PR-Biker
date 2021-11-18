@@ -35,6 +35,8 @@ Route::group(['prefix' => ''], function () {
 
 	Route::group(['middleware' => ['auth']], function()
 	{
+		
+
 		Route::get('/my-profile','UserController@myProfile')->name('my-profile');
 		Route::get('/change-password','UserController@accountProfilePassword')->name('account.profile.password');
 
@@ -69,6 +71,9 @@ Route::group(['prefix' => ''], function () {
 		
 
 			Route::resource('product', 'ProductController');
+
+			Route::get('toggle-product-status/{id}', 'ProductController@toggleproductStatus')->name('products.toggle-status');
+
 			Route::get('product-create-sale/{id}', 'ProductController@productCreateSale')->name('admin.product.create-sale');
 			Route::get('product-set-unsale/{id}', 'ProductController@productUnsale')->name('admin.product.unsale');
 			Route::post('product-save-sale/', 'ProductController@productSaleSave')->name('admin.product.sale-save');

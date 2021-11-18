@@ -132,4 +132,20 @@
             }
         });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+    @if(Session::has('flash_error'))
+    Swal.fire({
+        // title: '<h3></h3>',
+        html: '<h4>IMAGE REQUIRED{{Session::get('
+        flash_error ')}}</h4>',
+        type: 'error',
+        customClass: 'swal-wide',
+        confirmButtonText: 'Ok',
+        confirmButtonClass: 'btn-swal'
+    })
+    @endif
+ 
+</script>
 @endsection

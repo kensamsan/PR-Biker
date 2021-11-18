@@ -124,6 +124,7 @@ class OrderController extends Controller
 	}
 	public function cancelOrder(Request $request)
 	{
+		Log::info('asd');
 		$order = Order::find($request->orderID);
 		$order->status = 'cancelled';
 		$order->save();
@@ -131,7 +132,7 @@ class OrderController extends Controller
 		$orderLog = OrderLog::create([
 					'order_id'=>$request->orderID,
 					'title'=>'ORDER CANCELLED',
-					'content'=>$request->content,
+					'content'=>$request->content."",
 				]);
 
 		//  $oi = OrderItem::where('order_id','=',$order->id)->get();
