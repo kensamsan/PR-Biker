@@ -1,5 +1,5 @@
 @extends('template.master')
-@section('title', 'Rental Details')
+
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
@@ -18,7 +18,7 @@
                 <h3 class="title-style">Rental Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$listing->id}}</span></h3>
                 <br>
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 text-center">
                     <div class="progressbar-container">
                         <h4>Rental Status:</h4>
                         <ul class="progressbar">
@@ -32,7 +32,12 @@
                     @endif
                 </div>
             </div>
+      
             <hr>
+        
+            <br>
+         
+
             <!--Customer & Address Details-->
             <div class="row no-gutters" id="custadd_det">
                 <div class="col-lg-4 p-3">
@@ -41,19 +46,24 @@
                     <small>{{ Auth::user()->email }}</small><br>
                     <small>{{ Auth::user()->contact }}</small>
                 </div>
+                <div class="col-lg-4 p-3" id="mid_col">
+                    <label> Billing Address</label><br>
+                  
+                </div>
                 <div class="col-lg-4 p-3">
                     <label> Delivery Address</label><br>
-                   
+                    <p> {{ $listing->address }}</p><br>
                 </div>
             </div>
             <!--Method-->
             <div class="row no-gutters" id="method">
                 <div class="col-lg-6 p-3" id="method_col">
-                    <label> Payment Method</label><br>
+                    <label> </label><br>
                     <p> {{ $listing->payment_method }}</p><br>
                 </div>
                 <div class="col-lg-6 p-3">
                     <label> Shipping Method</label><br>
+                    <p> {{ $listing->shipping_type }}</p><br>
                 </div>
             </div>
             <br>
@@ -69,6 +79,7 @@
                 </thead>
                 <tbody>
                     @foreach($rentalLogs as $x)
+
                         @if(Session::get('is_admin')==0 && $x->title=='UPLOADED DEPOSIT SLIP' && $listing->payment_method=='cod')
 
                         @else
@@ -77,9 +88,12 @@
                             <td>{!! $x->content !!}</td>
                         </tr>
                         @endif
+
                     @endforeach
+
                 </tbody>
             </table>
+
         </div>
         </div>
     </div>

@@ -42,10 +42,10 @@
                     {{ Form::label('City', 'City') }}
                     <input type="text" class="form-control" value="Las Piñas City" disabled>
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     {{ Form::label('brgy', 'Barangay') }}
                     <input type="text" name="brgy" value="{{Auth::user()->getBillingAddressBrgy() }}" readonly="true" class="form-control">
-                </div>
+                </div> -->
             </div>
             <div class="row mt-2">
                 <div class="col-lg-8">
@@ -53,8 +53,8 @@
                     {{ Form::label('Address', 'Address') }}
                     <select name="address" class="form-control" required="true">
                         @foreach($billingAddress as $x)
-                        <option value="{{$x->address}} {{$x->city}} {{$x->zip}}" @if($x->id==$billingAddress->last()->id)
-                            selected @endif>{{$x->address}} {{$x->city}} {{$x->zip}}</option>
+                        <option value="{{$x->id}}" @if($x->id==$billingAddress->last()->id)
+                            selected @endif>{{$x->address}} {{$x->city}} {{$x->zip}} {{ $x->brgy}}</option>
                         @endforeach
                     </select>
                     <!-- <input type="text" name="address" value="{{Auth::user()->getBillingAddress() }}" readonly="true" class="form-control"> -->
