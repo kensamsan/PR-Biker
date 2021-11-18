@@ -759,7 +759,7 @@ class UserController extends Controller
     }
     public function updateMyProfile(Request $request)
     {
- 
+        Log::info($request);
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'middle_name' => 'required|max:255',
@@ -849,7 +849,7 @@ class UserController extends Controller
                     {
                         $destinationPath = 'uploads/users';
                         $photoExtension = $request->id_photo->getClientOriginalExtension(); 
-                        $filename = 'user_photo_'.$user->id.'_'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
+                        $filename = 'user_id_photo_'.$user->id.'_'.\Carbon\Carbon::now()->timestamp.'.'.$photoExtension;
                         $request->file('id_photo')->move($destinationPath, $filename);
                         // Storage::disk('users')->put($filename,file_get_contents($request->photo->getRealPath()));
                         if(file_exists('uploads/users/'.$filename))

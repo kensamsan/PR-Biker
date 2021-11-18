@@ -102,7 +102,7 @@ class RentalController extends Controller
 	}
 	public function clientRentalSubmit(Request $request)
 	{
-		
+	
 		$rental = Rentals::find($request->rental_id);
 		$rental->dt_from = $request->dt_from;
 		$rental->dt_to = $request->dt_to;
@@ -188,7 +188,7 @@ class RentalController extends Controller
     }
 	public function approvePayment($id)
     {
-    	Log::info($id);
+  
     	$rental = Rentals::find($id);
     	$rental->status = 'ship';
     	$rental->payment_status = 'paid';
