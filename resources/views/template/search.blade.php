@@ -8,14 +8,11 @@
                 <div class="col-lg-3 text-lg-start text-center">
                     <a href="{{url('')}}"><img src="/images/navbarlogo.svg" alt="" class="img-fluid"></a>       
                 </div>
-             
                 {{ csrf_field() }}
                 <div id="search-item" class="col-lg-4 mb-3 mb-lg-0">
-                    <div class="input-group">
-                        <input style="background:#F3F3F5" name="search" type="text" class="form-control fw-bold" placeholder="Search for an Item" aria-label="Username" aria-describedby="basic-addon1">
-                     
+                    <div class="input-group mt-0">
+                        <input style="background:#F3F3F5" name="search" type="text" class="form-control fw-bold" placeholder="Search for available Bikes for Rent" aria-label="Username" aria-describedby="basic-addon1">
                          <button type="submit" class="btn btn-background">Submit</button>
-                       
                     </div>
                 </div>
                 <div class="col-lg-3 mb-3 mb-lg-0">
