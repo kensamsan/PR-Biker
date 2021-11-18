@@ -11,13 +11,13 @@
                 {{ csrf_field() }}
                 <div id="search-item" class="col-lg-4 mb-3 mb-lg-0">
                     <div class="input-group mt-0">
-                        <input style="background:#F3F3F5" name="search" type="text" class="form-control fw-bold" placeholder="Search for available Bikes for Rent" aria-label="Username" aria-describedby="basic-addon1">
+                        <input style="background:#F3F3F5" name="search" type="text" class="form-control fw-bold m-0" placeholder="Search for available Bikes for Rent" aria-label="Username" aria-describedby="basic-addon1">
                          <button type="submit" class="btn btn-background">Submit</button>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-3 mb-lg-0">
                     <div class="input-group">
-                        <select name="brgy" style="color:gray; padding-left:25px;" type="text" class="location-bar form-control fw-bold">
+                        <select name="brgy" style="color:gray; padding-left:25px;" type="text" class="location-bar form-control fw-bold m-0">
                             <option value="-1">Barangays of Las Piñas City</option>
                             <option value="ALMANZA DOS">ALMANZA DOS</option>
                             <option value="ALMANZA UNO">ALMANZA UNO</option>

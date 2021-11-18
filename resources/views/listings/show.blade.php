@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Rental Details')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
@@ -11,17 +11,17 @@
         <h1 class="fst-italic fw-bolder">Rental Tracking</h1>
     </div>
 </div>
-<div class="container d-flex justify-content-evenly mt-3 mb-5">
+<div class="container justify-content-evenly mt-3 mb-5">
     <div class="row my-auto">
         <div class="col-lg-7 listing-container shadow p-4 ms-4 w-100">
       <div class="panel panel-default"  style="width: 100%; margin: auto;">
                 <h3 class="title-style">Rental Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$listing->id}}</span></h3>
                 <br>
             <div class="row">
-                <div class="col-lg-9 text-center">
+                <div class="col-lg-9">
                     <div class="progressbar-container">
                         <h4>Rental Status:</h4>
-                        <ul class="progressbar">
+                        <ul class="progressbar p-0">
                            {{$listing->status}}
                         </ul>
                     </div>
