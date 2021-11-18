@@ -35,12 +35,12 @@ class HomeController extends Controller
             })
         ->get();
 
-        $products = Product::whereRaw("(('".$brgy."'='-1') OR (brgy='".$request->input('brgy')."'))")
-           ->Where(function ($query) use ($request) {
-                $query->where('product_name','like', '%'.$request->search.'%');
-            })
-        ->get();
-     
+        // $products = Product::whereRaw("(('".$brgy."'='-1') OR (brgy='".$request->input('brgy')."'))")
+        //    ->Where(function ($query) use ($request) {
+        //         $query->where('product_name','like', '%'.$request->search.'%');
+        //     })
+        // ->get();
+        $products =[];
        
          return view('rent-bike',[
             'rentals'=>$rentals,
@@ -55,8 +55,8 @@ class HomeController extends Controller
             ->where('user_id','!=',Auth::user()->id)
             ->get();
         
-         $products = Product::get();
-
+         // $products = Product::get();
+        $products =[];
        
          return view('rent-bike',[
             'rentals'=>$rentals,
@@ -113,6 +113,7 @@ class HomeController extends Controller
         DB::beginTransaction();
             try
             {
+                $bill = BillingAddress::find($request->address);
                 $rental = Rentals::create([
                     'user_id'=>Auth::user()->id,
                     'bike_name'=>$request->bike_name,
@@ -121,10 +122,10 @@ class HomeController extends Controller
                     'city_id'=>$request->city,
                     'description'=>$request->description,                  
                     'status'=>'waiting-approval',                  
-                    'brgy'=>$request->brgy,                           
-                    'address'=>$request->address,                           
+                    'brgy'=>$bill->brgy,                           
+                    'address'=>$bill->address." ".$bill->city." ".$bill->zip." ".$bill->brgy,                           
                     'fb_url'=>$request->fb_url,                           
-                    'contact_number'=>$request->contact_number or 0,                           
+                    'contact_number'=>$request->contact_number."",                           
 
                     ]);
 

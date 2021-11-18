@@ -188,6 +188,7 @@ class RentalController extends Controller
     }
 	public function approvePayment($id)
     {
+    	Log::info($id);
     	$rental = Rentals::find($id);
     	$rental->status = 'ship';
     	$rental->payment_status = 'paid';
