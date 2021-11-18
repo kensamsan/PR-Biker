@@ -187,12 +187,11 @@
                     {!! Form::close() !!}
                 </div>
             </div>
-        </div>
-
-        <div class="modal-footer">
+        </div>s
+        {{-- <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <input type="submit" class="btn btn-background" value="Submit" />
-        </div>
+        </div> --}}
         {!! Form::close() !!}
 
         <div class="modal fade" id="myModalNumber" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -218,15 +217,13 @@
                         <br />
                         <div class="row top10">
                             <div class="col-lg-4">
-
                             </div>
                         </div>
-
                     </div>
-                    {{-- <div class="modal-footer">
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <input type="submit" class="btn btn-background" value="Submit" />
-                    </div> --}}
+                    </div>
                     {!! Form::close() !!}
                 </div>
             </div>
