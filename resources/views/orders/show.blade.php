@@ -1,5 +1,5 @@
 @extends('template.master')
-
+@section('title', 'Order Details')
 @section('content')
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="/css/user.css">
@@ -9,7 +9,7 @@
 
 <div class="row ms-4">
     <div class="headers col-lg-6 pt-3">
-        <h1 class="fst-italic fw-bolder">My Orders </h1>
+        <h1 class="fst-italic fw-bolder">Order Tracking </h1>
     </div>
 </div>
 <div class="container d-flex justify-content-evenly mt-3 mb-5">
@@ -19,7 +19,7 @@
                 <h3 class="title-style">Order Details <span style="float:right;font-weight:normal;font-size:16px;color:grey;text-decoration:underline">Order id# {{$order->order_id}}</span></h3>
                 <br>
             <div class="row">
-                <div class="col-lg-9 text-center">
+                <div class="col-lg-9">
                     <div class="progressbar-container">
                         <h4>Order Status:</h4>
                         <ul class="progressbar">
@@ -38,7 +38,6 @@
                 </div>
             </div>
             <br>
-            
             <!--Order Table-->
             <table class="table" id="wishlist">
                 <thead>
@@ -84,7 +83,6 @@
                     @endforeach
                 </tbody>
             </table>
-            <hr>
             <!--Order Notes-->
             <div class="row no-gutters" id="order_notes">
                 <div class="col-lg-6">
