@@ -144,7 +144,7 @@
                                                 <img  src="/uploads/products/{{App\Product::find($x->id)->getProductImage()}}" class="shipping-img mr-3" style="float: left;width:75px;height:75px">
                                             </td>
                                             <td class="w-50"><p class="p-small">{{$x->name}}</p></td>
-                                            <td class="text-right w-75">x{{$x->qty}} <br>
+                                            <td class="text-right w-75">x{{$x->quantity}} <br>
                                                 <span class="text-bold">₱ {{number_format($x->price)}}</span>
                                             </td>
                                         </tr>
