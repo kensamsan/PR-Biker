@@ -190,7 +190,7 @@ class RentalController extends Controller
     {
   
     	$rental = Rentals::find($id);
-    	$rental->status = 'ship';
+    	$rental->status = 'shipped';
     	$rental->payment_status = 'paid';
     	$rental->save();
     	$orderLog = RentalLogs::create([

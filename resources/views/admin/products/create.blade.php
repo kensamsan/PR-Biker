@@ -212,7 +212,7 @@
 									</Select>
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-lg-4 col-lg-4 margin-top margin-left">
                                     <label for="category_id">Categories</label> <br>
                                     <select class="form-control" name="category_id">
@@ -223,8 +223,8 @@
                                     <span class="errors"
                                         style="color:#FF0000">{{ $errors->first('category_id') }}</span>
                                 </div>
-                            </div>
-                            <div class="row">
+                            </div> --}}
+                            {{-- <div class="row">
                                 <div class="col-lg-12 margin-top margin-left">
                                     {{ Form::label('tag_id', 'Tags') }}
                                     @foreach ($tags as $x)
@@ -236,7 +236,7 @@
                                     <span class="errors"
                                         style="color:#FF0000">{{ $errors->first('category_name') }}</span>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 <div class="col-lg-4 margin-top margin-left">
                                     <label for="description">Description</label>
