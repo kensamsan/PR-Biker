@@ -123,7 +123,6 @@
         $(document).on('ready load click focus', "[data-mask]", (e) => {
             let obj = $(e.currentTarget);
             if (!obj.attr('data-masked')) {
-                obj.inputmask('mask', {
                     'mask': obj.attr('data-mask-format'),
                     'removeMaskOnSubmit': true,
                     'autoUnmask': true

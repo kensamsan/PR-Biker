@@ -22,7 +22,6 @@
     <link href="{{ URL::asset('css/sb-admin.css') }}" rel="stylesheet" media="  ">
     <link href="{{ URL::asset('css/normalize.css') }}" rel="stylesheet">
 
-
     <link href="{{ URL::asset('assets/fontawesome-free-5.15.1-web/css/all.min.css') }}" rel="stylesheet"
         type="text/css">
     <link href="{{ URL::asset('assets/DataTables/datatables.min.css') }}" rel="stylesheet">
@@ -495,10 +494,10 @@
                             <li>
                                 <a class="{{ \Request::route()->getName() == 'settings.activity.logs.index' ? 'active' : '' }}" href="{{ route('settings.activity.logs.index') }}">Application</a>
                             </li> -->
-                            <li>
+                            {{-- <li>
                                 <a class="{{ \Request::route()->getName() == 'categories.index' ? 'active' : '' }}"
                                     href="{{ route('categories.index') }}">Categories</a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a class="{{ \Request::route()->getName() == 'roles.index' ? 'active' : '' }}"
                                     href="{{ route('roles.index') }}">Roles</a>

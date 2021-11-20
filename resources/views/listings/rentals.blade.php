@@ -34,7 +34,7 @@
                     @elseif($x->status=='pick-up')
                     <span class="status pick"></span>For pick-up
                     @elseif($x->status=='ship')
-                    <span class="status ship"></span>SHIP
+                    <span class="status ship"></span>Shipped
                     @elseif($x->status=='delivered')
                     <span class="status delivered"></span>Delivered
                     @elseif($x->status=='cancelled')
