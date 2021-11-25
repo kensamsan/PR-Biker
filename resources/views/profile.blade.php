@@ -141,9 +141,9 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4">
                                 <div class="form-group {{ $errors->first('username') ? 'has-error' : '' }} ">
-                                    {{ Form::label('bank_details', 'Bank Detail', ['class' => 'control-label']) }}
-                                    <textarea class="form-control"
-                                        name="bank_details">{{ $user->bank_details }}</textarea>
+                                    {{ Form::label('bank_details', 'BPI - Bank Details', ['class' => 'control-label']) }}
+                                    <input class="form-control" name="bank_details" value="{{ $user->bank_details }}" type="number" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    <span class="errors" style="color:#FF0000">{{ $errors->first('bank_details') }}</span>
                                 </div>
                             </div>
                             <div class="row mt-4">

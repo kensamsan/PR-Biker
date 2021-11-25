@@ -65,9 +65,9 @@
 
                     <p class="paragraph-alignment">@if($rental->contact_number=='') none @else {{ $rental->contact_number }} @endif</p>
 
-                    <h3 class="fw-bold"><b>Identification Card:</b></h3>
+                    {{-- <h3 class="fw-bold"><b>Identification Card:</b></h3>
                     <img style="width:400px;height:230px;"
-                        src="/uploads/users/{{ App\User::find($rental->user_id)->id_photo }}">
+                        src="/uploads/users/{{ App\User::find($rental->user_id)->id_photo }}"> --}}
                     <div class="row mb-5">
                         <div class="col-lg-6 d-flex col-md-2">
                             <form method="post" action="{{ route('client-rent-now') }}">

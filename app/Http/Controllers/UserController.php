@@ -764,6 +764,7 @@ class UserController extends Controller
             'first_name' => 'required|max:255',
             'middle_name' => 'required|max:255',
             'last_name' => 'required|max:255',
+            'bank_details' => 'required|numeric|max:9999999999',
             'photo' => 'image|mimes:jpeg,jpg,png',
             'username' => 'required|min:4|unique:users,username,'.Auth::user()->id.',id,deleted_at,NULL',
             'email_address' => 'required|email|unique:users,email,'.Auth::user()->id.',id,deleted_at,NULL',

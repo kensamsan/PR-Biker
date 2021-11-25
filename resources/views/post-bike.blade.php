@@ -15,6 +15,9 @@
 
     <div class="container-fluid px-5">
         <h1 class=" headers lead fs-1 text-dark mb-0 mt-4">Post A Bike</h1>
+        <p class=" headers lead text-dark mb-0 mt-2">Disclaimers</p>
+        <p>1. Biker Company will not be liable for all the relataed accidents and unfortunate events connected to your posted bike. <br>
+            2. The company will get 5% of the total rent price.</p>
         <div class="row p-2">
             {{ Form::open(['url' => '/post-bike-submit', 'method' => 'post', 'files' => true]) }}
 
@@ -62,7 +65,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col-lg-4">
-                    {{ Form::label('price', 'Price') }}
+                    {{ Form::label('price', 'Rent Price per Day') }}
                     <input type="number" class="form-control" placeholder="Price" name="price" maxlength="7" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     <span class="errors" style="color:#FF0000">{{ $errors->first('price') }}</span>
                 </div>
